@@ -1,0 +1,11 @@
+﻿@model WebApplication3.Models.CourseEnumsModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post">
+    @Html.EnumDropDownListFor(model => model.OptionSelected)
+    <input type="submit" value="Send" />
+</form>
