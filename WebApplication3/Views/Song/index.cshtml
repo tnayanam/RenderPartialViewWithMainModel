@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WebApplication3.Models.Song>
+@{
+    ViewBag.Title = "Song";
+}
+
+<h2>Song</h2>
+
+@*@Html.Partial("songname")*@
+
+@foreach (var x in Model)
+{
+    <p>@x.Name</p>
+}
