@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace WebApplication3
 {
@@ -26,6 +25,8 @@ namespace WebApplication3
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            BundleTable.EnableOptimizations = false;
         }
+
     }
 }
