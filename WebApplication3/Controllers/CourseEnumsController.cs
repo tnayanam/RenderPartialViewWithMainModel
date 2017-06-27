@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
@@ -13,6 +9,7 @@ namespace WebApplication3.Controllers
         public ActionResult Index()
         {
             CourseEnumsModel model = new CourseEnumsModel();
+            System.Web.HttpContext.Current.Session["sessionString"] = "Hello World";
             return View(model);
         }
 
@@ -20,8 +17,15 @@ namespace WebApplication3.Controllers
         [HttpPost]
         public ActionResult Index(CourseEnumsModel model)
         {
-            // business logic here
-            return View();
+            // busiess logic here
+
+            return RedirectToAction("Show");
+        }
+
+        // GET: CourseEnums
+        public ActionResult Show()
+        {
+            return Content((string)(System.Web.HttpContext.Current.Session["sessionString"]));
         }
     }
 }
