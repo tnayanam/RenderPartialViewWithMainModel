@@ -9,6 +9,7 @@ namespace WebApplication3.Controllers
         public ActionResult Index()
         {
             CourseEnumsModel model = new CourseEnumsModel();
+            model.Error = "<b> Some Error Occured </b>";
             System.Web.HttpContext.Current.Session["sessionString"] = "Hello World";
             return View(model);
         }
