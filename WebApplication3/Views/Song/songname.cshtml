@@ -1,4 +1,8 @@
 ﻿@foreach (var x in Model)
 {
-    <p>@x.Name</p>
+    <p class="song">@x.Name</p>
 }
+
+<script>
+     $(".song").prepend("<p> prepend </p>")
+</script>
