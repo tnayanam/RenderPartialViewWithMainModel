@@ -245,6 +245,7 @@
     <Content Include="Views\Song\songname.cshtml" />
     <Content Include="Views\Home\Show.cshtml" />
     <Content Include="Views\CourseEnums\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminMenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

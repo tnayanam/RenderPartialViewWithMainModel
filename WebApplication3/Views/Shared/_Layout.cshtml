@@ -8,6 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -26,6 +27,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Enums", "Index", "courseenums")</li>
                     <li>@Html.ActionLink("TestPartial", "Index", "Song")</li>
+                    @Html.Partial("_AdminMenuPartial")
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -44,3 +46,14 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<script>
+
+    $(document).ready(function () {
+        $(function () {
+            $('[data-admin-menu]').hover(function () {
+                $('[data-admin-menu]').toggleClass('open')
+            });
+        });
+    });
+
+</script>
