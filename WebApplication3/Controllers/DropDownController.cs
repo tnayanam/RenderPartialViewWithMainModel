@@ -13,11 +13,12 @@ namespace WebApplication3.Controllers
             dropdown.SongList.Add(new SelectListItem { Text = "Five", Value = "5" });
             dropdown.SongList.Add(new SelectListItem { Text = "Six", Value = "6" });
             dropdown.SongList.Add(new SelectListItem { Text = "Seven", Value = "7" });
+            dropdown.Name = "Tanuj Nayanam";
 
             return View(dropdown);
         }
 
-        // GET: DropDown
+        // POST : DropDown
         [HttpPost]
         public ActionResult Index(DropDownViewModel viewModel)
         {
