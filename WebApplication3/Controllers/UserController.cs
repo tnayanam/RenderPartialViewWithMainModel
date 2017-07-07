@@ -16,6 +16,7 @@ namespace WebApplication3.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ModelState.AddModelError("", "Fix Below Errors.");
                 return View();
             }
             else
