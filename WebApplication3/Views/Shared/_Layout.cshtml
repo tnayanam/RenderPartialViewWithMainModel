@@ -43,6 +43,9 @@
 
 
     @Scripts.Render("~/bundles/bootstrap")
+
+    @*Below is required for client side validation*@
+    @* And this is the place where actual script will get rendered. *@
     @RenderSection("scripts", required: false)
 </body>
 </html>
