@@ -1,0 +1,11 @@
+﻿@model WebApplication3.Models.DropDownViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post">
+    @Html.DropDownListFor(m => m.Id, Model.SongList, "", new { @class = "form-control" })
+    <input type="submit" value="Send" />
+</form>

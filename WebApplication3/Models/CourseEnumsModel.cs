@@ -4,7 +4,6 @@ namespace WebApplication3.Models
 {
     public class CourseEnumsModel
     {
-        //[DisplayName("<YOUR NAME>")]
         [Display(Name = "Select the Genre")]
         public CourseEnums OptionSelected { get; set; }
 
