@@ -15,6 +15,7 @@ namespace WebApplication3.Controllers
             dropdown.SongList.Add(new SelectListItem { Text = "Seven", Value = "7" });
             dropdown.FirstName = "Tanuj";
             dropdown.LastName = "Nayanam";
+            dropdown.RateInDollar = 23;
 
             return View(dropdown);
         }

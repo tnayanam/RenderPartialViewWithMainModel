@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
+
 namespace WebApplication3.Models
 {
     public class DropDownViewModel
@@ -30,6 +31,8 @@ namespace WebApplication3.Models
             }
         }
 
-
+        [Display(Name = "In Dollar")]
+        [DataType(DataType.Currency)]
+        public int RateInDollar { get; set; }
     }
 }
