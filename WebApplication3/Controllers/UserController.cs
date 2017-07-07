@@ -14,7 +14,12 @@ namespace WebApplication3.Controllers
         [HttpPost]
         public ActionResult Create(UserModel viewModel)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+                return Content("Everything Alright");
         }
     }
 }
