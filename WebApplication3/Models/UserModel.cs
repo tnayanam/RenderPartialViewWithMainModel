@@ -4,7 +4,7 @@ namespace WebApplication3.Models
 {
     public class UserModel
     {
-        [Required]
+        [Required(ErrorMessage = "Name field cannot be blank")]
         public string Name { get; set; }
         public int Id { get; set; }
         [Required]
