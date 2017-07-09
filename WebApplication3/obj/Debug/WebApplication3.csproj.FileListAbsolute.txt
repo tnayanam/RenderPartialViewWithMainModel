@@ -114,3 +114,4 @@ C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\D
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.Ads.resources
