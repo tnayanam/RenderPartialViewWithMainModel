@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
 
@@ -18,7 +19,9 @@ namespace WebApplication3.Controllers
         {
             var userId = User.Identity.GetUserId();
 
-            //var email = _context.Users.Where(c => c.Id == userId).First().Email;
+
+            // get first and only result using lINQ
+            var email = _context.Users.Where(c => c.Id == userId).First().Email;
             ViewBag.userId = userId;
             return View();
         }
