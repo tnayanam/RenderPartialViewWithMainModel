@@ -7,6 +7,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
+    [Authorize] // Allows only logged in user to hit any of the function in thecontroller.
     public class HomeController : Controller
     {
 
