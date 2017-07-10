@@ -12,6 +12,7 @@ namespace WebApplication3.Controllers
         }
 
         // GET: Order
+        [Authorize]
         public ActionResult Create()
         {
 
@@ -19,9 +20,18 @@ namespace WebApplication3.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Create(Order viewModel)
         {
+            if (ModelState.IsValid)
+            {
+                _context.Orders.Add(viewModel);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
+
+
     }
 }

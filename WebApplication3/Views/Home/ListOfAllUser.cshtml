@@ -1,0 +1,39 @@
+﻿@*@model IEnumerable<WebApplication3.Models.ApplicationUser>
+@{
+    ViewBag.Title = "ListOfAllUser";
+}
+
+<h2>ListOfAllUser</h2>
+
+@foreach( var item in Model)
+{
+   <p> @item.Email</p>
+}*@
+
+
+
+@model IEnumerable<WebApplication3.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+        </tr>
+    }
+
+</table>

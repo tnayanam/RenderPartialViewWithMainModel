@@ -27,6 +27,13 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        public ActionResult ListOfAllUser()
+        {
+
+            //all the stuff from Database
+            return View(_context.Users.ToList());
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
