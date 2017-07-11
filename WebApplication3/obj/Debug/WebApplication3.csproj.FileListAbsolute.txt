@@ -108,10 +108,10 @@ C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\bin\M
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdf.resources
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdfk.resources
+C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.Ads.resources
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
-C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.Ads.resources
+C:\Users\Dev10\Desktop\Proj\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache

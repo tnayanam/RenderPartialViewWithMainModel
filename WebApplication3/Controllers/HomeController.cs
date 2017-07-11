@@ -27,11 +27,31 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        public ActionResult Details()
+        {
+            var userId = User.Identity.GetUserId();
+
+            // find an entry directly based on the id from DBSET
+            var f = _context.Users.Find(userId);
+            return View(f);
+        }
+
+        public ActionResult DetailsForAdmin(string id)
+        {
+
+            //var userId = User.Identity.GetUserId();
+            // find an entry directly based on the id from DBSET
+
+            var f = _context.Users.Find(id);
+            return View("Details", f);
+        }
+
         public ActionResult ListOfAllUser()
         {
 
             //all the stuff from Database
             return View(_context.Users.ToList());
+
         }
 
         public ActionResult About()
