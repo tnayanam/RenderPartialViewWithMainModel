@@ -11,6 +11,7 @@ namespace WebApplication3.Models
         public DropDownViewModel()
         {
             SongList = new List<SelectListItem>();
+            BoolVal = true;
         }
 
         public int Id { get; set; }
@@ -22,6 +23,8 @@ namespace WebApplication3.Models
 
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+
+        public bool BoolVal { get; set; }
 
         public string Name
         {

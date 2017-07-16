@@ -174,3 +174,5 @@ C:\Users\lenovo\Desktop\atm\RenderPartialViewWithMainModel\WebApplication3\obj\D
 C:\Users\lenovo\Desktop\atm\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\lenovo\Desktop\atm\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
 C:\Users\lenovo\Desktop\atm\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\atm\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.df.resources
+C:\Users\lenovo\Desktop\atm\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.dfh.resources

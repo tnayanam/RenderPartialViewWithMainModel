@@ -4,6 +4,11 @@
 }
 
 <h2>Index</h2>
+<script>
+    debugger;
+    var x = @Json.Encode(@Model.BoolVal)
+        alert(x);
+</script>
 
 <form method="post">
     @Html.DropDownListFor(m => m.Id, Model.SongList, "", new { @class = "form-control" })
