@@ -19,5 +19,11 @@ namespace WebApplication3.Controllers
             return View(songModel);
         }
 
+        public ActionResult ChildSelector()
+        {
+            var songModel = _context.Songs.ToList();
+            return View(songModel);
+        }
+
     }
 }

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebApplication3.Models.Song>
+@{
+    ViewBag.Title = "Child Selector";
+}
+
+<h2>Song</h2>
+<style>
+.b {color:red}
+</style>
+
+<div class="a">
+    <div class="b">
+        Hello
+    </div>
+</div>
+
+
+<div class="c">
+    <div class="b">
+        Hello
+    </div>
+</div>
+<script>
+    $(".a>.b").removeClass("b")
+
+</script>
