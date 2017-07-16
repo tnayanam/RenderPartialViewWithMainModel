@@ -15,7 +15,7 @@ namespace WebApplication3.Controllers
         // GET: Song
         public ActionResult Index()
         {
-            var songModel = _context.Songs.ToList();
+            var songModel = _context.Songs.OrderByDescending(c => c.Name).ToList();
             return View(songModel);
         }
 
