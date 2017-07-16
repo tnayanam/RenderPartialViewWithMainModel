@@ -24,6 +24,7 @@ namespace WebApplication3.Controllers
             // get first and only result using lINQ
             var email = _context.Users.Where(c => c.Id == userId).First().Email;
             ViewBag.userId = userId;
+            TempData["User"] = "This is temp";
             return View();
         }
 
@@ -57,6 +58,11 @@ namespace WebApplication3.Controllers
 
         public ActionResult About()
         {
+            string data;
+            if (TempData["User"] != null)
+            {
+                data = TempData["User"] as string;
+            }
             ViewBag.Message = "Your application description page.";
 
             return View();

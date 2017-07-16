@@ -8,4 +8,13 @@
     <text> Hello World</text>
 }
 
+@*available in second request*@
+@{ 
+    string data;
+    if (TempData["User"] != null)
+    {
+        data = TempData["User"] as string;
+    }
+}
+ 
 <p>Use this area to provide additional information.</p>
