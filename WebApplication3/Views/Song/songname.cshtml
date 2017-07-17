@@ -1,8 +1,28 @@
-﻿@foreach (var x in Model)
+﻿<style>
+   .abc>li:nth-child(odd) {
+    background: red;
+} 
+      .abc>li:nth-child(even) {
+    background: blue;
+} 
+</style>
+@foreach (var x in Model)
 {
     <p class="song">@x.Name</p>
 }
+<ul class="abc">
+    <li>
+        One
+    </li>
+    <li>
+        Two
+    </li>
+    <li>
+        Three
+    </li>
+</ul>
 
 <script>
-     $(".song").prepend("<p> prepend </p>")
+    $(".song").prepend("<p> prepend </p>")
+
 </script>
