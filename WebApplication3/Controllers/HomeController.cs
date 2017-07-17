@@ -69,7 +69,7 @@ namespace WebApplication3.Controllers
             return View();
         }
 
-        [SomeRule]
+        [SomeRule(prop = "one")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -77,6 +77,7 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        [SomeRule(prop = "two")]
         public ActionResult Show(string text)
         {
             ViewBag.Message = text;
