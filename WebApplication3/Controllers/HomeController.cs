@@ -56,6 +56,7 @@ namespace WebApplication3.Controllers
 
         }
 
+        [SomeRule]
         public ActionResult About()
         {
             string data;
@@ -68,6 +69,7 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        [SomeRule]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

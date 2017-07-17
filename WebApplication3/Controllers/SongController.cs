@@ -13,6 +13,7 @@ namespace WebApplication3.Controllers
             _context = new ApplicationDbContext();
         }
         // GET: Song
+        [SomeRule]
         public ActionResult Index()
         {
             var songModel = _context.Songs.OrderByDescending(c => c.Name).ToList();
