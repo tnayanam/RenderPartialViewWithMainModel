@@ -22,9 +22,9 @@ namespace WebApplication3.Controllers
 
 
             // get first and only result using lINQ
-            var email = _context.Users.Where(c => c.Id == userId).First().Email;
-            ViewBag.userId = userId;
-            TempData["User"] = "This is temp";
+            //var email = _context.Users.Where(c => c.Id == userId).First().Email;
+            //ViewBag.userId = userId;
+            //TempData["User"] = "This is temp";
             return View();
         }
 

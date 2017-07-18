@@ -26,5 +26,9 @@
             @Html.DisplayFor(m => m.RateInDollar)
         </dd>
     </dl>
+    <p style="display:none">@Model.test</p>
     <input type="submit" value="Send" />
 </form>
+<script>
+    $("p").show();
+</script>

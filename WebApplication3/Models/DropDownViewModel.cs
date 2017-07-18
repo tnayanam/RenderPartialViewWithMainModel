@@ -12,6 +12,7 @@ namespace WebApplication3.Models
         {
             SongList = new List<SelectListItem>();
             BoolVal = true;
+            test = 2;
         }
 
         public int Id { get; set; }
@@ -37,5 +38,6 @@ namespace WebApplication3.Models
         [Display(Name = "In Dollar")]
         [DataType(DataType.Currency)]
         public int RateInDollar { get; set; }
+        public int test { get; set; }
     }
 }
