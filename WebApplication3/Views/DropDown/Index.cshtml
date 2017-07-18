@@ -12,6 +12,14 @@
 
 <form method="post">
     @Html.DropDownListFor(m => m.Id, Model.SongList, "", new { @class = "form-control" })
+    @*here name = classtest should be the property that should match in the model*@
+    <select id="idtest" name="classtest">
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+    </select>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(m => m.Name)

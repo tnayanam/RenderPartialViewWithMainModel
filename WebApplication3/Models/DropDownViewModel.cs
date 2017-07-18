@@ -39,5 +39,9 @@ namespace WebApplication3.Models
         [DataType(DataType.Currency)]
         public int RateInDollar { get; set; }
         public int test { get; set; }
+
+        public int classtest { get; set; }
+        public int idtest { get; set; }
+
     }
 }
