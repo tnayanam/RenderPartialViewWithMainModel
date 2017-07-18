@@ -32,16 +32,19 @@
 <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-block margin-top-20">Click Me! </a>
 
 <a href="@Url.Action("Create", "Order", new {ApplicationUserId = ViewBag.userId })">&nbsp;&nbsp;Order</a>
+<div id="update"></div>
 
 
-<select id="idselect" name="classselect" onchange="makeajaxcall()">
+<select id="idselect" name="classselect" onchange="addhtmlcontent()">
     <option value="1">One</option>
     <option value="2">Two</option>
 </select>
 <script>
-    function makeajaxcall() {
+    function addhtmlcontent() {
         //get the selected value from the dropdown
-        var idselect = $('#idselect').val()
-        alert(idselect);
+        var idselect = $('#idselect').val();
+        var markup = '';
+        markup = '<h1> This is html content using .html() dynamically.</h1>';
+        $("#update").html(markup);
     }
 </script>
