@@ -42,7 +42,11 @@
     function makeajaxcall()
     {
         //get the selected value from the dropdown
-        var idselect = $('#idselect').val() 
+        var idselect = $('#idselect').val()
+        if (idselect === "undefined")
+        {
+
+        }
         $.ajax({
             type: 'POST',
             url: '/DropDown/hello',

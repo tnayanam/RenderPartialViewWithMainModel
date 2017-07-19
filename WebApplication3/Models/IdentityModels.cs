@@ -26,6 +26,7 @@ namespace WebApplication3.Models
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Song> Songs { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Rain> Rains { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
