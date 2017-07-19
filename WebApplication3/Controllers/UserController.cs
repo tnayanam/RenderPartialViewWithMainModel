@@ -17,6 +17,12 @@ namespace WebApplication3.Controllers
             if (!ModelState.IsValid)
             {
                 ModelState.AddModelError("", "Fix Below Errors.");
+
+                return View();
+            }
+            else if (viewModel.Name.Length < 8)
+            {
+                ModelState.AddModelError("Name", "Name length should be greater than 5");
                 return View();
             }
             else

@@ -19,7 +19,8 @@ namespace WebApplication3.Models
 
         public List<SelectListItem> SongList { get; set; }
 
-        [Display(Name = "First Name")]
+        [Display(Name = "Enter your First Name")]
+        [Required]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
