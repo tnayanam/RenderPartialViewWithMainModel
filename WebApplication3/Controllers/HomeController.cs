@@ -84,4 +84,9 @@ namespace WebApplication3.Controllers
             return PartialView();
         }
     }
+
+    public enum Hello
+    {
+        sim = 1
+    }
 }
