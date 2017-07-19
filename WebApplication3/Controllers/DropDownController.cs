@@ -7,19 +7,26 @@ namespace WebApplication3.Controllers
     public class DropDownController : Controller
     {
         // GET: DropDown
-        public string Index()
+        public ActionResult Index()
         {
-            return typeof(Controller).Assembly.GetName().Version.ToString();
-            //DropDownViewModel dropdown = new DropDownViewModel();
-            //dropdown.SongList.Add(new SelectListItem { Text = "Four", Value = "4" });
-            //dropdown.SongList.Add(new SelectListItem { Text = "Five", Value = "5" });
-            //dropdown.SongList.Add(new SelectListItem { Text = "Six", Value = "6" });
-            //dropdown.SongList.Add(new SelectListItem { Text = "Seven", Value = "7" });
-            //dropdown.FirstName = "Tanuj";
-            //dropdown.LastName = "Nayanam";
-            //dropdown.RateInDollar = 23;
+            //return typeof(Controller).Assembly.GetName().Version.ToString();
+            DropDownViewModel dropdown = new DropDownViewModel();
+            dropdown.SongList.Add(new SelectListItem { Text = "Four", Value = "4" });
+            dropdown.SongList.Add(new SelectListItem { Text = "Five", Value = "5" });
+            dropdown.SongList.Add(new SelectListItem { Text = "Six", Value = "6" });
+            dropdown.SongList.Add(new SelectListItem { Text = "Value as the ENum itself", Value = ENUMS.SIM.ToString() }); // this will send value of string as "SIM"
+            dropdown.SongList.Add(new SelectListItem { Text = "Value as integer of SIM", Value = ((int)ENUMS.SIM).ToString() }); // this will send value of string as "3"
+            dropdown.SongList.Add(new SelectListItem { Text = "Seven", Value = "7" });
+            dropdown.FirstName = "Tanuj";
+            dropdown.LastName = "Nayanam";
+            dropdown.RateInDollar = 23;
 
-            //return View(dropdown);
+            return View(dropdown);
+        }
+
+        public enum ENUMS
+        {
+            SIM = 3
         }
 
         // POST : DropDown
