@@ -14,9 +14,9 @@ namespace WebApplication3.Controllers
         }
 
         // GET: Rain
-        public ActionResult Index()
+        public ActionResult Index(int Id = 2)
         {
-            var rain = _context.Rains.ToList();
+            var rain = _context.Rains.Single(ra => ra.Id == Id);
             return View();
         }
     }
