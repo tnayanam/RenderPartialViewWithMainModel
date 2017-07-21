@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
@@ -18,8 +19,9 @@ namespace WebApplication3.Controllers
         }
         public ActionResult Index()
         {
+            // receiving the value from ajax success 
+            int val = Convert.ToInt32(TempData["Val"]);
             var userId = User.Identity.GetUserId();
-
 
             // get first and only result using lINQ
             //var email = _context.Users.Where(c => c.Id == userId).First().Email;
@@ -60,6 +62,7 @@ namespace WebApplication3.Controllers
         public ActionResult About()
         {
             string data;
+            TempData["Val"] = 2;
             if (TempData["User"] != null)
             {
                 data = TempData["User"] as string;
@@ -67,6 +70,20 @@ namespace WebApplication3.Controllers
             ViewBag.Message = "Your application description page.";
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult About(int id)
+        {
+            string data;
+            TempData["Val"] = 2;
+            if (TempData["User"] != null)
+            {
+                data = TempData["User"] as string;
+            }
+            ViewBag.Message = "Your application description page.";
+
+            return Json(true);
         }
 
         [SomeRule(prop = "one")]

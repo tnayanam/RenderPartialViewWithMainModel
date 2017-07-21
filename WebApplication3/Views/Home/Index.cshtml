@@ -1,4 +1,6 @@
-﻿@{
+﻿@*POINTS: Here we are trying to send data from controller action to aonther controller action but the controller action which is sending data is called via AQJAX request*@
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -53,4 +55,25 @@
         alert(r);
     }
    
+</script>
+
+<button type="button" onclick="makeajaxcall()">Click Me!</button>
+
+<script>
+    function makeajaxcall()
+    {
+        //get the selected value from the dropdown
+        var idselect =2;
+        $.ajax({
+            type: 'POST',
+            url: '/Home/About',
+            data: { id: idselect },
+            success: function (data) {
+                window.location.href = '/Home/Index/';
+            },
+            error: function () {
+                alert("sadfsdf");
+            }
+        });
+    }
 </script>
