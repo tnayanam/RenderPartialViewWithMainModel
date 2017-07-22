@@ -1,0 +1,9 @@
+﻿@model WebApplication3.Models.Company
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.DropDownListFor(m=>m.Parkings, new SelectList(Model.Parkings, "Id", "Name"), "" )
+

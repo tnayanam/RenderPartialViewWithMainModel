@@ -29,6 +29,8 @@ namespace WebApplication3.Models
         public DbSet<Rain> Rains { get; set; }
         public DbSet<Emp> Emps { get; set; }
         public DbSet<Depot> Depots { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Parking> Parkings { get; set; }
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
