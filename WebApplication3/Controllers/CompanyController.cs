@@ -28,5 +28,14 @@ namespace WebApplication3.Controllers
             return viewModel.selectedRadio;
         }
 
+        // GET: DropDown
+        public ActionResult Display()
+        {
+            var viewModel = new Company();
+            viewModel = _context.Companies.Where(c => c.Id == 1).Single();
+
+            return View(viewModel);
+        }
+
     }
 }
