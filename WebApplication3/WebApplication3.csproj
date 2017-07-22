@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201707222226232_kjeji.Designer.cs">
       <DependentUpon>201707222226232_kjeji.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707222255177_sdergd.cs" />
+    <Compile Include="Migrations\201707222255177_sdergd.Designer.cs">
+      <DependentUpon>201707222255177_sdergd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseEnums.cs" />
@@ -370,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707222226232_kjeji.resx">
       <DependentUpon>201707222226232_kjeji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707222255177_sdergd.resx">
+      <DependentUpon>201707222255177_sdergd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

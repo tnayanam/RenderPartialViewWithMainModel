@@ -7,3 +7,13 @@
 
 @Html.DropDownListFor(m=>m.Parkings, new SelectList(Model.Parkings, "Id", "Name"), "" )
 
+@using(@Html.BeginForm())
+{
+    foreach(var parking in Model.Parkings)
+    {
+        @Html.RadioButtonFor(m=>m.selectedRadio, parking.Id) @parking.Name
+    <br />
+    }
+    <input type="submit"   value="Submit" />
+}
+

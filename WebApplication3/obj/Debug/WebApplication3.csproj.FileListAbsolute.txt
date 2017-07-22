@@ -228,15 +228,11 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bi
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdf.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdfk.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.Ads.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.df.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.dfh.resources
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.df1.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sdfgg.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sdfggk.resources
@@ -245,3 +241,7 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.kje.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.kjeede.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.kjeji.resources
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sdergd.resources

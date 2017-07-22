@@ -20,5 +20,11 @@ namespace WebApplication3.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public string Index(Company viewModel)
+        {
+            return viewModel.selectedRadio;
+        }
+
     }
 }

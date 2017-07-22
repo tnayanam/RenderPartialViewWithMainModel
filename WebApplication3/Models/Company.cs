@@ -7,5 +7,6 @@ namespace WebApplication3.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public List<Parking> Parkings { get; set; }
+        public string selectedRadio { get; set; }
     }
 }
