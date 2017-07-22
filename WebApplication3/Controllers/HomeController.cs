@@ -86,8 +86,9 @@ namespace WebApplication3.Controllers
             return Json(true);
         }
 
-        [SomeRule(prop = "one")]
-        public ActionResult Contact()
+        //[SomeRule(prop = "one")]
+        [ActionName("Contact")]
+        public ActionResult Contact_Abcd()
         {
             ViewBag.Message = "Your contact page.";
 
