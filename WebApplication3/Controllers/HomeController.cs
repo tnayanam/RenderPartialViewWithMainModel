@@ -3,7 +3,6 @@ using System;
 using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
-using System.Collections.Generic;
 
 
 
@@ -106,9 +105,20 @@ namespace WebApplication3.Controllers
         public ActionResult shows()
         {
             //one department can have many employees and one employee can only be parrt of one department
-            // below LINQ query fetches the count of employees belonging to each department
-            var x = _context.Employees.Include("Department").ToList();
-            return Content("x");
+            // below LINQ query fetches the count of employees belonging to each department\
+            var x = _context.Employees.Include("Department").GroupBy(e => e.Department.Name).Select(y => new MyViewModel
+            {
+                Department = y.Key,
+                count = y.Count()
+            }).ToList();
+
+            //var x = _context.Employees.Include("Department").ToList().GroupBy(e => e.DepartmentId).Select(y => new MyViewModel { Department = y.First().Department.Name, count = y.Count() });
+
+
+            //_context.Employees.Include("Department").ToList().GroupBy(e => e.DepartmentId)
+
+
+            return View(x);
         }
     }
 

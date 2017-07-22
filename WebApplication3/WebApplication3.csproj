@@ -214,6 +214,7 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MyViewModel.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Rain.cs" />
     <Compile Include="Models\Song.cs" />
@@ -288,6 +289,7 @@
     <Content Include="Views\Home\ListOfAllUser.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Song\ChildSelector.cshtml" />
+    <Content Include="Views\Home\Shows.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
