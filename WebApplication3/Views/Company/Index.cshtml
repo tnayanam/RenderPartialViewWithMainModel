@@ -6,6 +6,8 @@
 <h2>Index</h2>
 
 @Html.DropDownListFor(m=>m.Parkings, new SelectList(Model.Parkings, "Id", "Name"), "" )
+@Html.DisplayNameFor(m => m.date)
+@Html.DisplayFor(m => m.date)
 
 @using(@Html.BeginForm())
 {

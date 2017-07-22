@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
 
@@ -16,6 +17,7 @@ namespace WebApplication3.Controllers
         {
             var viewModel = new Company();
             viewModel.Parkings = _context.Parkings.ToList();
+            viewModel.date = DateTime.Now;
             viewModel.Name = "My Company";
             return View(viewModel);
         }
