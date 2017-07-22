@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
+using System.Collections.Generic;
 
 
 
@@ -100,6 +101,14 @@ namespace WebApplication3.Controllers
         {
             ViewBag.Message = text;
             return PartialView();
+        }
+
+        public ActionResult shows()
+        {
+            //one department can have many employees and one employee can only be parrt of one department
+            // below LINQ query fetches the count of employees belonging to each department
+            var x = _context.Employees.Include("Department").ToList();
+            return Content("x");
         }
     }
 

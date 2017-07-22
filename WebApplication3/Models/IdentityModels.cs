@@ -27,6 +27,9 @@ namespace WebApplication3.Models
         public DbSet<Song> Songs { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Rain> Rains { get; set; }
+
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
