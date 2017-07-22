@@ -77,3 +77,9 @@
         });
     }
 </script>
+
+@using(Html.BeginForm("About","Home"))
+{
+<input type="submit" value="Submit" onclick="return confirm('Are you sure you want to delete?')"/> 
+}
+
