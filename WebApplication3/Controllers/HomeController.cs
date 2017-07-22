@@ -106,7 +106,9 @@ namespace WebApplication3.Controllers
         {
             //one department can have many employees and one employee can only be parrt of one department
             // below LINQ query fetches the count of employees belonging to each department\
-            var x = _context.Employees.Include("Department").GroupBy(e => e.Department.Name).Select(y => new MyViewModel
+            var x = _context.Employees.Include("Department").GroupBy(e => e.Department.Name).ToList();
+            var px = _context.Employees.Include("Department").GroupBy(e => e.Department.Name)
+            .Select(y => new MyViewModel
             {
                 Department = y.Key,
                 count = y.Count()
