@@ -16,7 +16,7 @@ namespace WebApplication3.Controllers
         public ActionResult Index()
         {
             //-------------------------------// source, // value to be submitted, name to display
-            ViewBag.Depots = new SelectList(_context.Depots, "Id", "Name");
+            ViewBag.Depots = new SelectList(_context.Depots, "Id", "Name", "1");
             return View();
         }
     }
