@@ -7,10 +7,12 @@ namespace WebApplication3.Migrations
     {
         public override void Up()
         {
+            AddColumn("dbo.Genres", "Image", c => c.String());
         }
         
         public override void Down()
         {
+            DropColumn("dbo.Genres", "Image");
         }
     }
 }

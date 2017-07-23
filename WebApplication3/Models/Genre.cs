@@ -9,6 +9,7 @@ namespace WebApplication3.Models
         public string Name { get; set; }
         [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime SongDate { get; set; }
+        public string Image { get; set; }
     }
 }
 

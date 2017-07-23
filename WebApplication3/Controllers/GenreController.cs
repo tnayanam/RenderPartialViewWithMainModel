@@ -31,6 +31,12 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        public ActionResult Display(int id)
+        {
+            var x = _context.Genres.Single(g => g.Id == id);
+            return View(x);
+        }
+
         // GET: Genre
         public ActionResult Edit(int id)
         {
