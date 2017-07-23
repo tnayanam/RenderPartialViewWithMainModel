@@ -37,7 +37,7 @@ namespace WebApplication3.Models
         }
 
         [Display(Name = "In Dollar")]
-        [DataType(DataType.Currency)]
+        [DataType(DataType.Currency)] // for currency
         public int RateInDollar { get; set; }
         public int test { get; set; }
 
