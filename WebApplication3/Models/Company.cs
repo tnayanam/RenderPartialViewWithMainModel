@@ -14,5 +14,7 @@ namespace WebApplication3.Models
         public DateTime? date { get; set; }
         [DataType(DataType.EmailAddress)]
         public string EmailAddress { get; set; }
+        [DataType(DataType.Url)]
+        public string Url { get; set; }
     }
 }
