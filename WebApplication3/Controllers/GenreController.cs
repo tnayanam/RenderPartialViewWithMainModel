@@ -18,6 +18,19 @@ namespace WebApplication3.Controllers
             return View(x);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Genre viewModel)
+        {
+            _context.Genres.Add(viewModel);
+            _context.SaveChanges();
+            return View();
+        }
+
         // GET: Genre
         public ActionResult Edit(int id)
         {
