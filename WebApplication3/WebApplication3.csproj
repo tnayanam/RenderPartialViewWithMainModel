@@ -164,6 +164,7 @@
     <Compile Include="Controllers\CourseEnumsController.cs" />
     <Compile Include="Controllers\DropDownController.cs" />
     <Compile Include="Controllers\DepotController.cs" />
+    <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
@@ -245,6 +246,10 @@
     <Compile Include="Migrations\201707230043483_cgrt.cs" />
     <Compile Include="Migrations\201707230043483_cgrt.Designer.cs">
       <DependentUpon>201707230043483_cgrt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707230107007_34df.cs" />
+    <Compile Include="Migrations\201707230107007_34df.Designer.cs">
+      <DependentUpon>201707230107007_34df.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -340,6 +345,8 @@
     <Content Include="Views\Depot\Index.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Company\Display.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
+    <Content Include="Views\Genre\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -406,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707230043483_cgrt.resx">
       <DependentUpon>201707230043483_cgrt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707230107007_34df.resx">
+      <DependentUpon>201707230107007_34df.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

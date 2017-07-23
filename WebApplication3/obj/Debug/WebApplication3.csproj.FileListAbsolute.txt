@@ -250,3 +250,4 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.cd.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.ckd.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.cgrt.resources
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations._34df.resources

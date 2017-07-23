@@ -37,5 +37,15 @@ namespace WebApplication3.Controllers
             return View(viewModel);
         }
 
+        // GET: DropDown
+        public ActionResult Edit()
+        {
+            var viewModel = new Company();
+            viewModel.Parkings = _context.Parkings.ToList();
+            viewModel.date = DateTime.Now;
+            viewModel.Name = "My Company";
+            return View(viewModel);
+        }
+
     }
 }
