@@ -1,4 +1,5 @@
 ﻿@model WebApplication3.Models.Genre
+           @using WebApplication3.CustomHtmlHelpers
 
 @{
     ViewBag.Title = "Display";
@@ -35,7 +36,8 @@
         </dd>
 
         <dd>
-            <img src="@Url.Content(@Model.Image)" alt="image mising" />
+            @*<img src="@Url.Content(@Model.Image)" alt="image mising" />*@
+            @Html.Image(@Model.Image, "alternate text")
         </dd>
 
     </dl>
