@@ -1,7 +1,12 @@
 ﻿@*POINTS: Here we are trying to send data from controller action to aonther controller action but the controller action which is sending data is called via AQJAX request*@
 
+
+@*Actual flow -> from controller Return view() -> )Viewstart.cshtml : it inclued the layout file-> and then the corresponding page in=s rendered.*@
+
 @{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
 }
 
 <script>
