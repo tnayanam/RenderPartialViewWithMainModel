@@ -13,7 +13,7 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
-        </th>
+        </th>%
         <th></th>
     </tr>
 
@@ -22,3 +22,8 @@
 }
 
 </table>
+
+@for(var i =0;i<10;i++)
+{
+    <b>@i</b>
+}
