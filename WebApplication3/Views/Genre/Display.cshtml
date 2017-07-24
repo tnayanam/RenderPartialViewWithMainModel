@@ -38,7 +38,7 @@
             @*<img src="@Url.Content(@Model.Image)" alt="image mising" />*@
             @* Now below tag is returning as string, hence it will not be understood as HTML element and will be rendeed just as a string *@
             @*@Html.Image(@Model.Image, "alternate text")*@
-            @Html.Image(@Model.Image, "alternate text")
+            @Html.Raw(Html.Image(@Model.Image, "alternate text"))
         </dd>
 
     </dl>
