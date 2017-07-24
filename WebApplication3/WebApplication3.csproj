@@ -404,6 +404,7 @@
     <Content Include="Views\Genre\Create.cshtml" />
     <Content Include="Views\Genre\Display.cshtml" />
     <Content Include="Views\Genre\_AllGenre.cshtml" />
+    <Content Include="Views\Shared\_Temp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
