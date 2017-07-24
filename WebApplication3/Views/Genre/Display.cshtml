@@ -36,6 +36,8 @@
 
         <dd>
             @*<img src="@Url.Content(@Model.Image)" alt="image mising" />*@
+            @* Now below tag is returning as string, hence it will not be understood as HTML element and will be rendeed just as a string *@
+            @*@Html.Image(@Model.Image, "alternate text")*@
             @Html.Image(@Model.Image, "alternate text")
         </dd>
 
@@ -45,3 +47,7 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+
+
+@*When a normal tag/html helper gets rendered by Razor view, it understands the HTML properly and thus renders it. and thus DOES NOT Html Encode anything. However if a normal string comes which has html character then it will be HTML encoded by the Raxorview. It means that if we pass a string as <hello>  it will be printed as <hello> as razor will not treat is as HTML Character. That means if we make any model propety to return a div tag as html string.for example @Model.abc = "<div> tanuj</div>". When it comes to the Razor view. It sees the string prop type and this renders it as "<div>tanuj</div> It does not understand that it is an HTML tag.*@ 
