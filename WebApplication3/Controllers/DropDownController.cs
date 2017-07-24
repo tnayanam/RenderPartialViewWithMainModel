@@ -62,5 +62,14 @@ namespace WebApplication3.Controllers
             var d = Json(l1);
             return Json(l1);
         }
+
+
+
+
+        [HttpPost]
+        public JsonResult gethiddenvalue(bool boolVal)
+        {
+            return Json("df");
+        }
     }
 }

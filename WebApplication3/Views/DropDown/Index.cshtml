@@ -17,6 +17,7 @@
         <option value="1">One</option>
         <option value="2">Two</option>
         </select>
+    @Html.HiddenFor(m=>m.BoolVal)
         <select id="idtest" name="classtest"></select>
         <dl class="dl-horizontal">
             <dt>
@@ -34,6 +35,7 @@
         </dl>
         <p style="display:none">@Model.test</p>
         <input type="submit" value="Send" />
+    <button id="btn" onclick="sendhiddenfieldtobackend()">click and send hidden field data to backend</button>
 </form>
 <script>
     $("p").show();
@@ -67,3 +69,28 @@
         });
     }
 </script>
+
+<script>
+    $('input:hidden[name=BoolVal]').val(true);
+</script>
+
+<script>
+    function sendhiddenfieldtobackend() {
+        //get the selected value from the dropdown
+        var boolVal = $('#BoolVal').val()
+        $.ajax({
+            type: 'POST',
+            url: '/DropDown/gethiddenvalue',
+            data: { boolVal: boolVal },
+            success: function (data) {
+                alert("success");
+            },
+            error: function () {
+                alert("sadfsdf");
+            }
+        });
+    }
+</script>
+
+
+

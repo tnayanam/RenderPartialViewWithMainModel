@@ -11,7 +11,7 @@ namespace WebApplication3.Models
         public DropDownViewModel()
         {
             SongList = new List<SelectListItem>();
-            BoolVal = true;
+            BoolVal = false;
             test = 2;
         }
 
