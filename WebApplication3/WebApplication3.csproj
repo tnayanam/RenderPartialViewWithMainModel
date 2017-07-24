@@ -403,6 +403,7 @@
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Create.cshtml" />
     <Content Include="Views\Genre\Display.cshtml" />
+    <Content Include="Views\Genre\_AllGenre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
