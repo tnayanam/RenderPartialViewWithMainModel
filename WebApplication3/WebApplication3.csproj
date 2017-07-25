@@ -168,6 +168,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ParkingController.cs" />
     <Compile Include="Controllers\RainController.cs" />
     <Compile Include="Controllers\SomeRule.cs" />
     <Compile Include="Controllers\SongController.cs" />
@@ -259,6 +260,10 @@
     <Compile Include="Migrations\201707231711341_bgdf.cs" />
     <Compile Include="Migrations\201707231711341_bgdf.Designer.cs">
       <DependentUpon>201707231711341_bgdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707250146036_acr.cs" />
+    <Compile Include="Migrations\201707250146036_acr.Designer.cs">
+      <DependentUpon>201707250146036_acr.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -406,6 +411,7 @@
     <Content Include="Views\Genre\_AllGenre.cshtml" />
     <Content Include="Views\Shared\_Temp.cshtml" />
     <Content Include="Views\Home\_TempPartialView.cshtml" />
+    <Content Include="Views\Parking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -481,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707231711341_bgdf.resx">
       <DependentUpon>201707231711341_bgdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707250146036_acr.resx">
+      <DependentUpon>201707250146036_acr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
