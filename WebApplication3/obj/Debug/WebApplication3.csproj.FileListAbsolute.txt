@@ -197,6 +197,8 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bi
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\Newtonsoft.Json.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\Owin.dll
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\PagedList.dll
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\PagedList.Mvc.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Helpers.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Mvc.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Optimization.dll
@@ -205,6 +207,8 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bi
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.WebPages.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.WebPages.Razor.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\WebGrease.dll
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\PagedList.xml
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\PagedList.Mvc.xml
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Helpers.xml
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Mvc.xml
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Optimization.xml
@@ -241,9 +245,6 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.kje.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.kjeede.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.kjeji.resources
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sdergd.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sdergdkl.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.cd.resources
@@ -252,5 +253,7 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations._34df.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.bg.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.bgdf.resources
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.acr.resources
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb

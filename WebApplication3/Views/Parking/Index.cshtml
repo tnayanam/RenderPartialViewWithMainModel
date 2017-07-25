@@ -1,4 +1,8 @@
-﻿@model IEnumerable<WebApplication3.Models.Parking>
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<WebApplication3.Models.Parking>
+
 
 @{
     ViewBag.Title = "Index";
@@ -18,10 +22,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.First().Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Location)
+            @Html.DisplayNameFor(model => model.First().Location)
         </th>
         <th></th>
     </tr>
@@ -39,3 +43,10 @@
     }
 
 </table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new
+{
+    page,
+    searchBy = Request.QueryString["searchBy"],
+    search = Request.QueryString["search"]
+}),
+    new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true})

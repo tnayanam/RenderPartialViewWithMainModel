@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using PagedList;
+using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
 
@@ -13,24 +14,22 @@ namespace WebApplication3.Controllers
             _context = new ApplicationDbContext();
         }
         // GET: Parking
-        public ActionResult Index(string searchBy, string search)
+        public ActionResult Index(string searchBy, string search, int? page)
         {
             if (searchBy == "Name")
             {
-                return View(_context.Parkings.Where(p => p.Name.StartsWith(search)).ToList());
+                return View(_context.Parkings.Where(p => p.Name.StartsWith(search)).ToList().ToPagedList(page ?? 1, 2));
 
             }
             else if (searchBy == "Location")
             {
-                return View(_context.Parkings.Where(p => p.Location.StartsWith(search)).ToList());
+                return View(_context.Parkings.Where(p => p.Location.StartsWith(search)).ToList().ToPagedList(page ?? 1, 2));
 
             }
             else
             {
-                return View(_context.Parkings);
+                return View(_context.Parkings.ToList().ToPagedList(page ?? 1, 2)); ;
             }
-
-            return View();
         }
     }
 }
