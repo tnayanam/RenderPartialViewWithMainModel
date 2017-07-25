@@ -22,7 +22,12 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.First().Name)
+            @Html.ActionLink("Name", "Index", new
+       {
+           sortBy = ViewBag.SortNameParameter,
+           searchBy = Request.QueryString["searchBy"],
+           search = Request["search"]
+       })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.First().Location)
@@ -47,6 +52,7 @@
 {
     page,
     searchBy = Request.QueryString["searchBy"],
-    search = Request.QueryString["search"]
+    search = Request.QueryString["search"],
+    sortBy = Request["sortBy"]
 }),
     new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true})

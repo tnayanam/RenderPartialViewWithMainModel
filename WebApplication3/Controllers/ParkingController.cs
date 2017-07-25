@@ -14,22 +14,37 @@ namespace WebApplication3.Controllers
             _context = new ApplicationDbContext();
         }
         // GET: Parking
-        public ActionResult Index(string searchBy, string search, int? page)
+        public ActionResult Index(string searchBy, string search, int? page, string sortBy)
         {
+            ViewBag.SortNameParameter = string.IsNullOrEmpty(sortBy) ? "Name desc" : "";
+
+            var parkings = _context.Parkings.AsQueryable();
+
             if (searchBy == "Name")
             {
-                return View(_context.Parkings.Where(p => p.Name.StartsWith(search)).ToList().ToPagedList(page ?? 1, 2));
-
+                parkings = _context.Parkings.Where(p => p.Name.StartsWith(search));
             }
             else if (searchBy == "Location")
             {
-                return View(_context.Parkings.Where(p => p.Location.StartsWith(search)).ToList().ToPagedList(page ?? 1, 2));
+                parkings = _context.Parkings.Where(p => p.Location.StartsWith(search));
 
             }
             else
             {
-                return View(_context.Parkings.ToList().ToPagedList(page ?? 1, 2)); ;
+                parkings = _context.Parkings;
             }
+
+            switch (sortBy)
+            {
+                case "Name desc":
+                    parkings = parkings.OrderByDescending(x => x.Name);
+                    break;
+                default:
+                    parkings = parkings.OrderBy(x => x.Name);
+                    break;
+
+            }
+            return View(parkings.ToPagedList(page ?? 1, 3));
         }
     }
 }
