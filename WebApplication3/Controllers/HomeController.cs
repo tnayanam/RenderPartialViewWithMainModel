@@ -95,6 +95,12 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+
+        public PartialViewResult Hell()
+        {
+            return PartialView("_TempPartialView"); // second argument can be passed as data or model if required.
+        }
+
         [SomeRule(prop = "two")]
         public ActionResult Show(string text)
         {
