@@ -56,3 +56,18 @@
     sortBy = Request["sortBy"]
 }),
     new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true})
+
+<input id="test" type="email" value="test"/> 
+
+@*input - tag,element*@
+@* id, type, value == are the attributes, they come in name value pairs *@
+@*  *@
+
+
+@*difference between attribute and property:
+    .prop() method should be used for boolean attributes/properties and for properties which do not exist in html (such as window.location).
+    All other attributes (ones you can see in the html) can and should continue to be manipulated with the .attr() method.
+        A property is the current state of the input element. An attribute is the default value.
+
+*@
+
