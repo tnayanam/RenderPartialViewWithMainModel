@@ -6,9 +6,13 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
 
 </head>
 @Scripts.Render("~/bundles/jquery")
+
+window.jQuery()
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -59,4 +63,9 @@
         });
     });
 
+</script>
+
+
+<script>
+    window.jQuery || document.write('<script src="locastion of loca jquery file">\x3C/script>')
 </script>
