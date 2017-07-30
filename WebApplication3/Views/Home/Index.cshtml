@@ -18,6 +18,8 @@
 <script>
     var r =  @((int)WebApplication3.Controllers.Hello.sim)
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"></script>
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
@@ -91,3 +93,19 @@
 </script>
 
 <img src="~/Content/themes/base/images/logo.png" />
+<button class="example2">pop up</button>
+
+<script>
+    $('.example2').on('click', function () {
+        $.confirm({
+            title: 'DRAFT DELETION',
+            content: 'Are you sure you want to delete Draf',
+            buttons: {
+                confirm: function () {
+                },
+                cancel: function () {
+                }
+            }
+        });
+    });
+</script>
