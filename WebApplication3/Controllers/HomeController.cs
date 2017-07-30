@@ -128,10 +128,17 @@ namespace WebApplication3.Controllers
 
             return View(x);
         }
+
+        public JsonResult GetAjax(int dataInt, string dataString)
+        {
+            return Json("asdf", JsonRequestBehavior.AllowGet);
+        }
     }
 
     public enum Hello
     {
         sim = 1
     }
+
+
 }

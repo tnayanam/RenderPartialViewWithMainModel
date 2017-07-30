@@ -102,6 +102,21 @@
             content: 'Are you sure you want to delete Draf',
             buttons: {
                 confirm: function () {
+
+                    $.ajax({
+                        url: "/Home/GetAjax",
+                        data:{dataInt: 2, dataString: "hello"},
+                        contentType: "application/json; charset=utf-8",
+                        success:function(data)
+                        {
+
+                        },
+                        error:function()
+                        {
+
+                        }
+
+                    });
                 },
                 cancel: function () {
                 }
@@ -109,3 +124,7 @@
         });
     });
 </script>
+
+
+
+
