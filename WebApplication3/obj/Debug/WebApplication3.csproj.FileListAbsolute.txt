@@ -257,4 +257,3 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
-C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
