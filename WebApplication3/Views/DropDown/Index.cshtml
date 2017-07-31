@@ -71,7 +71,11 @@
 </script>
 
 <script>
+  
     $('input:hidden[name=BoolVal]').val(true);
+    // suppose we want to access any model property we can directly access as  @@Model.BoolVal
+    // but if you want to alter any of the property then you cannot do soemthing like @@Model.BoolVal ==true as during runtime the @@Model is not presernt in javascript code
+    //// in order to alter any of the model property you need to bind it to any UI elelent and then you can alter it. just like   $('input:hidden[name=BoolVal]').val(true);
 </script>
 
 <script>
@@ -91,6 +95,7 @@
         });
     }
 </script>
+
 
 
 
