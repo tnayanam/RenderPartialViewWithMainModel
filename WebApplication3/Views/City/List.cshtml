@@ -14,7 +14,7 @@
     <table class="table">
         <tr>
             <th>
-                checkbox
+                <input type="checkbox" id="checkAll"/>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CityName)
@@ -48,5 +48,23 @@
 <script>
     $(".fooq").click(function () {
         alert("class selector");
+    });
+</script>
+
+<a href="#one">One</a>
+<a href="#two">Two</a>
+<a href="#three">Three</a>
+<a href="#four">Four</a>
+<a href="#five">Five</a>
+@* select an element based on jquery attribute selector. *@
+<script>
+    $("a[href='#two']").click(function () {
+        alert("jquery atribute selector");
+    });
+</script>
+
+<script>
+    $("#checkAll").click(function () {
+        $("input[type='checkbox']").prop("checked", this.checked);
     });
 </script>
