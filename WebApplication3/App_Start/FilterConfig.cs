@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace WebApplication3
 {
@@ -7,6 +6,7 @@ namespace WebApplication3
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            // what ever added here is added to the entire controller. so error attribute has been added as a whole to all the controller actions.
             filters.Add(new HandleErrorAttribute());
         }
     }

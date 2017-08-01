@@ -21,6 +21,7 @@ namespace WebApplication3.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
+            throw new Exception("Code no handled");
             // receiving the value from ajax success 
             int val = Convert.ToInt32(TempData["Val"]);
             var userId = User.Identity.GetUserId();
