@@ -32,7 +32,7 @@ namespace WebApplication3.Controllers
             var r = _context.Cities.Where(c => listOfCityIdToDelete.Contains(c.Id)).ToList();
             _context.Cities.RemoveRange(r);
             _context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
     }
