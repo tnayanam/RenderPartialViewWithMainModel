@@ -53,6 +53,7 @@ namespace WebApplication3.Controllers
             return View("Details", f);
         }
 
+        [NonAction]
         public ActionResult ListOfAllUser()
         {
 
