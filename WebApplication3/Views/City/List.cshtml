@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebApplication3.Models.City>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Delete", "City", FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <th>
+                checkbox
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="listOfCityIdToDelete" id="listOfCityIdToDelete" value="@item.Id">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <input type="submit" value="Submit" />
+
+}
