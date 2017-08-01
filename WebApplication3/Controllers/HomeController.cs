@@ -18,7 +18,7 @@ namespace WebApplication3.Controllers
             _context = new ApplicationDbContext();
         }
 
-        [Authorize]
+        [AllowAnonymous]
         public ActionResult Index()
         {
             // receiving the value from ajax success 
