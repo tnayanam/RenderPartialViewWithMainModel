@@ -173,6 +173,7 @@
     <Compile Include="Controllers\CourseEnumsController.cs" />
     <Compile Include="Controllers\DropDownController.cs" />
     <Compile Include="Controllers\DepotController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -429,9 +430,11 @@
     <Content Include="Views\Home\_TempPartialView.cshtml" />
     <Content Include="Views\Parking\Index.cshtml" />
     <Content Include="Views\City\List.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
     <Folder Include="Views\Rain\" />
   </ItemGroup>
   <ItemGroup>
