@@ -17,6 +17,8 @@ namespace WebApplication3.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
+
         public ActionResult Index()
         {
             // receiving the value from ajax success 
@@ -30,6 +32,7 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        [ActionName("List")]
         public ActionResult Details()
         {
             var userId = User.Identity.GetUserId();
