@@ -83,13 +83,15 @@
 
 <script>
     $("#btn-submit").click(function () {
-        if( $("input[name='listOfCityIdToDelete']:checked").length == 0 )
-        {
-            var count = $("input[name='listOfCityIdToDelete']").length;
+            var count = $("input[name='listOfCityIdToDelete']:checked").length;
+            debugger;
             if (count == 0) {
                 alert("No rows selected tp delete");
                 return false; // this is important. if it returns false it does not allow form to get submitted.
             }
-
+            else {
+                debugger;
+                return confirm(count + 'rows will be deleted.');
+            }
     });
 </script>
