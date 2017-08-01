@@ -39,7 +39,7 @@ namespace WebApplication3.Controllers
 
             // find an entry directly based on the id from DBSET
             var f = _context.Users.Find(userId);
-            return View(f);
+            return View("Details", f);
         }
 
         public ActionResult DetailsForAdmin(string id)
