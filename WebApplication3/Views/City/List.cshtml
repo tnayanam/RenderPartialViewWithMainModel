@@ -14,7 +14,7 @@
     <table class="table">
         <tr>
             <th>
-                <input type="checkbox" id="checkAll"/>
+                <input type="checkbox" name ="checkAll" id="checkAll"/>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CityName)
@@ -65,6 +65,18 @@
 
 <script>
     $("#checkAll").click(function () {
-        $("input[type='checkbox']").prop("checked", this.checked);
+        $("input[name='listOfCityIdToDelete']").prop("checked", this.checked);
+    });
+</script>
+
+<script>
+    $("input[name='listOfCityIdToDelete']").click(function () {
+        if ($("input[name='listOfCityIdToDelete']").length == $("input[name='listOfCityIdToDelete']:checked").length)
+        {
+            $("input[name='checkAll']").prop("checked", "checked");
+        }
+        else {
+            $("#checkAll").removeAttr("checked");
+        }
     });
 </script>
