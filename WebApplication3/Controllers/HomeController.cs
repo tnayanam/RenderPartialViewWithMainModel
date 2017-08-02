@@ -79,6 +79,7 @@ namespace WebApplication3.Controllers
         }
 
         [HttpPost]
+        [RequireHttps]
         public ActionResult About(int id)
         {
             string data;
