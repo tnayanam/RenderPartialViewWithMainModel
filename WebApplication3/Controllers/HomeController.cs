@@ -18,6 +18,18 @@ namespace WebApplication3.Controllers
             _context = new ApplicationDbContext();
         }
 
+        public ActionResult Htmlcontent()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Htmlcontent(string Comments)
+        {
+            return View();
+        }
+
         [AllowAnonymous]
         public ActionResult Index()
         {
