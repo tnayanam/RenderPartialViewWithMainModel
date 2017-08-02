@@ -34,6 +34,7 @@ namespace WebApplication3.Controllers
         }
 
         [ActionName("List")]
+        [OutputCache(Duration = 10800, VaryByParam = "*")]
         public ActionResult Details()
         {
             var userId = User.Identity.GetUserId();
@@ -144,6 +145,5 @@ namespace WebApplication3.Controllers
     {
         sim = 1
     }
-
 
 }
