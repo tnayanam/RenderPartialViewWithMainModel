@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
 
 namespace WebApplication3.Models
 {
@@ -9,7 +8,7 @@ namespace WebApplication3.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        [Remote("IsAgeUnique", "Form", ErrorMessage = "Age is not unique")]
+        //[Remote("IsAgeUnique", "Form", ErrorMessage = "Age is not unique")]
         public int age { get; set; }
     }
 }
