@@ -45,6 +45,8 @@ namespace WebApplication3.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<WebApplication3.Models.Form> Forms { get; set; }
+
         //public System.Data.Entity.DbSet<WebApplication3.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
