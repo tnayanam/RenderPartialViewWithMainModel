@@ -19,6 +19,18 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+
+        // GET: Form
+        [HttpPost]
+        public ActionResult Create(Form form)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View();
+        }
+
         public JsonResult IsAgeUnique(int age)
         {
             var r = true;
