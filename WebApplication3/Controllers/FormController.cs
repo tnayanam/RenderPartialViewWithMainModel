@@ -34,6 +34,8 @@ namespace WebApplication3.Controllers
         public JsonResult IsAgeUnique(int age)
         {
             var r = true;
+
+            // LINQ to check if record exists for a articualr ID
             if (_context.Forms.Any(f => f.age == age))
             {
                 r = false;
