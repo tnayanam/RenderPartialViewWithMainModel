@@ -1,57 +1,42 @@
-﻿@{
-    ViewBag.Title = "PartialViewContainer";
-}
+﻿@model IEnumerable<WebApplication3.Models.Student>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
 <script>
-    function ClearResult(){
-        $("#divStudents").empty();
-    }
-    function CountRows(){
-       //alert( ($("#studentstable tr").length -1) + 'rows retrieved');
-    }
-
-    //function CancelCall() {
-    //    if(1==2)
-    //     return true; 
-    //    else {
-    //        alert("fa");
-    //        return false;
-    //    }
+    $(function () {
+        $("#txtSearch").autocomplete({
+            source: '@Url.Action("GetStudents")'
+        });
+    });
 </script>
-<div style="font-family: Arial">
-    <h2>Students</h2>
+@using(@Html.BeginForm())
+{
+    <b>Name</b>
+    @Html.TextBox("searchTerm", null, new { id = "txtSearch" })
+    <input type="submit" value="Search"/>
+    
+}
+<table class="table" id="studentstable" style="border: 1px solid black; background-color: silver">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+    </tr>
 
-    @Ajax.ActionLink("All", "All", new AjaxOptions
-       {
-           HttpMethod = "GET",
-           UpdateTargetId = "divStudents",
-           InsertionMode = InsertionMode.Replace,
-           LoadingElementId = "divLoading",
-           OnBegin = "ClearResult",
-           OnSuccess = "CountRows",
-           LoadingElementDuration = 1000
-       })
-    <span style="color:Blue">|</span>
-    @Ajax.ActionLink("Top3", "Top3", new AjaxOptions
-       {
-           HttpMethod = "GET",
-           UpdateTargetId = "divStudents",
-           LoadingElementId = "divloading",
-           InsertionMode = InsertionMode.Replace,
-           OnBegin = "ClearResult",
-           OnSuccess = "CountRows"
-       })
-    <span style="color:Blue">|</span>
-    @Ajax.ActionLink("Bottom", "Bottom3", new AjaxOptions
-       {
-           HttpMethod = "GET",
-           UpdateTargetId = "divStudents",
-           InsertionMode = InsertionMode.Replace,
-           LoadingElementId = "divloading",
-           OnBegin = "ClearResult",
-           OnSuccess = "CountRows"
-       })
-    <div id="divLoading" style="display:none">
-        <img src="~/Content/themes/base/images/spinner.gif" />
-    </div>
-    <div id="divStudents"></div>
-</div>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+        </tr>
+    }
+</table>

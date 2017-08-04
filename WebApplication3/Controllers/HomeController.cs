@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
@@ -50,9 +51,34 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        public JsonResult GetStudents(string term)
+        {
+            List<string> students;
+            students = _context.Students.Where(s => s.Name.StartsWith(term))
+                .Select(y => y.Name).ToList();
+
+            return Json(students, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult PartialViewContainer()
         {
-            return View();
+            var students = _context.Students.ToList();
+            return View(students);
+        }
+
+        [HttpPost]
+        public ActionResult PartialViewContainer(string searchTerm)
+        {
+            List<Student> students;
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                students = _context.Students.ToList();
+            }
+            else
+            {
+                students = _context.Students.Where(s => s.Name.StartsWith(searchTerm)).ToList();
+            }
+            return View(students);
         }
 
         [AllowAnonymous]
