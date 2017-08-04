@@ -37,6 +37,7 @@ namespace WebApplication3.Controllers
 
         public PartialViewResult Bottom3()
         {
+            // get top three or bottom three LINQ Queries for that
             var students = _context.Students.OrderBy(s => s.Age).Take(3);
             return PartialView("_Student", students);
         }
