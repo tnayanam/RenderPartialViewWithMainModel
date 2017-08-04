@@ -5,6 +5,15 @@
     function ClearResult(){
         $("#divStudents").empty();
     }
+
+    function CancelCall() {
+        if(1==2)
+         return true; 
+        else {
+            alert("Action will not be invoked.");
+            return false;
+        }
+    }
 </script>
 <div style="font-family: Arial">
     <h2>Students</h2>
@@ -14,7 +23,7 @@
            UpdateTargetId = "divStudents",
            InsertionMode = InsertionMode.Replace,
            LoadingElementId = "divLoading",
-           OnBegin="ClearResult"
+           OnBegin = "CancelCall"
        })
     <span style="color:Blue">|</span>
     @Ajax.ActionLink("Top3", "Top3", new AjaxOptions
@@ -23,7 +32,7 @@
            UpdateTargetId = "divStudents",
            LoadingElementId = "divloading",
            InsertionMode = InsertionMode.Replace,
-           OnBegin = "ClearResult"
+           OnBegin = "CancelCall"
        })
     <span style="color:Blue">|</span>
     @Ajax.ActionLink("Bottom", "Bottom3", new AjaxOptions
@@ -32,7 +41,7 @@
            UpdateTargetId = "divStudents",
            InsertionMode = InsertionMode.Replace,
            LoadingElementId = "divloading",
-           OnBegin = "ClearResult"
+           OnBegin = "CancelCall"
        })
     <div id="divLoading" style="display:none">
         <img src="~/Content/themes/base/images/spinner.gif" />
