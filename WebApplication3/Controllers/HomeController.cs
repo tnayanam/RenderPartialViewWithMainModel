@@ -25,6 +25,7 @@ namespace WebApplication3.Controllers
 
         public PartialViewResult All()
         {
+            System.Threading.Thread.Sleep(4000);
             var students = _context.Students.ToList();
             return PartialView("_Student", students);
         }
