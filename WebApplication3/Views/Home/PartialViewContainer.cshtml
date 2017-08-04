@@ -6,7 +6,7 @@
         $("#divStudents").empty();
     }
     function CountRows(){
-       alert( ($("#studentstable tr").length -1) + 'rows retrieved');
+       //alert( ($("#studentstable tr").length -1) + 'rows retrieved');
     }
 
     //function CancelCall() {
@@ -27,7 +27,8 @@
            InsertionMode = InsertionMode.Replace,
            LoadingElementId = "divLoading",
            OnBegin = "ClearResult",
-           OnSuccess = "CountRows"
+           OnSuccess = "CountRows",
+           LoadingElementDuration = 1000
        })
     <span style="color:Blue">|</span>
     @Ajax.ActionLink("Top3", "Top3", new AjaxOptions
