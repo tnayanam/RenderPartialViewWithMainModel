@@ -5,25 +5,29 @@
     function ClearResult(){
         $("#divStudents").empty();
     }
-
-    function CancelCall() {
-        if(1==2)
-         return true; 
-        else {
-            alert("Action will not be invoked.");
-            return false;
-        }
+    function CountRows(){
+       alert( ($("#studentstable tr").length -1) + 'rows retrieved');
     }
+
+    //function CancelCall() {
+    //    if(1==2)
+    //     return true; 
+    //    else {
+    //        alert("fa");
+    //        return false;
+    //    }
 </script>
 <div style="font-family: Arial">
     <h2>Students</h2>
+
     @Ajax.ActionLink("All", "All", new AjaxOptions
        {
            HttpMethod = "GET",
            UpdateTargetId = "divStudents",
            InsertionMode = InsertionMode.Replace,
            LoadingElementId = "divLoading",
-           OnBegin = "CancelCall"
+           OnBegin = "ClearResult",
+           OnSuccess = "CountRows"
        })
     <span style="color:Blue">|</span>
     @Ajax.ActionLink("Top3", "Top3", new AjaxOptions
@@ -32,7 +36,8 @@
            UpdateTargetId = "divStudents",
            LoadingElementId = "divloading",
            InsertionMode = InsertionMode.Replace,
-           OnBegin = "CancelCall"
+           OnBegin = "ClearResult",
+           OnSuccess = "CountRows"
        })
     <span style="color:Blue">|</span>
     @Ajax.ActionLink("Bottom", "Bottom3", new AjaxOptions
@@ -41,7 +46,8 @@
            UpdateTargetId = "divStudents",
            InsertionMode = InsertionMode.Replace,
            LoadingElementId = "divloading",
-           OnBegin = "CancelCall"
+           OnBegin = "ClearResult",
+           OnSuccess = "CountRows"
        })
     <div id="divLoading" style="display:none">
         <img src="~/Content/themes/base/images/spinner.gif" />
