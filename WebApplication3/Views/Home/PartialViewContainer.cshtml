@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "PartialViewContainer";
+}
+<div style="font-family: Arial">
+            <h2>Students</h2>
+            @Ajax.ActionLink("All", "All", new AjaxOptions{
+                HttpMethod = "GET",
+                UpdateTargetId = "divStudents",
+                InsertionMode = InsertionMode.Replace
+            })
+            <span style="color:Blue">|</span>
+            @Ajax.ActionLink("Top3", "Top3", new AjaxOptions{
+            HttpMethod = "GET",
+            UpdateTargetId = "divStudents",
+            InsertionMode = InsertionMode.Replace
+        })
+            <span style="color:Blue">|</span>
+            @Ajax.ActionLink("Bottom", "Bottom3", new AjaxOptions{
+            HttpMethod = "GET",
+            UpdateTargetId = "divStudents",
+            InsertionMode = InsertionMode.Replace
+        })
+  <div id="divStudents"></div>
+</div>

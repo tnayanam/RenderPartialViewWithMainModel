@@ -23,9 +23,32 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        public PartialViewResult All()
+        {
+            var students = _context.Students.ToList();
+            return PartialView("_Student", students);
+        }
+
+        public PartialViewResult Top3()
+        {
+            var students = _context.Students.OrderByDescending(s => s.Age).Take(3);
+            return PartialView("_Student", students);
+        }
+
+        public PartialViewResult Bottom3()
+        {
+            var students = _context.Students.OrderBy(s => s.Age).Take(3);
+            return PartialView("_Student", students);
+        }
+
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult Htmlcontent(string Comments)
+        {
+            return View();
+        }
+
+        public ActionResult PartialViewContainer()
         {
             return View();
         }

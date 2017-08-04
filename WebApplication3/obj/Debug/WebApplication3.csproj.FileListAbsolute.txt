@@ -262,3 +262,4 @@ C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.wer.resources
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache
 C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.wer1.resources
+C:\Users\Dev10\Desktop\VS\Git2\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.fgfse.resources
