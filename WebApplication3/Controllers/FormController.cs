@@ -19,7 +19,6 @@ namespace WebApplication3.Controllers
             return View();
         }
 
-
         // GET: Form
         [HttpPost]
         public ActionResult Create(Form form)

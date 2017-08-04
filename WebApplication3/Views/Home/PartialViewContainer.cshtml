@@ -1,31 +1,41 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "PartialViewContainer";
 }
+<script>
+    function ClearResult(){
+        $("#divStudents").empty();
+    }
+</script>
 <div style="font-family: Arial">
-            <h2>Students</h2>
-            @Ajax.ActionLink("All", "All", new AjaxOptions{
-                HttpMethod = "GET",
-                UpdateTargetId = "divStudents",
-                InsertionMode = InsertionMode.Replace,
-                LoadingElementId = "divLoading"
-            })
-            <span style="color:Blue">|</span>
-            @Ajax.ActionLink("Top3", "Top3", new AjaxOptions{
-            HttpMethod = "GET",
-            UpdateTargetId = "divStudents",
-                LoadingElementId = "divloading",
-            InsertionMode = InsertionMode.Replace
-        })
-            <span style="color:Blue">|</span>
-            @Ajax.ActionLink("Bottom", "Bottom3", new AjaxOptions{
-            HttpMethod = "GET",
-            UpdateTargetId = "divStudents",
-            InsertionMode = InsertionMode.Replace,
-                LoadingElementId = "divloading"
-        })
+    <h2>Students</h2>
+    @Ajax.ActionLink("All", "All", new AjaxOptions
+       {
+           HttpMethod = "GET",
+           UpdateTargetId = "divStudents",
+           InsertionMode = InsertionMode.Replace,
+           LoadingElementId = "divLoading",
+           OnBegin="ClearResult"
+       })
+    <span style="color:Blue">|</span>
+    @Ajax.ActionLink("Top3", "Top3", new AjaxOptions
+       {
+           HttpMethod = "GET",
+           UpdateTargetId = "divStudents",
+           LoadingElementId = "divloading",
+           InsertionMode = InsertionMode.Replace,
+           OnBegin = "ClearResult"
+       })
+    <span style="color:Blue">|</span>
+    @Ajax.ActionLink("Bottom", "Bottom3", new AjaxOptions
+       {
+           HttpMethod = "GET",
+           UpdateTargetId = "divStudents",
+           InsertionMode = InsertionMode.Replace,
+           LoadingElementId = "divloading",
+           OnBegin = "ClearResult"
+       })
     <div id="divLoading" style="display:none">
         <img src="~/Content/themes/base/images/spinner.gif" />
     </div>
-  <div id="divStudents"></div>
+    <div id="divStudents"></div>
 </div>
