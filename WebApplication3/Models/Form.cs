@@ -10,5 +10,7 @@ namespace WebApplication3.Models
         [Required]
         //[Remote("IsAgeUnique", "Form", ErrorMessage = "Age is not unique")]
         public int age { get; set; }
+        [Display(Name = "Amount Owed")]
+        public decimal amount { get; set; }
     }
 }

@@ -185,6 +185,7 @@
     <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CustomHtmlHelpers\CustomHtmlHelpers.cs" />
+    <Compile Include="Extension\Helper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -295,6 +296,14 @@
     <Compile Include="Migrations\201708041301037_fgfse.cs" />
     <Compile Include="Migrations\201708041301037_fgfse.Designer.cs">
       <DependentUpon>201708041301037_fgfse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708042030205_update field.cs" />
+    <Compile Include="Migrations\201708042030205_update field.Designer.cs">
+      <DependentUpon>201708042030205_update field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708042032472_fg.cs" />
+    <Compile Include="Migrations\201708042032472_fg.Designer.cs">
+      <DependentUpon>201708042032472_fg.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -551,6 +560,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708041301037_fgfse.resx">
       <DependentUpon>201708041301037_fgfse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708042030205_update field.resx">
+      <DependentUpon>201708042030205_update field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708042032472_fg.resx">
+      <DependentUpon>201708042032472_fg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -5,7 +5,9 @@ using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
 
+// **************************************************************************************************************************************** //
 
+// LINQ Query can be written in many ways. 1. LINQ Query like SQl 2. LINQ Query like Lambda expression. I like the lambda ones. 
 
 namespace WebApplication3.Controllers
 {
@@ -54,15 +56,18 @@ namespace WebApplication3.Controllers
         public JsonResult GetStudents(string term)
         {
             List<string> students;
+
             students = _context.Students.Where(s => s.Name.StartsWith(term))
                 .Select(y => y.Name).ToList();
 
             return Json(students, JsonRequestBehavior.AllowGet);
         }
 
+        // LINQ => LINQ providers(converts LINQ query to SQL) => TRANSACT SQL
         public ActionResult PartialViewContainer()
         {
             var students = _context.Students.ToList();
+            //var f = from x in _context.Students select x.Name;
             return View(students);
         }
 
