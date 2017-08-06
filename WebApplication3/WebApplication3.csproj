@@ -313,6 +313,7 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Depot.cs" />
     <Compile Include="Models\DropDownViewModel.cs" />
+    <Compile Include="Models\EmailFrom.cs" />
     <Compile Include="Models\Emp.cs" />
     <Compile Include="Models\EmpDepotViewModel.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -466,6 +467,7 @@
     <Content Include="Views\Form\Create.cshtml" />
     <Content Include="Views\Shared\_Student.cshtml" />
     <Content Include="Views\Home\PartialViewContainer.cshtml" />
+    <Content Include="Views\Home\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
