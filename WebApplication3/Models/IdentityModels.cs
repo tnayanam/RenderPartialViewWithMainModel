@@ -11,6 +11,7 @@ namespace WebApplication3.Models
     public class ApplicationUser : IdentityUser
     {
         public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Document> Documents { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -37,6 +38,7 @@ namespace WebApplication3.Models
         public DbSet<Student> Students { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Document> Documents { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -48,6 +50,7 @@ namespace WebApplication3.Models
         }
 
         public System.Data.Entity.DbSet<WebApplication3.Models.Form> Forms { get; set; }
+
 
         //public System.Data.Entity.DbSet<WebApplication3.Models.ApplicationUser> ApplicationUsers { get; set; }
     }

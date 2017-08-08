@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\CourseEnumsController.cs" />
+    <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\DropDownController.cs" />
     <Compile Include="Controllers\DepotController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -309,6 +310,22 @@
     <Compile Include="Migrations\201708081324160_addedonetomanyrelationship.Designer.cs">
       <DependentUpon>201708081324160_addedonetomanyrelationship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708081411170_add document.cs" />
+    <Compile Include="Migrations\201708081411170_add document.Designer.cs">
+      <DependentUpon>201708081411170_add document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708081451595_sdfdfgqw.cs" />
+    <Compile Include="Migrations\201708081451595_sdfdfgqw.Designer.cs">
+      <DependentUpon>201708081451595_sdfdfgqw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708081541493_sdfdfgqwfd.cs" />
+    <Compile Include="Migrations\201708081541493_sdfdfgqwfd.Designer.cs">
+      <DependentUpon>201708081541493_sdfdfgqwfd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708081609106_sdfdfgqwfdlsdf.cs" />
+    <Compile Include="Migrations\201708081609106_sdfdfgqwfdlsdf.Designer.cs">
+      <DependentUpon>201708081609106_sdfdfgqwfdlsdf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Children.cs" />
@@ -317,6 +334,7 @@
     <Compile Include="Models\CourseEnumsModel.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Depot.cs" />
+    <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DropDownViewModel.cs" />
     <Compile Include="Models\EmailFrom.cs" />
     <Compile Include="Models\Emp.cs" />
@@ -474,6 +492,7 @@
     <Content Include="Views\Shared\_Student.cshtml" />
     <Content Include="Views\Home\PartialViewContainer.cshtml" />
     <Content Include="Views\Home\Sent.cshtml" />
+    <Content Include="Views\Document\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -577,6 +596,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708081324160_addedonetomanyrelationship.resx">
       <DependentUpon>201708081324160_addedonetomanyrelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081411170_add document.resx">
+      <DependentUpon>201708081411170_add document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081451595_sdfdfgqw.resx">
+      <DependentUpon>201708081451595_sdfdfgqw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081541493_sdfdfgqwfd.resx">
+      <DependentUpon>201708081541493_sdfdfgqwfd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081609106_sdfdfgqwfdlsdf.resx">
+      <DependentUpon>201708081609106_sdfdfgqwfdlsdf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
