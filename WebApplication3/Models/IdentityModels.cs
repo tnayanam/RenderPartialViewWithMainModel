@@ -23,6 +23,8 @@ namespace WebApplication3.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Standard> Standards { get; set; }
+        public DbSet<Children> Childrens { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Song> Songs { get; set; }
         public DbSet<Order> Orders { get; set; }

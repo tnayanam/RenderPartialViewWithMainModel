@@ -305,8 +305,13 @@
     <Compile Include="Migrations\201708042032472_fg.Designer.cs">
       <DependentUpon>201708042032472_fg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708081324160_addedonetomanyrelationship.cs" />
+    <Compile Include="Migrations\201708081324160_addedonetomanyrelationship.Designer.cs">
+      <DependentUpon>201708081324160_addedonetomanyrelationship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Children.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\CourseEnums.cs" />
     <Compile Include="Models\CourseEnumsModel.cs" />
@@ -327,6 +332,7 @@
     <Compile Include="Models\Rain.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Standard.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -568,6 +574,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708042032472_fg.resx">
       <DependentUpon>201708042032472_fg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708081324160_addedonetomanyrelationship.resx">
+      <DependentUpon>201708081324160_addedonetomanyrelationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
