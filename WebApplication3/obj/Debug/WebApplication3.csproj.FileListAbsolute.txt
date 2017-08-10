@@ -458,3 +458,4 @@ C:\Users\Dev10\Desktop\testing\RenderPartialViewWithMainModel\WebApplication3\bi
 C:\Users\Dev10\Desktop\testing\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Dev10\Desktop\testing\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Dev10\Desktop\testing\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\Dev10\Desktop\testing\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdf1.resources

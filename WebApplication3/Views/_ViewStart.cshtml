@@ -1,3 +1,15 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@* Create a separate layout file altogether if user is not logged in *@
+
+
+@{
+    
+    if(User.Identity.IsAuthenticated)
+    {
+        Layout = "~/Views/Shared/_LoggedInLayout.cshtml";
+    }
+else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    
 }

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNet.Identity;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -92,15 +91,15 @@ namespace WebApplication3.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            // throw new Exception("Code no handled");
-            // receiving the value from ajax success 
-            int val = Convert.ToInt32(TempData["Val"]);
-            var userId = User.Identity.GetUserId();
+            //// throw new Exception("Code no handled");
+            //// receiving the value from ajax success 
+            //int val = Convert.ToInt32(TempData["Val"]);
+            //var userId = User.Identity.GetUserId();
 
-            // get first and only result using lINQ
-            var email = _context.Users.Where(c => c.Id == userId).First().Email;
-            ViewBag.userId = userId;
-            TempData["User"] = "This is temp";
+            //// get first and only result using lINQ
+            //var email = _context.Users.Where(c => c.Id == userId).First().Email;
+            //ViewBag.userId = userId;
+            //TempData["User"] = "This is temp";
             return View();
         }
 
