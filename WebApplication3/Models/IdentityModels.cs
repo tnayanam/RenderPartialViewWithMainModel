@@ -52,6 +52,14 @@ namespace WebApplication3.Models
         public System.Data.Entity.DbSet<WebApplication3.Models.Form> Forms { get; set; }
 
 
-        //public System.Data.Entity.DbSet<WebApplication3.Models.ApplicationUser> ApplicationUsers { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Plant>()
+                .HasMany<Flower>(p => p.Flowers)
+                .WithRequired(f => f.Plant)
+                .HasForeignKey(k => k.PlantId)
+                .WillCascadeOnDelete(false);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
