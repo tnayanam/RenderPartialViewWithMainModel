@@ -26,30 +26,36 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Enums", "Index", "courseenums")</li>
-                    <li>@Html.ActionLink("TestPartial", "Index", "Song")</li>*@
-                   @* @Html.Partial("_AdminMenuPartial")*@
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Enums", "Index", "courseenums")</li>
+                        <li>@Html.ActionLink("TestPartial", "Index", "Song")</li>*@
+                    @* @Html.Partial("_AdminMenuPartial")*@
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+    
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+
+        <div class="container body-content" style="background-color:white;">
+            <div class="row">
+                @* since this partial view is added in the main layout file so every page will have thiese menu items *@
+                @Html.Partial("_SideBar")
+            </div>
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
 
 
-    @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/bootstrap")
 
-    @*Below is required for client side validation*@
-    @* And this is the place where actual script will get rendered. *@
-    @RenderSection("scripts", required: false)
+        @*Below is required for client side validation*@
+        @* And this is the place where actual script will get rendered. *@
+        @RenderSection("scripts", required: false)
 </body>
 </html>
 <script>
@@ -70,3 +76,4 @@
 </script>
 @* This package is important *@
 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+

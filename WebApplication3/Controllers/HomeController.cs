@@ -251,6 +251,25 @@ namespace WebApplication3.Controllers
         {
             return View();
         }
+
+        public ActionResult Resume()
+        {
+            return View();
+        }
+        public ActionResult CoverLetter()
+        {
+            return View();
+        }
+        public ActionResult Account()
+        {
+            return View();
+        }
+        public ActionResult Rewards()
+        {
+            return View();
+        }
+
+
     }
 
     public enum Hello
