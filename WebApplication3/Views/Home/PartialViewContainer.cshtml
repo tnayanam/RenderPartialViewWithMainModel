@@ -45,6 +45,7 @@
                 @Html.DisplayFor(modelItem => item.Age)
             </td>
             <td>
+                @* here we are using a basic c sharp code, this is not a html helper. *@
                 @item.Amount.ConvertToDollar()
             </td>
             <td>

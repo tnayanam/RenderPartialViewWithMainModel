@@ -340,6 +340,7 @@
     <Compile Include="Models\Emp.cs" />
     <Compile Include="Models\EmpDepotViewModel.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Flower.cs" />
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -347,6 +348,7 @@
     <Compile Include="Models\MyViewModel.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Parking.cs" />
+    <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Rain.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\Company.cs" />

@@ -1,5 +1,7 @@
 ﻿using System;
 
+// this is a c sharp helper , this is different from HTML Helper.
+
 namespace WebApplication3.Extension
 {
     public static class Helper
