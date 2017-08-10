@@ -1,4 +1,4 @@
-﻿
+﻿@using WebApplication3.Helpers
 @*<ul style="list-style-type:none;">
     <li class="">
         <a href="@Url.Action("Resume", "Home")" class="btn btn-block">My Resume </a>
@@ -14,17 +14,22 @@
         <a href="@Url.Action("Rewards", "Home")" class="btn btn-block">Get Rewards </a>
     </li>
 </ul>*@
-
+@* User will now now which tab is currently selected *@
 @{
     string pageUrl = Request.Url.PathAndQuery.ToString();
     <script>alert(@pageUrl)</script>
     var s = 2;
 }
     <ul style="list-style-type:none;">
-        <li class="@(pageUrl.ToLower().Contains("/home/resume") ? "active" : string.Empty) setBtnMargin">
+        
+        @Html.MenuLink("My Resume", "Resume", "Home", "")
+        @Html.MenuLink("My CoverLetter", "CoverLetter", "Home", "")
+        @Html.MenuLink("My Account", "Account", "Home", "")
+        @Html.MenuLink("My Rewards", "Rewards", "Home", "")
+        @*<li class="@(pageUrl.ToLower().Contains("/home/resume") ? "active" : string.Empty) setBtnMargin">
             <a href="@Url.Action("Resume", "Home")" class="btn btn-block">My Resume </a>
-        </li>
-        <li class="@(pageUrl.ToLower().Contains("/home/coverletter") ? "active" : string.Empty) setBtnMargin">
+        </li>*@
+        @*<li class="@(pageUrl.ToLower().Contains("/home/coverletter") ? "active" : string.Empty) setBtnMargin">
             <a href="@Url.Action("CoverLetter", "Home")" class="btn btn-block">My Cover Letter </a>
         </li>
         <li class="@(pageUrl.ToLower().Contains("/home/account") ? "active" : string.Empty) setBtnMargin">
@@ -32,7 +37,7 @@
         </li>
         <li class="@(pageUrl.ToLower().Contains("/home/rewards") ? "active" : string.Empty) setBtnMargin">
             <a href="@Url.Action("Rewards", "Home")" class="btn  btn-block">Get Rewards </a>
-        </li>
+        </li>*@
     </ul>
 
 

@@ -190,6 +190,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ActiveMenuHelper.cs" />
     <Compile Include="Migrations\201706161821186_asdf.cs" />
     <Compile Include="Migrations\201706161821186_asdf.Designer.cs">
       <DependentUpon>201706161821186_asdf.cs</DependentUpon>
