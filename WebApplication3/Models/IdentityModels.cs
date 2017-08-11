@@ -59,6 +59,13 @@ namespace WebApplication3.Models
                 .WithRequired(f => f.Plant)
                 .HasForeignKey(k => k.PlantId)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Industry>()
+                .HasMany<Website>(w => w.Websites)
+                .WithRequired(w => w.Industry)
+                .HasForeignKey(w => w.IndusId)
+                .WillCascadeOnDelete(false);
+
             base.OnModelCreating(modelBuilder);
         }
     }
