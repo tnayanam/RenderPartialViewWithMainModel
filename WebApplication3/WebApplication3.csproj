@@ -178,6 +178,7 @@
     <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndustriesWebsiteController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ParkingController.cs" />
@@ -353,6 +354,7 @@
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IndustriesWebsiteViewModel.cs" />
     <Compile Include="Models\Industry.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MyViewModel.cs" />
@@ -512,6 +514,7 @@
     <Content Include="Views\Home\CoverLetter.cshtml" />
     <Content Include="Views\Home\Account.cshtml" />
     <Content Include="Views\Home\Rewards.cshtml" />
+    <Content Include="Views\IndustriesWebsite\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

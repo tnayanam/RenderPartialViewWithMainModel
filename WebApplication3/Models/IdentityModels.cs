@@ -39,6 +39,10 @@ namespace WebApplication3.Models
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Document> Documents { get; set; }
+        public DbSet<Website> Websites { get; set; }
+        public DbSet<Industry> Industries { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
