@@ -4,20 +4,26 @@
 @*Actual flow -> from controller Return view() -> )Viewstart.cshtml : it inclued the layout file-> and then the corresponding page in=s rendered.*@
 
 @{
-    ViewBag.Title = "Home Page";    
+    ViewBag.Title = "Home Page";
 }
-        <style>
-        @@media screen and (max-width: 600px) {
-            img {
-                width: 100%;
-            }
+<style>
+    @@media screen and (max-width: 600px) {
+        img {
+            width: 100%;
         }
-    </style>
+    }
+</style>
 <script>
     var r =  @((int)WebApplication3.Controllers.Hello.sim)
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.3/jquery-confirm.min.js"></script>
+
+<select id="eachexample" onchange="drop()">
+    <option name="one">one</option>
+    <option name="two">two</option>
+</select>
+<select id="ajaxdrop" name="ajaxdrop"></select>
 
 
 <div class="jumbotron">
@@ -37,6 +43,7 @@
     <option value="1">One</option>
     <option value="2">Two</option>
 </select>
+
 <script>
     function addhtmlcontent() {
         //get the selected value from the dropdown
@@ -46,7 +53,7 @@
         $("#update").html(markup);
         alert(r);
     }
-   
+
 </script>
 
 <button type="button" onclick="makeajaxcall()">Click Me!</button>
@@ -70,9 +77,9 @@
     }
 </script>
 
-@using(Html.BeginForm("About","Home"))
+@using (Html.BeginForm("About", "Home"))
 {
-<input type="submit" value="Submit" onclick="return confirm('Are you sure you want to delete?')"/> 
+    <input type="submit" value="Submit" onclick="return confirm('Are you sure you want to delete?')" />
 }
 
 
@@ -125,5 +132,22 @@
 </script>
 
 
+<script>
+    function drop(){
+        $.ajax({
+            url:"/Home/JsonData",
+            contentType: "application/json; charset-utf-8",
+            success:function(datas)
+            {
+            $.each(datas, function(i, data)  {
+                $("#ajaxdrop").append('<option value="' + data.Value + '">' + data.Text + '</option>');  
+                })
+            },
+            error:function()
+            {
 
+            }
+        });
+    }
 
+</script>

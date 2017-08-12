@@ -269,6 +269,16 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        public JsonResult JsonData()
+        {
+            var dropdowndata = new List<SelectListItem>();
+            dropdowndata.Add(new SelectListItem { Text = "One", Value = "1" });
+            dropdowndata.Add(new SelectListItem { Text = "Two", Value = "2" });
+            dropdowndata.Add(new SelectListItem { Text = "Three", Value = "3" });
+            dropdowndata.Add(new SelectListItem { Text = "Four", Value = "4" });
+            return Json(dropdowndata, JsonRequestBehavior.AllowGet);
+        }
+
 
     }
 
