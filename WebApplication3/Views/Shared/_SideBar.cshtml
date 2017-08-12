@@ -22,10 +22,10 @@
 }
     <ul style="list-style-type:none;">
         
-        @Html.MenuLink("My Resume", "Resume", "Home", "")
-        @Html.MenuLink("My CoverLetter", "CoverLetter", "Home", "")
-        @Html.MenuLink("My Account", "Account", "Home", "")
-        @Html.MenuLink("My Rewards", "Rewards", "Home", "")
+        @Html.MenuLink("My Resume", "Resume", "Home", null, new { @class = "btn"})
+        @Html.MenuLink("My CoverLetter", "CoverLetter", "Home", null, new { @class = "btn" })
+        @Html.MenuLink("My Account", "Account", "Home", null, new { @class = "btn" })
+        @Html.MenuLink("My Rewards", "Rewards", "Home", null, new { @class = "btn" })
         @*<li class="@(pageUrl.ToLower().Contains("/home/resume") ? "active" : string.Empty) setBtnMargin">
             <a href="@Url.Action("Resume", "Home")" class="btn btn-block">My Resume </a>
         </li>*@
