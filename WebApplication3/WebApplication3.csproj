@@ -181,6 +181,7 @@
     <Compile Include="Controllers\IndustriesWebsiteController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\ParkingController.cs" />
     <Compile Include="Controllers\RainController.cs" />
     <Compile Include="Controllers\SomeRule.cs" />
@@ -336,10 +337,20 @@
     <Compile Include="Migrations\201708111927471_sadtfwqre.Designer.cs">
       <DependentUpon>201708111927471_sadtfwqre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708121934312_zxce.cs" />
+    <Compile Include="Migrations\201708121934312_zxce.Designer.cs">
+      <DependentUpon>201708121934312_zxce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708121949574_sdrwea.cs" />
+    <Compile Include="Migrations\201708121949574_sdrwea.Designer.cs">
+      <DependentUpon>201708121949574_sdrwea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Children.cs" />
     <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Copy.cs" />
+    <Compile Include="Models\CopyPageViewModel.cs" />
     <Compile Include="Models\CourseEnums.cs" />
     <Compile Include="Models\CourseEnumsModel.cs" />
     <Compile Include="Models\Department.cs" />
@@ -359,6 +370,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MyViewModel.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Parking.cs" />
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Rain.cs" />
@@ -515,6 +527,8 @@
     <Content Include="Views\Home\Account.cshtml" />
     <Content Include="Views\Home\Rewards.cshtml" />
     <Content Include="Views\IndustriesWebsite\Create.cshtml" />
+    <Content Include="Views\Page\Index.cshtml" />
+    <Content Include="Views\Page\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -636,6 +650,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708111927471_sadtfwqre.resx">
       <DependentUpon>201708111927471_sadtfwqre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708121934312_zxce.resx">
+      <DependentUpon>201708121934312_zxce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708121949574_sdrwea.resx">
+      <DependentUpon>201708121949574_sdrwea.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

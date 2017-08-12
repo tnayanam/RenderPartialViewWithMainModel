@@ -555,3 +555,5 @@ C:\Users\Dev10\Desktop\abc\abc\RenderPartialViewWithMainModel\WebApplication3\ob
 C:\Users\Dev10\Desktop\abc\abc\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Dev10\Desktop\abc\abc\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
 C:\Users\Dev10\Desktop\abc\abc\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sadtfwqre.resources
+C:\Users\Dev10\Desktop\abc\abc\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.zxce.resources
+C:\Users\Dev10\Desktop\abc\abc\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.sdrwea.resources

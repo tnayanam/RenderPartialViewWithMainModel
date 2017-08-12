@@ -41,6 +41,9 @@ namespace WebApplication3.Models
         public DbSet<Document> Documents { get; set; }
         public DbSet<Website> Websites { get; set; }
         public DbSet<Industry> Industries { get; set; }
+        public DbSet<Copy> Copies { get; set; }
+        public DbSet<Page> Pages { get; set; }
+
 
 
         public ApplicationDbContext()
@@ -70,7 +73,15 @@ namespace WebApplication3.Models
                 .HasForeignKey(w => w.IndusId)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Copy>()
+                .HasMany<Page>(w => w.Pages)
+                .WithRequired(w => w.Copy)
+                .HasForeignKey(w => w.CopyId)
+                .WillCascadeOnDelete(false);
+
             base.OnModelCreating(modelBuilder);
         }
+
+        public System.Data.Entity.DbSet<WebApplication3.Models.CopyPageViewModel> CopyPageViewModels { get; set; }
     }
 }
