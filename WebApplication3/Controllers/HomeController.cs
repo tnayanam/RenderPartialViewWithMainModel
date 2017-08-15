@@ -298,3 +298,26 @@ namespace WebApplication3.Controllers
     }
 
 }
+
+
+
+////Git commands
+
+//1. git init
+//2. git add .
+//3. git commit -m "Add the commit name"
+//4. git push
+//5. git clone
+
+/* create a new repo
+create a new folder
+create the basic VS solution there
+create a repo in git
+ * and now locate that folder in git CMD and then 
+ * git init
+ * git add .
+ * git commit -m "repo link" 
+ * git push -u ------------------- origin master
+ * and now run the commnand as git status, and it should tell that everything is in sync ewith repo.
+  
+ */
