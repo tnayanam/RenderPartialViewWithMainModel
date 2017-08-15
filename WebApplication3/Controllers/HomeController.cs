@@ -299,8 +299,6 @@ namespace WebApplication3.Controllers
 
 }
 
-
-
 ////Git commands
 
 //1. git init
@@ -321,3 +319,12 @@ create a repo in git
  * and now run the commnand as git status, and it should tell that everything is in sync ewith repo.
   
  */
+
+/*
+ * Local Publish
+ * go to the web site and right click and  select "Publish"
+ * in profile select "LocalPublish" in the dropdown
+ * and now put the folder where you want to publish the code.
+ * an then you can click on publish
+ * ideally it will create a publish file. and you can copy paste all of them to the actual server where LIVE code in hosted.
+*/
