@@ -279,6 +279,16 @@ namespace WebApplication3.Controllers
             return Json(dropdowndata, JsonRequestBehavior.AllowGet);
         }
 
+        [Authorize(Roles = "Manager")]
+        public ActionResult ForManager()
+        {
+            return View();
+        }
+
+        public ActionResult ForOwner()
+        {
+            return View();
+        }
 
     }
 

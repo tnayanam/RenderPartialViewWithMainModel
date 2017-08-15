@@ -184,6 +184,7 @@
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Controllers\ParkingController.cs" />
     <Compile Include="Controllers\RainController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\SomeRule.cs" />
     <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -344,6 +345,10 @@
     <Compile Include="Migrations\201708121949574_sdrwea.cs" />
     <Compile Include="Migrations\201708121949574_sdrwea.Designer.cs">
       <DependentUpon>201708121949574_sdrwea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708151404084_asdfdf.cs" />
+    <Compile Include="Migrations\201708151404084_asdfdf.Designer.cs">
+      <DependentUpon>201708151404084_asdfdf.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -529,6 +534,10 @@
     <Content Include="Views\IndustriesWebsite\Create.cshtml" />
     <Content Include="Views\Page\Index.cshtml" />
     <Content Include="Views\Page\Create.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Home\ForManager.cshtml" />
+    <Content Include="Views\Home\ForOwner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -656,6 +665,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708121949574_sdrwea.resx">
       <DependentUpon>201708121949574_sdrwea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708151404084_asdfdf.resx">
+      <DependentUpon>201708151404084_asdfdf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
