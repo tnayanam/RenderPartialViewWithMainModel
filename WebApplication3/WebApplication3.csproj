@@ -379,6 +379,7 @@
     <Compile Include="Models\Parking.cs" />
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Rain.cs" />
+    <Compile Include="Models\Referral.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Standard.cs" />

@@ -11,6 +11,8 @@ namespace WebApplication3.Models
     public class ApplicationUser : IdentityUser
     {
         public ICollection<Order> Orders { get; set; }
+        public ICollection<Referral> CandidateReferral { get; set; }
+        public ICollection<Referral> ReferrerReferral { get; set; }
         public virtual ICollection<Document> Documents { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
@@ -78,6 +80,18 @@ namespace WebApplication3.Models
                 .WithRequired(w => w.Copy)
                 .HasForeignKey(w => w.CopyId)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(c => c.CandidateReferral)
+                .WithRequired(c => c.Candidate)
+                .HasForeignKey(c => c.CandidateId)
+                .WillCascadeOnDelete(false);
+
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(c => c.ReferrerReferral)
+                .WithRequired(c => c.Referrer)
+                .HasForeignKey(c => c.ReferrerId);
 
             base.OnModelCreating(modelBuilder);
         }
