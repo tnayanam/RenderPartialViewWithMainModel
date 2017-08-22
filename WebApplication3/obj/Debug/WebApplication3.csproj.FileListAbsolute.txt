@@ -754,3 +754,5 @@ C:\Users\Dev10\Desktop\abcd\RenderPartialViewWithMainModel\WebApplication3\bin\M
 C:\Users\Dev10\Desktop\abcd\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Dev10\Desktop\abcd\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Dev10\Desktop\abcd\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Dev10\Desktop\abcd\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdfasdf.resources
+C:\Users\Dev10\Desktop\abcd\RenderPartialViewWithMainModel\WebApplication3\bin\FoolproofValidation.dll

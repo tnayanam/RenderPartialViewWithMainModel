@@ -17,7 +17,7 @@
         <hr />
 
         @* first parameter false means show all the error on top *@
-        @Html.ValidationSummary(false,"Fix below error", new { @class = "text-danger" })
+        @Html.ValidationSummary(true,"Fix below error", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -43,7 +43,3 @@
     </div>
 }
 
-@*@section Scripts
- {
- @Scripts.Render("~/bundles/jqueryval")
- }*@

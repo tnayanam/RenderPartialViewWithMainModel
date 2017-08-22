@@ -12,5 +12,6 @@ namespace WebApplication3.Models
         public int age { get; set; }
         [Display(Name = "Amount Owed")]
         public decimal amount { get; set; }
+
     }
 }

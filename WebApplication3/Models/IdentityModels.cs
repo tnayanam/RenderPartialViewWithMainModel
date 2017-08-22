@@ -83,7 +83,7 @@ namespace WebApplication3.Models
 
             modelBuilder.Entity<ApplicationUser>()
                 .HasMany(c => c.CandidateReferral)
-                .WithRequired(c => c.Candidate)
+                .WithOptional(c => c.Candidate) // this wil make foreign key optional
                 .HasForeignKey(c => c.CandidateId)
                 .WillCascadeOnDelete(false);
 
