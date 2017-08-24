@@ -11,8 +11,14 @@ namespace WebApplication3.ViewModel
 
         public string FirstName { get; set; }
 
-        [RequiredIf("FirstName", "tanuj", ErrorMessage = "Name field is required if first name is Tanuj")]
+        [RequiredIf("FirstName", "*", ErrorMessage = "Name field is required if first name is Tanuj")]
         public string LastName { get; set; }
+
+        public string SelectedRoleType { get; set; }
     }
 }
 
+//<label>
+//    @Html.RadioButtonFor(m => m.SelectedRoleType, "JobSeeker", new { @class="js-radio", id = "" })
+//    <span>Job Seeker</span>
+//</label>

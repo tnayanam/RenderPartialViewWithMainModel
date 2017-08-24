@@ -12,7 +12,7 @@ namespace WebApplication3.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(CoverLetterViewModel viewModel)
+        public ActionResult Create(CoverLetterViewModel viewModel, string searchBy)
         {
             if (ModelState.IsValid)
             {
