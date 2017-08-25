@@ -34,6 +34,14 @@
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.PositiveNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(m => m.PositiveNumber)
+                @Html.ValidationMessageFor(model => model.PositiveNumber, "*", new { @class = "text-danger" })
+            </div>
+        </div>
+
         @Html.RadioButton("SearchBy", "Name", true) <text> Name </text>
         @Html.RadioButton("SearchBy", "Location") <text> Location</text>
 

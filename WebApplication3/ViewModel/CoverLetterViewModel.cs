@@ -1,4 +1,5 @@
 ﻿using Foolproof;
+using System.ComponentModel.DataAnnotations;
 using System.Web;
 using WebApplication3.CustomValidation;
 
@@ -15,6 +16,10 @@ namespace WebApplication3.ViewModel
         public string LastName { get; set; }
 
         public string SelectedRoleType { get; set; }
+
+        [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Only positive number allowed")]
+        public int PositiveNumber { get; set; }
     }
 }
 
