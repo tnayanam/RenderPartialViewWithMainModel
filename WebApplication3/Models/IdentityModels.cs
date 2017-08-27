@@ -45,8 +45,8 @@ namespace WebApplication3.Models
         public DbSet<Industry> Industries { get; set; }
         public DbSet<Copy> Copies { get; set; }
         public DbSet<Page> Pages { get; set; }
-
-
+        public DbSet<Camera> Cameras { get; set; }
+        public DbSet<Phone> Phones { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -93,9 +93,19 @@ namespace WebApplication3.Models
                 .WithRequired(c => c.Referrer)
                 .HasForeignKey(c => c.ReferrerId);
 
+            // one phone can have many camera. but one camera can be there in only one phone 1..*
+            // also 0..*, because a camera can exists w/o a phone too.
+            //modelBuilder.Entity<Phone>()
+            //    .HasMany(c => c.Cameras)
+            //    .WithOptional(c => c.Phone)
+            //    .HasForeignKey(c => c.PhoneId);
+
+
             base.OnModelCreating(modelBuilder);
         }
 
         public System.Data.Entity.DbSet<WebApplication3.Models.CopyPageViewModel> CopyPageViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication3.ViewModel.PhoneCameraViewModel> PhoneCameraViewModels { get; set; }
     }
 }
