@@ -961,3 +961,6 @@ C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\De
 C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asdrfd.resources
 C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.aweqr3qe44.resources
 C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.qwqer2.resources
+C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.arfqew.resources
+C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.asfre3q.resources
+C:\Users\lenovo\Desktop\am\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.Migrations.csa.resources

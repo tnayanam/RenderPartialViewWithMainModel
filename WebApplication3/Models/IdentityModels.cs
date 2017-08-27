@@ -49,6 +49,8 @@ namespace WebApplication3.Models
         public DbSet<Phone> Phones { get; set; }
         public DbSet<Child> Childs { get; set; }
         public DbSet<Disease> Diseases { get; set; }
+        public DbSet<Worker> Workers { get; set; }
+        public DbSet<Manager> Managers { get; set; }
 
 
         public ApplicationDbContext()
@@ -96,13 +98,12 @@ namespace WebApplication3.Models
                 .WithRequired(c => c.Referrer)
                 .HasForeignKey(c => c.ReferrerId);
 
-            // one phone can have many camera. but one camera can be there in only one phone 1..*
-            // also 0..*, because a camera can exists w/o a phone too.
-            //modelBuilder.Entity<Phone>()
-            //    .HasMany(c => c.Cameras)
-            //    .WithOptional(c => c.Phone)
-            //    .HasForeignKey(c => c.PhoneId);
-
+            // one manager can have many workers
+            // one worker can exist without a manager too, becase its not assigned.
+            modelBuilder.Entity<Manager>()
+                .HasMany(m => m.Workers)
+                .WithOptional(m => m.Manager)
+                .HasForeignKey(m => m.ManagerId);
 
             base.OnModelCreating(modelBuilder);
         }
@@ -110,5 +111,6 @@ namespace WebApplication3.Models
         public System.Data.Entity.DbSet<WebApplication3.Models.CopyPageViewModel> CopyPageViewModels { get; set; }
 
         public System.Data.Entity.DbSet<WebApplication3.ViewModel.PhoneCameraViewModel> PhoneCameraViewModels { get; set; }
+
     }
 }
