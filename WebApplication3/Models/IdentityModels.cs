@@ -47,6 +47,9 @@ namespace WebApplication3.Models
         public DbSet<Page> Pages { get; set; }
         public DbSet<Camera> Cameras { get; set; }
         public DbSet<Phone> Phones { get; set; }
+        public DbSet<Child> Childs { get; set; }
+        public DbSet<Disease> Diseases { get; set; }
+
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

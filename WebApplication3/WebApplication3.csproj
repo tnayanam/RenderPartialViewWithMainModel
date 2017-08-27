@@ -369,9 +369,14 @@
     <Compile Include="Migrations\201708271513082_aweqr3qe44.Designer.cs">
       <DependentUpon>201708271513082_aweqr3qe44.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708271551165_qwqer2.cs" />
+    <Compile Include="Migrations\201708271551165_qwqer2.Designer.cs">
+      <DependentUpon>201708271551165_qwqer2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Camera.cs" />
+    <Compile Include="Models\Child.cs" />
     <Compile Include="Models\Children.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Copy.cs" />
@@ -381,6 +386,7 @@
     <Compile Include="Models\CoverLetter.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Depot.cs" />
+    <Compile Include="Models\Disease.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\DropDownViewModel.cs" />
     <Compile Include="Models\EmailFrom.cs" />
@@ -712,6 +718,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708271513082_aweqr3qe44.resx">
       <DependentUpon>201708271513082_aweqr3qe44.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708271551165_qwqer2.resx">
+      <DependentUpon>201708271551165_qwqer2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
