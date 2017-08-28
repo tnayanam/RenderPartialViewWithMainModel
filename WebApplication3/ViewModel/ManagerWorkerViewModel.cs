@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
 namespace WebApplication3.ViewModel
@@ -20,6 +21,10 @@ namespace WebApplication3.ViewModel
         // it will not show the default value
         public DateTime? dateTimeNoDefault { get; set; }
 
-
+        // requirement
+        // we do not want to show the default (want to show blank) date but we want to user to fill the field while posting.
+        //thus preventing from Underposting
+        [Required]
+        public DateTime? nodefaultbutmanadatory { get; set; }
     }
 }

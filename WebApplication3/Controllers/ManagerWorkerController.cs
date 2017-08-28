@@ -31,19 +31,28 @@ namespace WebApplication3.Controllers
         [HttpPost]
         public ActionResult Create(ManagerWorkerViewModel viewModel)
         {
-            // this code is now throwing exception becase by defalt if supoose we do not select any manager fot hsi worker
-            // then the managerid will be set to zero and that is not present in manager table managerid = 0,
-            // hence we need to stop manager id from getting defalt vale as 0, so make it NULLABLE.
-            // is it NULLABLE THEN bedefault no vale (0) will be set to it.
-            var worker = new Worker
+            //// this code is now throwing exception becase by defalt if supoose we do not select any manager fot hsi worker
+            //// then the managerid will be set to zero and that is not present in manager table managerid = 0,
+            //// hence we need to stop manager id from getting defalt vale as 0, so make it NULLABLE.
+            //// is it NULLABLE THEN bedefault no vale (0) will be set to it.
+            //var worker = new Worker
+            //{
+            //    WorkerName = viewModel.WorkerName,
+            //    ManagerId = viewModel.ManagerId
+            //};
+            //_context.Workers.Add(worker);
+            //_context.SaveChanges();
+            //return RedirectToAction("Create");
+
+
+            if (ModelState.IsValid)
             {
-                WorkerName = viewModel.WorkerName,
-                ManagerId = viewModel.ManagerId
-            };
-            _context.Workers.Add(worker);
-            _context.SaveChanges();
+                return RedirectToAction("Create");
+            }
             return RedirectToAction("Create");
         }
+
+
 
     }
 }

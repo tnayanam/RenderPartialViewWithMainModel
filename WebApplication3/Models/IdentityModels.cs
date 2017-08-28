@@ -112,5 +112,6 @@ namespace WebApplication3.Models
 
         public System.Data.Entity.DbSet<WebApplication3.ViewModel.PhoneCameraViewModel> PhoneCameraViewModels { get; set; }
 
+        public System.Data.Entity.DbSet<WebApplication3.ViewModel.ManagerWorkerViewModel> ManagerWorkerViewModels { get; set; }
     }
 }
