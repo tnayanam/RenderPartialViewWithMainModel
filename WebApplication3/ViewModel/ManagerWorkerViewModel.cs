@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace WebApplication3.ViewModel
@@ -12,5 +13,13 @@ namespace WebApplication3.ViewModel
         //public int ManagerId { get; set; }
         // so making is Nullable
         public int? ManagerId { get; set; }
+
+        // it will show the default value
+        public DateTime dateTime { get; set; }
+
+        // it will not show the default value
+        public DateTime? dateTimeNoDefault { get; set; }
+
+
     }
 }
