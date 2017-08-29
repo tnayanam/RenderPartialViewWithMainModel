@@ -75,6 +75,7 @@ namespace WebApplication3.Controllers
             return RedirectToAction("Create");
         }
 
+        [HttpPost]
         public JsonResult GetInstrumentJson(int musicTypeId)
         {
             var instruments = _context.Instruments

@@ -3,13 +3,13 @@
     $('#MusicTypeId').change(function () {
         var musicTypeId = $(this).val();
         var url = $(this).data('url');
-        console.log(url);
         instrumentSelect.empty();
         if (!musicTypeId) {
             return;
         }
         $.ajax({
             url: url,
+            type:'POST',
             data: { musicTypeId: musicTypeId },
             success: function (response) {
                 instrumentSelect.append($('<option></option>').val('').text('None'));
@@ -21,3 +21,6 @@
         });
     });
 })
+
+
+
