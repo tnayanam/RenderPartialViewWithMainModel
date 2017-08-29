@@ -46,7 +46,8 @@
 
 
     @Scripts.Render("~/bundles/bootstrap")
-
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/CustomJS.js"></script>
     @*Below is required for client side validation*@
     @* And this is the place where actual script will get rendered. *@
     @RenderSection("scripts", required: false)

@@ -182,6 +182,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
+    <Compile Include="Controllers\GigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndustriesWebsiteController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -406,6 +407,14 @@
     <Compile Include="Migrations\201708280516330_asdfwesd.Designer.cs">
       <DependentUpon>201708280516330_asdfwesd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708282000280_sadfsadf.cs" />
+    <Compile Include="Migrations\201708282000280_sadfsadf.Designer.cs">
+      <DependentUpon>201708282000280_sadfsadf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708282004366_sadfsadfsdf.cs" />
+    <Compile Include="Migrations\201708282004366_sadfsadfsdf.Designer.cs">
+      <DependentUpon>201708282004366_sadfsadfsdf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Camera.cs" />
@@ -429,11 +438,13 @@
     <Compile Include="Models\Flower.cs" />
     <Compile Include="Models\Form.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IndustriesWebsiteViewModel.cs" />
     <Compile Include="Models\Industry.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MusicType.cs" />
     <Compile Include="Models\MyViewModel.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Page.cs" />
@@ -442,6 +453,7 @@
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Rain.cs" />
     <Compile Include="Models\Referral.cs" />
+    <Compile Include="Models\Instrument.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Standard.cs" />
@@ -453,6 +465,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\CoverLetterViewModel.cs" />
+    <Compile Include="ViewModel\GigViewModel.cs" />
     <Compile Include="ViewModel\ManagerWorkerViewModel.cs" />
     <Compile Include="ViewModel\PhoneCameraViewModel.cs" />
   </ItemGroup>
@@ -517,6 +530,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\CustomJS.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
@@ -616,6 +630,7 @@
     <Content Include="Views\CoverLetter\Create.cshtml" />
     <Content Include="Views\PhoneCamera\Create.cshtml" />
     <Content Include="Views\ManagerWorker\Create.cshtml" />
+    <Content Include="Views\Gig\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -783,6 +798,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708280516330_asdfwesd.resx">
       <DependentUpon>201708280516330_asdfwesd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708282000280_sadfsadf.resx">
+      <DependentUpon>201708282000280_sadfsadf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708282004366_sadfsadfsdf.resx">
+      <DependentUpon>201708282004366_sadfsadfsdf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

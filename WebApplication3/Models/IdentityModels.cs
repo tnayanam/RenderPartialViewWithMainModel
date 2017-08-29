@@ -51,6 +51,9 @@ namespace WebApplication3.Models
         public DbSet<Disease> Diseases { get; set; }
         public DbSet<Worker> Workers { get; set; }
         public DbSet<Manager> Managers { get; set; }
+        public DbSet<MusicType> MusicTypes { get; set; }
+        public DbSet<Gig> Gigs { get; set; }
+        public DbSet<Instrument> Instruments { get; set; }
 
 
         public ApplicationDbContext()
@@ -104,6 +107,32 @@ namespace WebApplication3.Models
                 .HasMany(m => m.Workers)
                 .WithOptional(m => m.Manager)
                 .HasForeignKey(m => m.ManagerId);
+
+
+            //ASSUMPTIONS
+            // here we are assuming three things.
+            // one musictype can have gigs(song)
+            // one song must have a music type
+            modelBuilder.Entity<MusicType>()
+                .HasMany(c => c.Gigs)
+                .WithRequired(c => c.MusicType)
+                .HasForeignKey(c => c.MusicTypeId);
+
+            // one instrument can be used in many songs. 
+            // and one instrument can exist independetly too
+            // a gig can existsw w/o an instrument
+            modelBuilder.Entity<Instrument>()
+               .HasMany(c => c.Gigs)
+               .WithOptional(c => c.Instrument)
+               .HasForeignKey(c => c.InstrumentId);
+
+            // one music type can ahve ,any instrumnet
+            // on instrument cannot exist w/o a music type
+
+            modelBuilder.Entity<MusicType>()
+             .HasMany(c => c.Instruments)
+             .WithRequired(c => c.MusicType)
+             .HasForeignKey(c => c.MusicTypeId);
 
             base.OnModelCreating(modelBuilder);
         }
