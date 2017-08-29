@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
 using WebApplication3.ViewModel;
@@ -78,16 +77,25 @@ namespace WebApplication3.Controllers
         [HttpPost]
         public JsonResult GetInstrumentJson(int musicTypeId)
         {
-            var instruments = _context.Instruments
-                .Where(c => c.MusicTypeId == musicTypeId)
-                .ToList();
+            //var instruments = _context.Instruments
+            //    .Where(c => c.MusicTypeId == musicTypeId)
+            //    .ToList();
 
-            var dropdown = new List<SelectListItem>();
-            foreach (var cl in instruments)
-            {
-                dropdown.Add(new SelectListItem { Text = cl.InstrumentName, Value = cl.InstrumentId.ToString() });
-            }
-            return Json(dropdown, JsonRequestBehavior.AllowGet);
+            //var dropdown = new List<SelectListItem>();
+            //foreach (var cl in instruments)
+            //{
+            //    dropdown.Add(new SelectListItem { Text = cl.InstrumentName, Value = cl.InstrumentId.ToString() });
+            //}
+
+
+            var instruments = _context.Instruments
+                .Where(c => c.MusicTypeId == musicTypeId).Select(x => new
+                {
+                    Value = x.InstrumentId,
+                    Text = x.InstrumentName
+                });
+
+            return Json(instruments);
         }
     }
 }
