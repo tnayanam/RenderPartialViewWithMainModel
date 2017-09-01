@@ -25,6 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.MusicTypeId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                @* Making ajax call on dropdown change and PASSING URL for ajax from the source "user control" itself. I could have hadcoded the url in ajax itself but this is better and clea *@
                 @Html.DropDownListFor(m => m.MusicTypeId, Model.MusicTypes,"Please Select", new { @class = "form-control", data_url =  Url.Action("GetInstrumentJson", "Gig") })
                 @Html.ValidationMessageFor(model => model.MusicTypeId, "", new { @class = "text-danger" })
             </div>
