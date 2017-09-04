@@ -57,11 +57,25 @@ namespace WebApplication3.Controllers
         {
             if (ModelState.IsValid)
             {
-                var gig = new Gig
+                // check if new gig or needs to be updaated
+
+                var gig = _context.Gigs.Where(g => g.GigName == viewModel.GigName).SingleOrDefault();
+
+                if (gig != null)
                 {
-                    GigName = viewModel.GigName,
-                    InstrumentId = viewModel.InstrumentId
-                };
+                    // updatre the gvlaues
+                    gig.GigName = "pappu8";
+                }
+                else
+                {
+                    gig = new Gig
+                    {
+                        GigName = viewModel.GigName,
+                        InstrumentId = viewModel.InstrumentId
+                    };
+                }
+
+
                 if (viewModel.MusicTypeId.HasValue)
                 {
                     gig.MusicTypeId = viewModel.MusicTypeId.Value;
