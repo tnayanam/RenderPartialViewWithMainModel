@@ -35,5 +35,12 @@ namespace WebApplication3.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public ActionResult Student()
+        {
+            // when I just want one result from LINQ Query, multiple calls.
+            var x = _context.Students.Where(s => (s.Amount == 23) && (s.Age == 35)).SingleOrDefault();
+            return View();
+        }
+
     }
 }
