@@ -484,3 +484,9 @@ namespace WebApplication3.Controllers
         #endregion
     }
 }
+
+// Fluent API, Entity Framework Issue, Migration Issue:
+
+//There is already an open DataReader associated with this Command which must be closed first.
+
+//this means you need to check your controller linq query and use.Include("tablename"), you might not have included all the includes that you are  using in the cshtml file
