@@ -61,3 +61,11 @@ namespace WebApplication3.Controllers
 //    }
 //    throw raise;
 //}
+
+
+//FLUENT API ERROR 1:
+// WebApplication3.Models.Instrument_Gigs: : Multiplicity conflicts with the
+// referential constraint in Role 'Instrument_Gigs_Source' in relationship 'Instrument_Gigs'. Because all of the properties in the Dependent Role are
+// non-nullable, multiplicity of the Principal Role must be '1'.
+
+// means one colunmn needs to be nullable as per the fluent api convention but in model that property is not set to nullable "?"
