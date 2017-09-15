@@ -12,13 +12,18 @@ namespace WebApplication3.Controllers
         {
             _context = new ApplicationDbContext();
         }
+        private void Configure(Company viewModel)
+        {
+            viewModel.Parkings = _context.Parkings.ToList();
+            viewModel.date = DateTime.Now;
+            viewModel.Name = "My Company";
+        }
+
         // GET: DropDown
         public ActionResult Index()
         {
             var viewModel = new Company();
-            viewModel.Parkings = _context.Parkings.ToList();
-            viewModel.date = DateTime.Now;
-            viewModel.Name = "My Company";
+            Configure(viewModel);
             return View(viewModel);
         }
 
@@ -41,9 +46,7 @@ namespace WebApplication3.Controllers
         public ActionResult Edit()
         {
             var viewModel = new Company();
-            viewModel.Parkings = _context.Parkings.ToList();
-            viewModel.date = DateTime.Now;
-            viewModel.Name = "My Company";
+            Configure(viewModel);
             return View(viewModel);
         }
 
