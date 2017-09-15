@@ -15,6 +15,7 @@ namespace WebApplication3.Controllers
         // GET: IndustriesWebsite
         public ActionResult Index()
         {
+            var x = _context.Industries.Where(i => (i.Name == "technology") && i.Websites.Any(w => w.Name == "googhle"));
             return View();
         }
 
