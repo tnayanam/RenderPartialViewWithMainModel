@@ -18,3 +18,8 @@ namespace WebApplication3.Controllers
  * 1. Get-Package
  * 2. Uninstall-Package packagename
 */
+
+
+/* How to target a nuget package to a particular project only
+ *  Install-Package foolproof -Version 0.9.4518 -ProjectName projectnamegoeshere
+*/
