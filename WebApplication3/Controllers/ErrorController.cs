@@ -12,3 +12,9 @@ namespace WebApplication3.Controllers
         }
     }
 }
+
+/*
+ * How to uninstall a package from git
+ * 1. Get-Package
+ * 2. Uninstall-Package packagename
+*/
