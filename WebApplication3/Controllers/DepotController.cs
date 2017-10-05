@@ -21,3 +21,6 @@ namespace WebApplication3.Controllers
         }
     }
 }
+
+/// For deploying any web app on godaddy we need to follow these steps. 
+/// //https://stackoverflow.com/questions/46416694/how-to-deploy-asp-net-mvc-5-code-from-visual-studio-to-godaddy-plesk-server-cod
