@@ -41,6 +41,8 @@ namespace WebApplication3.Models
         public double RateInDollar { get; set; }
         public int test { get; set; }
 
+        public string concatString { get; set; }
+
         public int classtest { get; set; }
         public int idtest { get; set; }
 
