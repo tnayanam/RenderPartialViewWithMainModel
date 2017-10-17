@@ -22,7 +22,9 @@ namespace WebApplication3.Controllers
             dropdown.LastName = "Nayanam";
 
             List<int> l1 = new List<int>() { 3, 2, 4, 5, -1 };
-            dropdown.RateInDollar = l1.Min();
+            dropdown.RateInDollar = l1.Sum();
+            dropdown.RateInDollar = l1.Count();
+            dropdown.RateInDollar = l1.Average();
 
             return View(dropdown);
         }
