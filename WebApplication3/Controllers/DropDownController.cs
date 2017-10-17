@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using WebApplication3.Models;
 
@@ -19,7 +20,9 @@ namespace WebApplication3.Controllers
             dropdown.SongList.Add(new SelectListItem { Text = "Seven", Value = "7" });
             dropdown.FirstName = "Tanuj";
             dropdown.LastName = "Nayanam";
-            dropdown.RateInDollar = 23;
+
+            List<int> l1 = new List<int>() { 3, 2, 4, 5, -1 };
+            dropdown.RateInDollar = l1.Min();
 
             return View(dropdown);
         }
