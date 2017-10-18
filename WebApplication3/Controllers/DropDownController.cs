@@ -26,7 +26,7 @@ namespace WebApplication3.Controllers
             dropdown.RateInDollar = l1.Count();
             dropdown.RateInDollar = l1.Average();
             dropdown.RateInDollar = l1.Aggregate((a, b) => a * b);
-            // Aggregate
+            // Aggregate Operators
 
             List<string> lStr = new List<string>() { "I", "Will", "Become", "CEO", "oneday." };
 

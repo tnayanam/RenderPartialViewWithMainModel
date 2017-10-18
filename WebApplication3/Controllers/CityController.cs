@@ -23,6 +23,8 @@ namespace WebApplication3.Controllers
         public ActionResult List()
         {
             var r = _context.Cities.ToList();
+            var e = _context.Cities.Select(c => new { Name = c.CityName, Cityid = c.Id });
+
             return View(r);
         }
 
