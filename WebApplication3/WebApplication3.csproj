@@ -468,6 +468,7 @@
     <Compile Include="ViewModel\GigViewModel.cs" />
     <Compile Include="ViewModel\ManagerWorkerViewModel.cs" />
     <Compile Include="ViewModel\PhoneCameraViewModel.cs" />
+    <Compile Include="ViewModel\Project.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Client Scripts\mvcfoolproof.unobtrusive.js" />
