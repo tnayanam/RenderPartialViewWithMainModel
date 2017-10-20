@@ -62,6 +62,10 @@ namespace WebApplication3.Controllers
 
             // chaining the order by clause
             var t3 = Projects.OrderBy(c => c.Distance).ThenBy(c => c.Name);
+
+            var t4 = Projects.Take(2);
+
+
             return View(r);
         }
 
