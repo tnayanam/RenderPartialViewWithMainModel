@@ -30,11 +30,15 @@ namespace WebApplication3.Controllers
             var f = _context.Cities.Select(c => new { Name = c.CityName + " " + c.CityName, Cityid = c.Id });
 
             List<Project> Projects = new List<Project>();
-            Project proj1 = new Project { Name = "Cognizant", Cities = new List<string> { "Chennai", "Bangalore" } };
-            Project proj2 = new Project { Name = "TCS", Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj1 = new Project { Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" } };
+            Project proj2 = new Project { Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj3 = new Project { Name = "CTS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj4 = new Project { Name = "CSS", Distance = 600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
 
             Projects.Add(proj1);
             Projects.Add(proj2);
+            Projects.Add(proj3);
+            Projects.Add(proj4);
             // creates a collection of string found in the collection of native class.
             // example: output: "Chennai", "Benaglore", "Chennai", "Bangalore", "Delhi"
             // here Cities: needs to be collection
@@ -50,6 +54,14 @@ namespace WebApplication3.Controllers
             {
                 Debug.Write(res.ProjName.Name + "-" + res.CityName);
             }
+
+            //Orderby operator
+            var w2 = _context.Cities.OrderBy(c => c.CityName);
+
+            var w3 = _context.Cities.OrderByDescending(c => c.CityName);
+
+            // chaining the order by clause
+            var t3 = Projects.OrderBy(c => c.Distance).ThenBy(c => c.Name);
             return View(r);
         }
 

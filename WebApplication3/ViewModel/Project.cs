@@ -6,5 +6,6 @@ namespace WebApplication3.ViewModel
     {
         public string Name { get; set; }
         public List<string> Cities { get; set; }
+        public int Distance { get; set; }
     }
 }
