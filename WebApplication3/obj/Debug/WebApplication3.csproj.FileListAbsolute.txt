@@ -1652,4 +1652,3 @@ C:\Users\Dev10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\bin\M
 C:\Users\Dev10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Dev10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Dev10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
-C:\Users\Dev10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache

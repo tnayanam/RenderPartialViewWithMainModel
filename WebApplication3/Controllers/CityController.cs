@@ -63,6 +63,8 @@ namespace WebApplication3.Controllers
             // chaining the order by clause
             var t3 = Projects.OrderBy(c => c.Distance).ThenBy(c => c.Name);
 
+            var t8 = _context.Cities.Sum(c => c.Id);
+
             var t4 = Projects.Take(2);
 
 
