@@ -67,6 +67,9 @@ namespace WebApplication3.Controllers
 
             var t4 = Projects.Take(2);
 
+            // skip first result
+            var t5 = Projects.Skip(1);
+
 
             return View(r);
         }
