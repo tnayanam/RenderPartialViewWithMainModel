@@ -30,15 +30,24 @@ namespace WebApplication3.Controllers
             var f = _context.Cities.Select(c => new { Name = c.CityName + " " + c.CityName, Cityid = c.Id });
 
             List<Project> Projects = new List<Project>();
-            Project proj1 = new Project { Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" } };
-            Project proj2 = new Project { Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj3 = new Project { Name = "CTS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj4 = new Project { Name = "CSS", Distance = 600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" } };
+            Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj3 = new Project { Id = 3, Name = "CTS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj4 = new Project { Id = 4, Name = "CSS", Distance = 600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj5 = new Project { Id = 1, Name = "Cognizant", Distance = 1900, Cities = new List<string> { "Chennai", "Bangalore" } };
+            Project proj6 = new Project { Id = 2, Name = "TCS", Distance = 2900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj7 = new Project { Id = 3, Name = "CTS", Distance = 3900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj8 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+
 
             Projects.Add(proj1);
             Projects.Add(proj2);
             Projects.Add(proj3);
             Projects.Add(proj4);
+            Projects.Add(proj5);
+            Projects.Add(proj6);
+            Projects.Add(proj7);
+            Projects.Add(proj8);
             // creates a collection of string found in the collection of native class.
             // example: output: "Chennai", "Benaglore", "Chennai", "Bangalore", "Delhi"
             // here Cities: needs to be collection
@@ -79,6 +88,24 @@ namespace WebApplication3.Controllers
             // where, select
             // Immediate Execution: It gets executed then and there when we actually execute them.Greedy Loading
             // count, toList
+
+            // --- Conversion Operator
+            // ToList
+            // ToArray
+            // ToDictionary
+
+            //Dictionary<int, string> d1 = Projects.ToDictionary(p => p.Id, p => p.Name);
+
+            //foreach (KeyValuePair<int, string> kvp in d1)
+            //{
+            //    Debug.Write(kvp.Key + "-" + kvp.Value);
+            //}
+
+            // suppose I want result as key: 1,val: {900,1900}
+            //                          key: 2,val: {900,2900}
+            // 
+
+            var results = Projects.GroupBy(key => key.Id, val => val.Distance).ToDictionary(key => key.Key, val => val.ToList());
 
             return View(r);
         }
