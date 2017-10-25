@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Web.Mvc;
@@ -112,6 +113,36 @@ namespace WebApplication3.Controllers
             // problem is we needed to group by first based on Id in case of dictinary because it does not allow duplicate keys and woul have given the exception.
             // however, the normal tolokkup does the group by implicitly so we dnt need it in case of lookup
             // tolookup = groupby + dictionary 
+
+            ArrayList al = new ArrayList();
+            al.Add(1); // here 1 is object not an integer
+            al.Add(2);
+            al.Add("1");
+            al.Add("tanuj");
+
+            // Since tanuj string cannot be converted to integer type it will throw an exception while looping, the linq query itsef will not throw the exception
+            // because it is deferred execution so when we start looping we get the exception.
+
+            IEnumerable<int> resultdd = al.Cast<int>();
+
+            foreach (int re in resultdd)
+            {
+                Debug.Write(re + "\t");
+            }
+
+            ArrayList al1 = new ArrayList();
+            al1.Add(1); // here 1 is object not an integer
+            al1.Add(2);
+            al1.Add("1");
+            al1.Add("tanuj");
+            IEnumerable<int> resud = al.OfType<int>();
+
+            // exception wil not be thrown here, as cast will ignpre thetype which cannot be converted.
+            foreach (int re in resud)
+            {
+                Debug.Write(re + "\t");
+            }
+
             return View(r);
         }
 
