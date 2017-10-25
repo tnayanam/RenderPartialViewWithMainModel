@@ -106,7 +106,12 @@ namespace WebApplication3.Controllers
             // 
 
             var results = Projects.GroupBy(key => key.Id, val => val.Distance).ToDictionary(key => key.Key, val => val.ToList());
+            // SO even below gives the same query result as above. and it is simple too. but lookup is immutable and also it can handle same key coming multupiple times unlike dictionary
+            var results2 = Projects.ToLookup(key => key.Id, val => val.Distance);
 
+            // problem is we needed to group by first based on Id in case of dictinary because it does not allow duplicate keys and woul have given the exception.
+            // however, the normal tolokkup does the group by implicitly so we dnt need it in case of lookup
+            // tolookup = groupby + dictionary 
             return View(r);
         }
 
