@@ -70,6 +70,15 @@ namespace WebApplication3.Controllers
             // skip first result
             var t5 = Projects.Skip(1);
 
+            // does not work with the Enitty objects
+
+            var t6 = _context.Cities.TakeWhile(c => c.Id > 3);
+            var t7 = _context.Cities.SkipWhile(c => c.Id > 3);
+
+            // Deferred Execution: It gets executed when actually we query them. More like Lazy Loading
+            // where, select
+            // Immediate Execution: It gets executed then and there when we actually execute them.Greedy Loading
+            // count, toList
 
             return View(r);
         }
