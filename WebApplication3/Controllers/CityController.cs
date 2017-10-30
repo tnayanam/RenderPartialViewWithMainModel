@@ -31,14 +31,15 @@ namespace WebApplication3.Controllers
             var f = _context.Cities.Select(c => new { Name = c.CityName + " " + c.CityName, Cityid = c.Id });
 
             List<Project> Projects = new List<Project>();
-            Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" } };
-            Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj3 = new Project { Id = 3, Name = "CTS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj4 = new Project { Id = 4, Name = "CSS", Distance = 600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj5 = new Project { Id = 1, Name = "Cognizant", Distance = 1900, Cities = new List<string> { "Chennai", "Bangalore" } };
-            Project proj6 = new Project { Id = 2, Name = "TCS", Distance = 2900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj7 = new Project { Id = 3, Name = "CTS", Distance = 3900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
-            Project proj8 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" } };
+            Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
+            Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj3 = new Project { Id = 3, Name = "CTS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Project proj4 = new Project { Id = 4, Name = "CSS", Distance = 600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Project proj5 = new Project { Id = 1, Name = "Cognizant", Distance = 1900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
+            Project proj6 = new Project { Id = 2, Name = "TCS", Distance = 2900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Project proj7 = new Project { Id = 3, Name = "CTS", Distance = 3900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Project proj8 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+
 
 
             Projects.Add(proj1);
@@ -49,6 +50,10 @@ namespace WebApplication3.Controllers
             Projects.Add(proj6);
             Projects.Add(proj7);
             Projects.Add(proj8);
+
+
+            var isOkselectId = Projects.Single(p => p.IsOk).Id;
+
             // creates a collection of string found in the collection of native class.
             // example: output: "Chennai", "Benaglore", "Chennai", "Bangalore", "Delhi"
             // here Cities: needs to be collection
@@ -125,10 +130,10 @@ namespace WebApplication3.Controllers
 
             IEnumerable<int> resultdd = al.Cast<int>();
 
-            foreach (int re in resultdd)
-            {
-                Debug.Write(re + "\t");
-            }
+            //foreach (int re in resultdd)
+            //{
+            //    Debug.Write(re + "\t");
+            //}
 
             ArrayList al1 = new ArrayList();
             al1.Add(1); // here 1 is object not an integer
