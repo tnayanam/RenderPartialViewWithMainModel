@@ -37,6 +37,17 @@ namespace WebApplication3.Controllers
             var emailss = _context.Cities.ElementAt(3);
             var emailsFGs = _context.Cities.ElementAtOrDefault(3);
 
+
+            int[] num = { 1, 2, 3 };
+            var g = num.DefaultIfEmpty(); // return all three integers
+            int[] num1 = { };
+            var g1 = num.DefaultIfEmpty(); // return 0 if empty cpolletion
+
+            int[] num1w = { };
+            var wg1 = num.DefaultIfEmpty(23); // return 23 if empty collction
+
+
+
             List<Project> Projects = new List<Project>();
             Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
             Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
