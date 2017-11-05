@@ -60,6 +60,16 @@ namespace WebApplication3.Controllers
                 Debug.WriteLine(grp.Key + " - " + grp.Count());
             }
 
+
+
+
+            // conditional groupby:
+            var compGrous = Projects.GroupBy(p => p.Name);
+
+            foreach (var grp in compGrous)
+            {
+                Debug.WriteLine(grp.Key + " - " + grp.Count(c => c.Distance > 900));
+            }
             var isOkselectId = Projects.Single(p => p.IsOk).Id;
 
             // creates a collection of string found in the collection of native class.
@@ -77,6 +87,9 @@ namespace WebApplication3.Controllers
             {
                 Debug.Write(res.ProjName.Name + "-" + res.CityName);
             }
+
+            // now conditional group by
+
 
             //Orderby operator
             var w2 = _context.Cities.OrderBy(c => c.CityName);
