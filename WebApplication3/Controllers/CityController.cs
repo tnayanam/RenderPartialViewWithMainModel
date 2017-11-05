@@ -325,6 +325,36 @@ namespace WebApplication3.Controllers
             //Arundhati
             //Sharma
             //--------------------------------
+
+
+            //==================
+            Debug.WriteLine("******************************");
+            var rest = Candidate.GetAllCandidates().Join
+                (Course.GetAllCourses(),
+                c => c.CourseId,
+                ca => ca.Id,
+                (candidate, course)
+                => new
+                {
+                    CandidateName = candidate.Name,
+                    Course = course.CourseName
+                });
+
+            foreach (var course in rest)
+            {
+                Debug.WriteLine(course.CandidateName + "-" + course.Course);
+                Debug.WriteLine("--------------------------------");
+            }
+            //output just like inner join
+            //            Tanuj - Maths
+            //--------------------------------
+            //Nayanam - Science
+            //--------------------------------
+            //Arundhati - Science
+            //--------------------------------
+            //Sharma - Science
+            //--------------------------------
+
             return View(r);
         }
 

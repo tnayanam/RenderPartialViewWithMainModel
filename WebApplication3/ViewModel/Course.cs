@@ -13,6 +13,7 @@ namespace WebApplication3.ViewModel
             {
                 new Course { Id = 1, CourseName = "Maths" },
                 new Course { Id = 2, CourseName = "Science" },
+                 new Course { Id = 3, CourseName = "Physics" }
             };
         }
     }
