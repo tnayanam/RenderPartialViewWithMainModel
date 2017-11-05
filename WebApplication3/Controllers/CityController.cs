@@ -32,15 +32,21 @@ namespace WebApplication3.Controllers
 
             List<Project> Projects = new List<Project>();
             Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
-            Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
             Project proj3 = new Project { Id = 3, Name = "CTS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
             Project proj4 = new Project { Id = 4, Name = "CSS", Distance = 600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
-            Project proj5 = new Project { Id = 1, Name = "Cognizant", Distance = 1900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
-            Project proj6 = new Project { Id = 2, Name = "TCS", Distance = 2900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
-            Project proj7 = new Project { Id = 3, Name = "CTS", Distance = 3900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
-            Project proj8 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
-
-
+            Project proj5 = new Project { Id = 5, Name = "Cognizant", Distance = 1900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = true };
+            Project proj6 = new Project { Id = 6, Name = "TCS", Distance = 2900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj7 = new Project { Id = 7, Name = "CTS", Distance = 3900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj8 = new Project { Id = 8, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj9 = new Project { Id = 9, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = true };
+            Project proj10 = new Project { Id = 10, Name = "TCS", Distance = 9050, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj11 = new Project { Id = 11, Name = "CTS", Distance = 9040, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj12 = new Project { Id = 12, Name = "CSS", Distance = 6030, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = true };
+            Project proj13 = new Project { Id = 13, Name = "Cognizant", Distance = 19300, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = true };
+            Project proj14 = new Project { Id = 14, Name = "TCS", Distance = 29030, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Project proj15 = new Project { Id = 15, Name = "CTS", Distance = 39030, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Project proj16 = new Project { Id = 16, Name = "CSS", Distance = 46020, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
 
             Projects.Add(proj1);
             Projects.Add(proj2);
@@ -50,6 +56,66 @@ namespace WebApplication3.Controllers
             Projects.Add(proj6);
             Projects.Add(proj7);
             Projects.Add(proj8);
+            Projects.Add(proj9);
+            Projects.Add(proj10);
+            Projects.Add(proj11);
+            Projects.Add(proj12);
+            Projects.Add(proj13);
+            Projects.Add(proj14);
+            Projects.Add(proj15);
+            Projects.Add(proj16);
+
+            var exps = Projects.GroupBy(p => new { p.Name, p.IsOk })
+                .OrderBy(p => p.Key.Name)
+                .ThenBy(p => p.Key.IsOk)
+                .Select(grp => new { Key1 = grp.Key.Name, Key2 = grp.Key.IsOk, Items = grp.OrderBy(i => i.Distance) });
+
+
+            foreach (var grp in exps)
+            {
+                Debug.WriteLine(grp.Key1, " - " + grp.Key2 + "- " + grp.Items.Count());
+
+                Debug.WriteLine("-------------------------------------------------------");
+                foreach (var g in grp.Items)
+                {
+                    Debug.WriteLine(g.Name + "-" + g.IsOk + "-" + g.Distance);
+                }
+            }
+
+            // OUTPUT:
+
+            //            -False - 1: Cognizant
+            //------------------------------------------------------ -
+            //Cognizant - False - 900
+            // - True - 3: Cognizant
+            // ------------------------------------------------------ -
+            // Cognizant - True - 900
+            //Cognizant - True - 1900
+            //Cognizant - True - 19300
+            // - False - 2: CSS
+            // ------------------------------------------------------ -
+            // CSS - False - 600
+            //CSS - False - 46020
+            // - True - 2: CSS
+            // ------------------------------------------------------ -
+            // CSS - True - 4600
+            //CSS - True - 6030
+            // - False - 2: CTS
+            // ------------------------------------------------------ -
+            // CTS - False - 900
+            //CTS - False - 39030
+            // - True - 2: CTS
+            // ------------------------------------------------------ -
+            // CTS - True - 3900
+            //CTS - True - 9040
+            // - False - 2: TCS
+            // ------------------------------------------------------ -
+            // TCS - False - 900
+            //TCS - False - 29030
+            // - True - 2: TCS
+            // ------------------------------------------------------ -
+            // TCS - True - 2900
+            //TCS - True - 9050
 
 
             // groupby:
@@ -139,8 +205,8 @@ namespace WebApplication3.Controllers
             // where as query after it gets executed LINQ TO Objects.
             var t9 = Projects.AsEnumerable().Where(c => c.Id > 2);
 
-            Project proj9 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
-            Projects.Add(proj9);
+            //Project proj9 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            //Projects.Add(proj9);
 
             // the query in the where clause will be exec
             foreach (var u in t9)
@@ -205,6 +271,11 @@ namespace WebApplication3.Controllers
             {
                 Debug.Write(re + "\t");
             }
+
+
+
+
+
 
             return View(r);
         }
