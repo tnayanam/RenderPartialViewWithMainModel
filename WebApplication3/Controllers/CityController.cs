@@ -33,9 +33,9 @@ namespace WebApplication3.Controllers
             var email = _context.Cities.Where(c => c.Id == 3).First().CityName;
             var emails = _context.Cities.First(c => c.Id == 3).CityName;
 
-            var emaiWls = _context.Cities.Last(c => c.Id == 3).CityName;
-            var emailss = _context.Cities.ElementAt(3);
-            var emailsFGs = _context.Cities.ElementAtOrDefault(3);
+            //var emaiWls = _context.Cities.Last(c => c.Id == 3).CityName;
+            //var emailss = _context.Cities.ElementAt(3);
+            //var emailsFGs = _context.Cities.ElementAtOrDefault(3);
 
 
             int[] num = { 1, 2, 3 };
@@ -89,16 +89,16 @@ namespace WebApplication3.Controllers
                 .Select(grp => new { Key1 = grp.Key.Name, Key2 = grp.Key.IsOk, Items = grp.OrderBy(i => i.Distance) });
 
 
-            foreach (var grp in exps)
-            {
-                Debug.WriteLine(grp.Key1, " - " + grp.Key2 + "- " + grp.Items.Count());
+            //foreach (var grp in exps)
+            //{
+            //    Debug.WriteLine(grp.Key1, " - " + grp.Key2 + "- " + grp.Items.Count());
 
-                Debug.WriteLine("-------------------------------------------------------");
-                foreach (var g in grp.Items)
-                {
-                    Debug.WriteLine(g.Name + "-" + g.IsOk + "-" + g.Distance);
-                }
-            }
+            //    Debug.WriteLine("-------------------------------------------------------");
+            //    foreach (var g in grp.Items)
+            //    {
+            //        Debug.WriteLine(g.Name + "-" + g.IsOk + "-" + g.Distance);
+            //    }
+            //}
 
             // OUTPUT:
 
@@ -166,19 +166,19 @@ namespace WebApplication3.Controllers
                 .OrderBy(p => p.Key)
                 .Select(grp => new { Key = grp.Key, Items = grp.OrderByDescending(p => p.Distance) });
 
-            foreach (var g in compGro)
-            {
-                Debug.WriteLine(g.Key + " -- ");
-                foreach (var t in g.Items)
-                {
-                    Debug.WriteLine(g.Key + "\t" + t.Distance);
-                }
-            }
+            //foreach (var g in compGro)
+            //{
+            //    Debug.WriteLine(g.Key + " -- ");
+            //    foreach (var t in g.Items)
+            //    {
+            //        Debug.WriteLine(g.Key + "\t" + t.Distance);
+            //    }
+            //}
 
 
 
 
-            var isOkselectId = Projects.Single(p => p.IsOk).Id;
+            //var isOkselectId = Projects.Single(p => p.IsOk).Id;
 
             // creates a collection of string found in the collection of native class.
             // example: output: "Chennai", "Benaglore", "Chennai", "Bangalore", "Delhi"
@@ -191,10 +191,10 @@ namespace WebApplication3.Controllers
             // Output: Cognizant-Chennai, Cognizant-Bangalore
             var result = Projects.SelectMany(p => p.Cities, (Name, City) => new { ProjName = Name, CityName = City });
             // Write to console.
-            foreach (var res in result)
-            {
-                Debug.Write(res.ProjName.Name + "-" + res.CityName);
-            }
+            //foreach (var res in result)
+            //{
+            //    Debug.Write(res.ProjName.Name + "-" + res.CityName);
+            //}
 
             // now conditional group by
 
@@ -290,11 +290,41 @@ namespace WebApplication3.Controllers
                 Debug.Write(re + "\t");
             }
 
+            //-------------------------------------------------------------------------------------------------------//
+            // basically below will tell Maths has who all stude4nts enroilled and science has who all students enrolled
+
+            var candidateByCourse = Course.GetAllCourses()
+                .GroupJoin(Candidate.GetAllCandidates(),
+                c => c.Id,
+                ca => ca.CourseId,
+                (course, candidates) => new
+                {
+                    Course = course,
+                    Candidates = candidates
+                });
+
+            foreach (var course in candidateByCourse)
+            {
+                Debug.WriteLine(course.Course.CourseName);
+                foreach (var candidate in course.Candidates)
+                {
+                    Debug.WriteLine(candidate.Name);
+                }
+                Debug.WriteLine("--------------------------------");
+            }
 
 
+            // output
 
-
-
+            //Maths
+            //Tanuj
+            //Raz
+            //--------------------------------
+            //Science
+            //Nayanam
+            //Arundhati
+            //Sharma
+            //--------------------------------
             return View(r);
         }
 

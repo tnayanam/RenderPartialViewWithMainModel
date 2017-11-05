@@ -464,6 +464,8 @@
     <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\Candidate.cs" />
+    <Compile Include="ViewModel\Course.cs" />
     <Compile Include="ViewModel\CoverLetterViewModel.cs" />
     <Compile Include="ViewModel\GigViewModel.cs" />
     <Compile Include="ViewModel\ManagerWorkerViewModel.cs" />
