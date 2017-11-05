@@ -68,7 +68,7 @@ namespace WebApplication3.Controllers
 
             foreach (var grp in compGrous)
             {
-                Debug.WriteLine(grp.Key + " - " + grp.Count(c => c.Distance > 900));
+                Debug.WriteLine(grp.Key + " - " + grp.Max(c => c.Distance));
             }
             var isOkselectId = Projects.Single(p => p.IsOk).Id;
 
