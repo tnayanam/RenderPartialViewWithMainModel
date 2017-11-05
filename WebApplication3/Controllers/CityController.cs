@@ -68,8 +68,13 @@ namespace WebApplication3.Controllers
 
             foreach (var grp in compGrous)
             {
-                Debug.WriteLine(grp.Key + " - " + grp.Max(c => c.Distance));
+                Debug.WriteLine(grp.Key + " - " + grp.Count());
+                foreach (var t in grp)
+                {
+                    Debug.WriteLine(t.Name + "-" + t.Distance);
+                }
             }
+
             var isOkselectId = Projects.Single(p => p.IsOk).Id;
 
             // creates a collection of string found in the collection of native class.
