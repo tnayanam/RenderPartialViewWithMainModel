@@ -52,6 +52,14 @@ namespace WebApplication3.Controllers
             Projects.Add(proj8);
 
 
+            // groupby:
+            var compGroups = Projects.GroupBy(p => p.Name);
+
+            foreach (var grp in compGroups)
+            {
+                Debug.WriteLine(grp.Key + " - " + grp.Count());
+            }
+
             var isOkselectId = Projects.Single(p => p.IsOk).Id;
 
             // creates a collection of string found in the collection of native class.
