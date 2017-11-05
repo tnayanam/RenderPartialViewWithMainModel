@@ -30,6 +30,9 @@ namespace WebApplication3.Controllers
 
             var f = _context.Cities.Select(c => new { Name = c.CityName + " " + c.CityName, Cityid = c.Id });
 
+            var email = _context.Cities.Where(c => c.Id == 3).First().CityName;
+            var emails = _context.Cities.First(c => c.Id == 3).CityName;
+
             List<Project> Projects = new List<Project>();
             Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
             Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
