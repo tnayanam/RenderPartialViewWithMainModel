@@ -75,6 +75,25 @@ namespace WebApplication3.Controllers
                 }
             }
 
+
+            // conditional groupby with sorting of the main group by as well as the inside element of the group by:
+            var compGro = Projects
+                .GroupBy(p => p.Name)
+                .OrderBy(p => p.Key)
+                .Select(grp => new { Key = grp.Key, Items = grp.OrderByDescending(p => p.Distance) });
+
+            foreach (var g in compGro)
+            {
+                Debug.WriteLine(g.Key + " -- ");
+                foreach (var t in g.Items)
+                {
+                    Debug.WriteLine(g.Key + "\t" + t.Distance);
+                }
+            }
+
+
+
+
             var isOkselectId = Projects.Single(p => p.IsOk).Id;
 
             // creates a collection of string found in the collection of native class.
