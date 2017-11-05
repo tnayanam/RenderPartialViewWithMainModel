@@ -90,6 +90,19 @@ namespace WebApplication3.Controllers
             var t6 = _context.Cities.TakeWhile(c => c.Id > 3);
             var t7 = _context.Cities.SkipWhile(c => c.Id > 3);
 
+            // As enummerable : Query written before it gets executed as LINQ to SQL
+            // where as query after it gets executed LINQ TO Objects.
+            var t9 = Projects.AsEnumerable().Where(c => c.Id > 2);
+
+            Project proj9 = new Project { Id = 4, Name = "CSS", Distance = 4600, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
+            Projects.Add(proj9);
+
+            // the query in the where clause will be exec
+            foreach (var u in t9)
+            {
+                Debug.Write(u.Id + "\n");
+            }
+
             // Deferred Execution: It gets executed when actually we query them. More like Lazy Loading
             // where, select
             // Immediate Execution: It gets executed then and there when we actually execute them.Greedy Loading
