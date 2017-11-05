@@ -292,7 +292,7 @@ namespace WebApplication3.Controllers
 
             //-------------------------------------------------------------------------------------------------------//
             // basically below will tell Maths has who all stude4nts enroilled and science has who all students enrolled
-
+            // Outer Join 
             var candidateByCourse = Course.GetAllCourses()
                 .GroupJoin(Candidate.GetAllCandidates(),
                 c => c.Id,
@@ -354,6 +354,25 @@ namespace WebApplication3.Controllers
             //--------------------------------
             //Sharma - Science
             //--------------------------------
+
+            //======================================
+            // Left Outer Join
+            var re1 = Candidate.GetAllCandidates()
+                .GroupJoin(Course.GetAllCourses(),
+                ca => ca.CourseId,
+                c => c.Id,
+                (candidate, courses) =>
+                new
+                {
+                    candidate,
+                    courses
+                })
+                .SelectMany(z => z.courses.DefaultIfEmpty(),
+                (a, b) => new
+                {
+                    CandidateName = a.candidate.Name,
+                    CourseName = b == null ? "No couse" : b.CourseName
+                });
 
             return View(r);
         }
