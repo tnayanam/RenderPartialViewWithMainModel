@@ -33,6 +33,10 @@ namespace WebApplication3.Controllers
             var email = _context.Cities.Where(c => c.Id == 3).First().CityName;
             var emails = _context.Cities.First(c => c.Id == 3).CityName;
 
+            var emaiWls = _context.Cities.Last(c => c.Id == 3).CityName;
+            var emailss = _context.Cities.ElementAt(3);
+            var emailsFGs = _context.Cities.ElementAtOrDefault(3);
+
             List<Project> Projects = new List<Project>();
             Project proj1 = new Project { Id = 1, Name = "Cognizant", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore" }, IsOk = false };
             Project proj2 = new Project { Id = 2, Name = "TCS", Distance = 900, Cities = new List<string> { "Chennai", "Bangalore", "Delhi" }, IsOk = false };
