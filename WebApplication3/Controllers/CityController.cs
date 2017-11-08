@@ -374,6 +374,34 @@ namespace WebApplication3.Controllers
                     CourseName = b == null ? "No couse" : b.CourseName
                 });
 
+            foreach (var g12 in re1)
+            {
+                Debug.WriteLine(g12.CandidateName + "--", g12.CourseName);
+                Debug.WriteLine("--");
+            }
+
+            // output
+
+            //            Maths: Tanuj--
+            //--
+            //Science: Nayanam--
+            //--
+            //Science: Arundhati--
+            //--
+            //Science: Sharma--
+            //--
+            //No couse: Raz--
+
+            // Select Many Cross Join
+
+            var rt = Candidate.GetAllCandidates().SelectMany(c => Course.GetAllCourses(), (c, co) => new { c, co });
+
+            foreach (var or in rt)
+            {
+                Debug.WriteLine(or.c.Name + "\t" + or.co.CourseName);
+            }
+
+
             return View(r);
         }
 

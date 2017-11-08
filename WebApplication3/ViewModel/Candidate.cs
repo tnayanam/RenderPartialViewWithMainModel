@@ -16,7 +16,7 @@ namespace WebApplication3.ViewModel
                 new Candidate { CourseId = 2, Id = 2, Name = "Nayanam" },
                 new Candidate { CourseId = 2, Id = 3, Name = "Arundhati" },
                 new Candidate { CourseId = 2, Id = 4, Name = "Sharma" },
-                new Candidate { Id = 5, Name = "Raz" }
+                new Candidate { CourseId = 3, Id = 5, Name = "Raz" }
             };
         }
     }
