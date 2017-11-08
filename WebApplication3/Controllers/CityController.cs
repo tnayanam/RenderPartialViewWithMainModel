@@ -400,7 +400,31 @@ namespace WebApplication3.Controllers
             {
                 Debug.WriteLine(or.c.Name + "\t" + or.co.CourseName);
             }
+            // Distinct for complex objects
 
+            var rf = Course.GetAllCourses().Distinct();
+            foreach (var or in rf)
+            {
+                Debug.WriteLine(or.CourseName + "\t" + or.Id);
+            }
+
+            // Output:
+
+            // Maths   1
+            // Maths   1
+            // Maths   2
+
+            // we expected output to be just 2. but we got three because Courese is complex class. so try below
+
+            var rfq = Course.GetAllCourses().Select(c => new { c.Id, c.CourseName }).Distinct();
+            foreach (var or in rfq)
+            {
+                Debug.WriteLine(or.CourseName + "\t" + or.Id);
+            }
+
+            // Output: as expected.
+            //            Maths   1
+            //Maths   2
 
             return View(r);
         }
