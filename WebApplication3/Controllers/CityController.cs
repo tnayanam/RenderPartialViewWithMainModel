@@ -426,6 +426,37 @@ namespace WebApplication3.Controllers
             //            Maths   1
             //Maths   2
 
+            // Union
+            int[] nu1 = { 1, 2, 3, 4, 5 };
+            int[] nu2 = { 1, 3, 5 };
+            var t1 = nu1.Union(nu2);
+
+            foreach (var or in t1)
+            {
+                Debug.WriteLine(or);
+            }
+
+            // output
+            //            ///1
+            //            2
+            //3
+            //4
+            //5
+
+            // Intersect
+            int[] nu3 = { 1, 2, 3, 4, 5 };
+            int[] nu4 = { 1, 3, 5 };
+            var t2 = nu3.Intersect(nu4);
+
+            foreach (var or in t2)
+            {
+                Debug.WriteLine(or);
+            }
+            //            // output
+            //            1
+            //3
+            //5
+
             return View(r);
         }
 
