@@ -471,6 +471,12 @@ namespace WebApplication3.Controllers
             //            2
             //4
 
+            var evennum = Enumerable.Range(1, 10).Where(c => c % ~2 == 0);
+
+            var evennum1 = Enumerable.Repeat("HJello", 10);
+
+            var res = nuq3.Concat(nuq4);
+
             return View(r);
         }
 
