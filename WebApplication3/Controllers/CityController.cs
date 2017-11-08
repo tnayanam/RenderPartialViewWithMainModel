@@ -457,6 +457,20 @@ namespace WebApplication3.Controllers
             //3
             //5
 
+
+            // Except
+            int[] nuq3 = { 1, 2, 3, 4, 5 };
+            int[] nuq4 = { 1, 3, 5 };
+            var tq2 = nuq3.Intersect(nuq4);
+
+            foreach (var or in tq2)
+            {
+                Debug.WriteLine(or);
+            }
+            //            // output
+            //            2
+            //4
+
             return View(r);
         }
 
