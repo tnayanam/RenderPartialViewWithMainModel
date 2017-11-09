@@ -508,7 +508,8 @@ namespace WebApplication3.Controllers
             var d9 = str6.Contains("usa", StringComparer.OrdinalIgnoreCase); // true
 
 
-
+            // Want to test LINQ QUeries use LINQPad Tool
+            // https://www.youtube.com/watch?v=reRfw22XG18&index=32&list=PL6n9fhu94yhWi8K02Eqxp3Xyh_OmQ0Rp6
 
 
 
