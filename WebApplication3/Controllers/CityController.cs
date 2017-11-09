@@ -495,6 +495,24 @@ namespace WebApplication3.Controllers
 
             var seqEq4 = str5.OrderBy(c => c).SequenceEqual(str2.OrderBy(c => c)); // true
 
+            int[] num4 = { 1, 2, 3, 4, 5 };
+            var f3 = num4.All(c => c > 3); // false
+
+            int[] num5 = { 1, 2, 3, 4, 5 };
+            var f5 = num4.Any(); // true
+
+            var f9 = num4.Any(c => c > 10); // false
+
+            var d1 = str6.Contains("USA"); // true
+            var d2 = str6.Contains("usa"); // false
+            var d9 = str6.Contains("usa", StringComparer.OrdinalIgnoreCase); // true
+
+
+
+
+
+
+
             return View(r);
         }
 
