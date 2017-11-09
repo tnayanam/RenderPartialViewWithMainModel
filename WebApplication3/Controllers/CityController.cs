@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -476,6 +477,23 @@ namespace WebApplication3.Controllers
             var evennum1 = Enumerable.Repeat("HJello", 10);
 
             var res = nuq3.Concat(nuq4);
+
+            string[] str1 = { "USA", "India", "UK" };
+            string[] str2 = { "USA", "India", "UK" };
+
+            var seqEql = str1.SequenceEqual(str2); // true
+
+            string[] str3 = { "USA", "India", "UK" };
+            string[] str4 = { "USA", "InDia", "UK" };
+
+            var seqEq2 = str3.SequenceEqual(str4); // false
+
+            var seqEq3 = str3.SequenceEqual(str4, StringComparer.OrdinalIgnoreCase); // true
+
+            string[] str5 = { "USA", "India", "UK" };
+            string[] str6 = { "India", "USA", "UK" };
+
+            var seqEq4 = str5.OrderBy(c => c).SequenceEqual(str2.OrderBy(c => c)); // true
 
             return View(r);
         }
