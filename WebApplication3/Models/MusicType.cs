@@ -13,5 +13,13 @@ namespace WebApplication3.Models
 
         public ICollection<Gig> Gigs { get; set; }
         public ICollection<Instrument> Instruments { get; set; }
+
+
+        // all these integers Id should match with the one in the database. 
+        // And now moving forward instead of Enum 
+        public static readonly int Blues = 0;
+        public static readonly int Rock = 1;
+        public static readonly int Metal = 2;
+
     }
 }

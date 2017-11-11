@@ -57,6 +57,12 @@ namespace WebApplication3.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Now you can compare directly w/o having separate enums and no need for casting also.
+
+                if (viewModel.MusicTypeId == MusicType.Blues)
+                {
+
+                }
                 // check if new gig or needs to be updaated
 
                 var gig = _context.Gigs.Where(g => g.GigName == viewModel.GigName).SingleOrDefault();
