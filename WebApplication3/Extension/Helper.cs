@@ -1,6 +1,6 @@
 ﻿using System;
 
-// this is a c sharp helper , this is different from HTML Helper.
+// this is a c sharp extention method , this is different from HTML Helper.
 
 namespace WebApplication3.Extension
 {

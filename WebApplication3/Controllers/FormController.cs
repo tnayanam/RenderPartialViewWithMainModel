@@ -25,7 +25,7 @@ namespace WebApplication3.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                return Content("all okey");
             }
             return View();
         }
