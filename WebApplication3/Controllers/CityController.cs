@@ -533,5 +533,12 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+
+        public ActionResult State(int month, int year)
+        {
+
+            return Content(month + " " + year);
+        }
+
     }
 }
