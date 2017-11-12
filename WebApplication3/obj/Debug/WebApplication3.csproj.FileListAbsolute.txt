@@ -1773,3 +1773,5 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Net.Http.Formatting.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Http.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Http.WebHost.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\AutoMapper.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\AutoMapper.xml

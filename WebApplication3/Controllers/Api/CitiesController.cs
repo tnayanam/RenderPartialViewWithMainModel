@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -24,26 +25,27 @@ namespace WebApplication3.Controllers.Api
         }
 
         //api/cities/1
-        public CityDto GetCity(int id)
+        public IHttpActionResult GetCity(int id)
         {
             var city = _context.Cities.SingleOrDefault(c => c.Id == id);
             if (city == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            return Mapper.Map<City, CityDto>(city);
+                return NotFound();
+
+            return Ok(Mapper.Map<City, CityDto>(city));
         }
 
         // POST: api/cities
         [HttpPost]
-        public CityDto CreateCity(CityDto cityDto)
+        public IHttpActionResult CreateCity(CityDto cityDto)
         {
             if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
             var city = Mapper.Map<CityDto, City>(cityDto);
             _context.Cities.Add(city);
             _context.SaveChanges();
 
             cityDto.Id = city.Id;
-            return cityDto;
+            return Created(new Uri(Request.RequestUri + "/" + cityDto.Id), cityDto);
         }
 
         // Put /api/cities/1
