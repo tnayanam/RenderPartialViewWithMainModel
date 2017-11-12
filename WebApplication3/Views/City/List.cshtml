@@ -100,7 +100,8 @@
 
 <script>
     $(document).ready(function () {
-        $("#cities .js-delete").on("click", function () {
+        $("#cities").on("click", ".js-delete", function () {
+            debugger;
             var button = $(this);
             bootbox.confirm("Are you sure you want to delete?", function (result) {
                 if (result) {
