@@ -9,9 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm("Delete", "City", FormMethod.Post))
-{
-    <table class="table">
+    <table class="table" id="cities">
         <tr>
             <th>
                 <input type="checkbox" name ="checkAll" id="checkAll"/>
@@ -22,7 +20,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.Country)
             </th>
-            <th></th>
+            <th>
+            <th>delete</th>
         </tr>
 
         @foreach (var item in Model)
@@ -37,13 +36,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Country)
                 </td>
+                <td>
+                    <button data-city-id ="@item.Id" class="btn btn-link js-delete">Delete</button>
+                </td>
             </tr>
         }
 
     </table>
-    <input type="submit" value="Delete" id="btn-submit" />
+    @*<input type="submit" value="Delete" id="btn-submit" />*@
 
-}
+
 <div class="fooq">hell</div>
 <script>
     $(".fooq").click(function () {
@@ -94,4 +96,25 @@
                 return confirm(count + 'rows will be deleted.');
             }
     });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#cities .js-delete").on("click", function () {
+
+            if(confirm("are you sure you want to delete?"))
+            {
+                $.ajax({
+                    url: "/api/cities/" + $(this).attr("data-city-id"),
+                    method: "DELETE",
+                    success: function () {
+                        console.log("deleted!!!!!!");
+                    }
+
+                })
+            }
+
+        })
+    });
+
 </script>
