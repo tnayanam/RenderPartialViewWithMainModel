@@ -10,43 +10,47 @@
     @Html.ActionLink("Create New", "Create")
 </p>
     <table class="table" id="cities">
-        <tr>
-            <th>
-                <input type="checkbox" name ="checkAll" id="checkAll"/>
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CityName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Country)
-            </th>
-            <th>
-            <th>delete</th>
-        </tr>
+        <thead>
 
-        @foreach (var item in Model)
-        {
             <tr>
-                <td>
-                    <input type="checkbox" name="listOfCityIdToDelete" id="listOfCityIdToDelete" value="@item.Id">
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CityName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Country)
-                </td>
-                <td>
-                    <button data-city-id ="@item.Id" class="btn btn-link js-delete">Delete</button>
-                </td>
+                @*<th>
+                    <input type="checkbox" name ="checkAll" id="checkAll"/>
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.CityName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th>delete</th>
             </tr>
-        }
+        </thead><tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                        <input type="checkbox" name="listOfCityIdToDelete" id="listOfCityIdToDelete" value="@item.Id">
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CityName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        <button data-city-id="@item.Id" class="btn btn-link js-delete">Delete</button>
+                    </td>
+                </tr>
+            }</tbody>
 
-    </table>
+</table>
     @*<input type="submit" value="Delete" id="btn-submit" />*@
 
 
 <div class="fooq">hell</div>
+
+@section scripts
+{
 <script>
     $(".fooq").click(function () {
         alert("class selector");
@@ -98,8 +102,10 @@
     });
 </script>
 
+
 <script>
     $(document).ready(function () {
+        $("#cities").DataTable();
         $("#cities").on("click", ".js-delete", function () {
             debugger;
             var button = $(this);
@@ -119,3 +125,10 @@
     });
 
 </script>
+
+    }
+
+@*// Install-package jquery.datatables -version:1.10.11
+    
+    make sure thead nad tbody are getting used it is imnportant rerequisaite of using datatablers
+    *@

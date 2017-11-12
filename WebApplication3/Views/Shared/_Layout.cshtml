@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
-@Scripts.Render("~/bundles/jquery")
+@*@Scripts.Render("~/bundles/jquery")*@
 @*to make sure image does not go out of parent div add img {max-width:100%}  *@
 
 <body>
@@ -51,8 +51,8 @@
     </div>
 
 
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/lib")
     <script src="~/Scripts/CustomJS.js"></script>
     @*Below is required for client side validation*@
     @* And this is the place where actual script will get rendered. *@
