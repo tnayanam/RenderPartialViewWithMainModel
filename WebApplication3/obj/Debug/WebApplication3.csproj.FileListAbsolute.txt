@@ -1767,3 +1767,9 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\obj\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Net.Http.Formatting.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Http.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Http.WebHost.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Net.Http.Formatting.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Http.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication3\bin\System.Web.Http.WebHost.xml
