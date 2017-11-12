@@ -101,6 +101,7 @@
 <script>
     $(document).ready(function () {
         $("#cities .js-delete").on("click", function () {
+            var button = $(this);
 
             if(confirm("are you sure you want to delete?"))
             {
@@ -108,7 +109,7 @@
                     url: "/api/cities/" + $(this).attr("data-city-id"),
                     method: "DELETE",
                     success: function () {
-                        console.log("deleted!!!!!!");
+                        button.parents("tr").remove();
                     }
 
                 })
