@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using AutoMapper;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
+using WebApplication3.Dtos;
 using WebApplication3.Models;
 
 namespace WebApplication3.Controllers.Api
@@ -16,36 +18,37 @@ namespace WebApplication3.Controllers.Api
         }
 
         //GET:  /api/cities   // retunrs list of all the cities
-        public IEnumerable<City> GetCities()
+        public IEnumerable<CityDto> GetCities()
         {
-            return _context.Cities.ToList();
+            return _context.Cities.ToList().Select(Mapper.Map<City, CityDto>);
         }
 
         //api/cities/1
-        public City GetCity(int id)
+        public CityDto GetCity(int id)
         {
             var city = _context.Cities.SingleOrDefault(c => c.Id == id);
             if (city == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
-            return city;
+            return Mapper.Map<City, CityDto>(city);
         }
 
         // POST: api/cities
         [HttpPost]
-        public City CreateCity(City city)
+        public CityDto CreateCity(CityDto cityDto)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
-
+            var city = Mapper.Map<CityDto, City>(cityDto);
             _context.Cities.Add(city);
             _context.SaveChanges();
 
-            return city;
+            cityDto.Id = city.Id;
+            return cityDto;
         }
 
         // Put /api/cities/1
         [HttpPut]
-        public void UpdateCity(int id, City city)
+        public void UpdateCity(int id, CityDto cityDto)
         {
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -53,8 +56,7 @@ namespace WebApplication3.Controllers.Api
 
             if (cityInDb == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
-            cityInDb.CityName = city.CityName;
-            cityInDb.Country = city.Country;
+            Mapper.Map(cityDto, cityInDb);
 
             _context.SaveChanges();
         }
