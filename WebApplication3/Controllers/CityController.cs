@@ -514,7 +514,7 @@ namespace WebApplication3.Controllers
 
 
 
-            return View(r);
+            return View();
         }
 
         [HttpPost]

@@ -9,86 +9,84 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-    <table class="table" id="cities">
-        <thead>
+<table class="table" id="cities">
+    <thead>
 
-            <tr>
-                @*<th>
+        <tr>
+            @*<th>
                     <input type="checkbox" name ="checkAll" id="checkAll"/>
                 </th>*@
-                <th>
-                    @Html.DisplayNameFor(model => model.CityName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Country)
-                </th>
-                <th>delete</th>
-            </tr>
-        </thead><tbody>
-            @foreach (var item in Model)
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var item in Model)
             {
-                <tr>
-                    @*<td>
-                        <input type="checkbox" name="listOfCityIdToDelete" id="listOfCityIdToDelete" value="@item.Id">
-                    </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CityName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Country)
-                    </td>
-                    <td>
-                        <button data-city-id="@item.Id" class="btn btn-link js-delete">Delete</button>
-                    </td>
-                </tr>
-            }</tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    <button data-city-id="@item.Id" class="btn btn-link js-delete">Delete</button>
+                </td>
+            </tr>
+        }*@
+    </tbody>
 
 </table>
-    @*<input type="submit" value="Delete" id="btn-submit" />*@
+@*<input type="submit" value="Delete" id="btn-submit" />*@
 
 
 <div class="fooq">hell</div>
 
 @section scripts
 {
-<script>
-    $(".fooq").click(function () {
-        alert("class selector");
-    });
-</script>
+    <script>
+        $(".fooq").click(function () {
+            alert("class selector");
+        });
+    </script>
 
-<a href="#one">One</a>
-<a href="#two">Two</a>
-<a href="#three">Three</a>
-<a href="#four">Four</a>
-<a href="#five">Five</a>
-@* select an element based on jquery attribute selector. *@
-<script>
-    $("a[href='#two']").click(function () {
-        alert("jquery atribute selector");
-    });
-</script>
+    <a href="#one">One</a>
+    <a href="#two">Two</a>
+    <a href="#three">Three</a>
+    <a href="#four">Four</a>
+    <a href="#five">Five</a>
+    @* select an element based on jquery attribute selector. *@
+    <script>
+        $("a[href='#two']").click(function () {
+            alert("jquery atribute selector");
+        });
+    </script>
 
-<script>
-    $("#checkAll").click(function () {
-        $("input[name='listOfCityIdToDelete']").prop("checked", this.checked);
-    });
-</script>
+    <script>
+        $("#checkAll").click(function () {
+            $("input[name='listOfCityIdToDelete']").prop("checked", this.checked);
+        });
+    </script>
 
-<script>
-    $("input[name='listOfCityIdToDelete']").click(function () {
-        if ($("input[name='listOfCityIdToDelete']").length == $("input[name='listOfCityIdToDelete']:checked").length)
-        {
-            $("input[name='checkAll']").prop("checked", "checked");
-        }
-        else {
-            $("#checkAll").removeAttr("checked");
-        }
-    });
-</script>
+    <script>
+        $("input[name='listOfCityIdToDelete']").click(function () {
+            if ($("input[name='listOfCityIdToDelete']").length == $("input[name='listOfCityIdToDelete']:checked").length) {
+                $("input[name='checkAll']").prop("checked", "checked");
+            }
+            else {
+                $("#checkAll").removeAttr("checked");
+            }
+        });
+    </script>
 
-<script>
-    $("#btn-submit").click(function () {
+    <script>
+        $("#btn-submit").click(function () {
             var count = $("input[name='listOfCityIdToDelete']:checked").length;
             debugger;
             if (count == 0) {
@@ -99,36 +97,55 @@
                 debugger;
                 return confirm(count + 'rows will be deleted.');
             }
-    });
-</script>
+        });
+    </script>
 
-
-<script>
-    $(document).ready(function () {
-        $("#cities").DataTable();
-        $("#cities").on("click", ".js-delete", function () {
-            debugger;
-            var button = $(this);
-            bootbox.confirm("Are you sure you want to delete?", function (result) {
-                if (result) {
-                    debugger;
-                    $.ajax({
-                        url: "/api/cities/" + button.attr("data-city-id"),
-                        method: "DELETE",
-                        success: function () {
-                            button.parents("tr").remove();
+    <script>
+        $(document).ready(function () {
+            $("#cities").DataTable({
+                ajax: {
+                    url: "/api/cities",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "cityName",
+                        render: function (data, type, city) {
+                            return "<a href = '/cities/edit/" + city.id + "'>" + city.cityName + "</a>";
                         }
-                    });
-                }
+                    },
+                    {
+                        data: "cityName"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class = 'btn-link js-delete' data-city-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+            $("#cities").on("click", ".js-delete", function () {
+                debugger;
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete?", function (result) {
+                    if (result) {
+                        debugger;
+                        $.ajax({
+                            url: "/api/cities/" + button.attr("data-city-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
             });
         });
-    });
-
-</script>
-
-    }
+    </script>
+}
 
 @*// Install-package jquery.datatables -version:1.10.11
-    
+
     make sure thead nad tbody are getting used it is imnportant rerequisaite of using datatablers
-    *@
+*@
