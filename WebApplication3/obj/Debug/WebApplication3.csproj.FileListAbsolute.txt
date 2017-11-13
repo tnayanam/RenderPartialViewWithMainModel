@@ -1783,6 +1783,11 @@ C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\AutoMapper.dll
 C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\EntityFramework.dll
 C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\EntityFramework.SqlServer.dll
 C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\FoolproofValidation.dll
+C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Glimpse.Ado.dll
+C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Glimpse.AspNet.dll
+C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Glimpse.Core.dll
+C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Glimpse.EF6.dll
+C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Glimpse.Mvc5.dll
 C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Dev-10\Desktop\Home\Sanctum\WebApplication3\bin\Microsoft.AspNet.Identity.Owin.dll

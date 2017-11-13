@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using System.Web.UI;
 using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
@@ -24,6 +25,8 @@ namespace WebApplication3.Controllers
         }
 
         [HttpPost]
+        [OutputCache(Duration=50,Location=OutputCacheLocation.Server,VaryByParam="*" )]
+        //[OutputCache(Duration = 50, Location = OutputCacheLocation.Client, VaryByParam = "viewModel")]
         public ActionResult Create(Genre viewModel)
         {
             _context.Genres.Add(viewModel);
@@ -31,6 +34,7 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        [OutputCache(Duration=0,VaryByParam="*", NoStore=true )] // Disable Caching
         public ActionResult Display(int id)
         {
             var x = _context.Genres.Single(g => g.Id == id);
