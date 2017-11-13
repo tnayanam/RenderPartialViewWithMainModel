@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using System.Runtime.Caching;
 using System.Web.UI;
 using WebApplication3.Models;
+using System.Collections.Generic;
 
 namespace WebApplication3.Controllers
 {
@@ -37,7 +39,13 @@ namespace WebApplication3.Controllers
         [OutputCache(Duration=0,VaryByParam="*", NoStore=true )] // Disable Caching
         public ActionResult Display(int id)
         {
-            var x = _context.Genres.Single(g => g.Id == id);
+            if(MemoryCache.Default["Genres"] == null)
+            {
+                MemoryCache.Default["Genres"] = _context.Genres.Single(g => g.Id == id);
+            }
+
+            var x = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+         
             return View(x);
         }
 
