@@ -21,7 +21,14 @@ namespace WebApplication3.Controllers.Api
         //GET:  /api/cities   // retunrs list of all the cities
         public IEnumerable<CityDto> GetCities()
         {
-            return _context.Cities.ToList().Select(Mapper.Map<City, CityDto>);
+            var cityDtos = _context.Cities.ToList().Select(Mapper.Map<City, CityDto>);
+
+
+            // Now suppose you wanted to reutrn some other related class data here I mean if the City class has some other class
+            // in it then you will have to create anotyher DTO for that class and then add it in the cityDTO and then Use INclude LINQ Query toi
+            // include it and then send the result back to UI and then render it accordingly. BUT DO  NOT USE DOMAIN CLASSES
+            // in API EVER!!!!!
+            return cityDtos;
         }
 
         //api/cities/1
@@ -85,4 +92,4 @@ namespace WebApplication3.Controllers.Api
 // delete : to delete
 
 
-    // in poackage manger constolw type install-package bootbox -version:4.3.0
+// in poackage manger constolw type install-package bootbox -version:4.3.0
