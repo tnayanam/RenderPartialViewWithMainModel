@@ -102,7 +102,7 @@
 
     <script>
         $(document).ready(function () {
-            $("#cities").DataTable({
+            var table =  $("#cities").DataTable({
                 ajax: {
                     url: "/api/cities",
                     dataSrc: ""
@@ -135,7 +135,7 @@
                             url: "/api/cities/" + button.attr("data-city-id"),
                             method: "DELETE",
                             success: function () {
-                                button.parents("tr").remove();
+                                table.row(button.parents("tr")).remove().draw();
                             }
                         });
                     }
