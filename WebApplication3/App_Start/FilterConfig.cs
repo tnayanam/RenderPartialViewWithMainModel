@@ -8,7 +8,7 @@ namespace WebApplication3
         {
             // what ever added here is added to the entire controller. so error attribute has been added as a whole to all the controller actions.
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new AuthorizeAttribute());
+            //filters.Add(new AuthorizeAttribute());
         }
     }
 }

@@ -512,9 +512,11 @@ namespace WebApplication3.Controllers
             // https://www.youtube.com/watch?v=reRfw22XG18&index=32&list=PL6n9fhu94yhWi8K02Eqxp3Xyh_OmQ0Rp6
 
 
+            if (User.IsInRole("CanManageMovies"))
+                return View();
+            else
+                return View("ReadOnlyList");
 
-
-            return View();
         }
 
         [HttpPost]

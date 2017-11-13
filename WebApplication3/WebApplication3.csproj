@@ -831,6 +831,7 @@
     <Content Include="Views\PhoneCamera\Create.cshtml" />
     <Content Include="Views\ManagerWorker\Create.cshtml" />
     <Content Include="Views\Gig\Create.cshtml" />
+    <Content Include="Views\City\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
