@@ -33,6 +33,7 @@ namespace WebApplication3.Controllers.Api
         }
 
         //api/cities/1
+        [Authorize(Roles = "CanManageMovies")]
         public IHttpActionResult GetCity(int id)
         {
             var city = _context.Cities.SingleOrDefault(c => c.Id == id);
