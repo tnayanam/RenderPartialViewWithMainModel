@@ -475,6 +475,7 @@
     <Compile Include="Models\Rain.cs" />
     <Compile Include="Models\Referral.cs" />
     <Compile Include="Models\Instrument.cs" />
+    <Compile Include="Models\RoleNames.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Standard.cs" />

@@ -528,6 +528,8 @@ namespace WebApplication3.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+
+        [Authorize(Roles = RoleNames.CanManageMovies)]
         public ActionResult Student()
         {
             // when I just want one result from LINQ Query, multiple calls.
