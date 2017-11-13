@@ -9,6 +9,7 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Controllers.Api
 {
+    [AllowAnonymous]
     public class CitiesController : ApiController
     {
         private ApplicationDbContext _context;
