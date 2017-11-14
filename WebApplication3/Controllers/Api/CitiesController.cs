@@ -20,9 +20,17 @@ namespace WebApplication3.Controllers.Api
         }
 
         //GET:  /api/cities   // retunrs list of all the cities
-        public IEnumerable<CityDto> GetCities()
+        public IEnumerable<CityDto> GetCities(string query = null)
         {
-            var cityDtos = _context.Cities.ToList().Select(Mapper.Map<City, CityDto>);
+
+            IQueryable<City> cityQuery = _context.Cities;
+
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                cityQuery = cityQuery.Where(c => c.CityName.Contains(query));
+            }
+
+            var cityDtos = cityQuery.ToList().Select(Mapper.Map<City, CityDto>);
 
 
             // Now suppose you wanted to reutrn some other related class data here I mean if the City class has some other class

@@ -4,23 +4,22 @@
 }
 
 <h2>New</h2>
-
-
-
 <form>
-
     <div class="form-group">
         <label>Movie</label>
         <input id="city" type="text" value="" class="form-control" />
-
     </div>
 
+    <ul id="cities" class="list-group"></ul>
 </form>
 
 @section scripts
 {
     <script>
-        var vm = {};
+        var vm = {
+
+            cityIds: []
+        };
         var cities = new Bloodhound({
             datumTokenizer: Bloodhound.tokenizers.obj.whitespace('cityName'),
             queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -38,7 +37,11 @@
             display: 'cityName',
             source: cities
         }).on("typeahead:select", function (e, city) {
-            vm.cityId = city.id;
+            //vm.cityId = city.id;
+            $("#cities").append("<li>" + city.cityName + "</li>");
+            $("#city").typeahead("val", "");
+
+            vm.cityIds.push(city.id);
         });
     </script>
 
