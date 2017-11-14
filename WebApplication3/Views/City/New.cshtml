@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+
+
+<form>
+
+    <div class="form-group">
+        <label>Movie</label>
+        <input id="city" type="text" value="" class="form-control" />
+
+    </div>
+
+</form>
+
+@section scripts
+{
+    <script>
+        var cities = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('cityName'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            remote: {
+                url: '/api/cities?query=%QUERY',
+                wildcard: '%QUERY'
+            }
+        });
+        debugger;
+        $('#city').typeahead({
+            minLength: 3,
+            highlight: true
+        }, {
+            name: 'cities',
+            display: 'cityName',
+            source: cities
+        });
+    </script>
+
+
+}
+

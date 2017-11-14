@@ -544,5 +544,12 @@ namespace WebApplication3.Controllers
             return Content(month + " " + year);
         }
 
+        public ActionResult New()
+        {
+            return View();
+        }
+
+
+
     }
 }
