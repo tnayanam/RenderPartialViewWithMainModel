@@ -52,3 +52,15 @@ namespace WebApplication3.Controllers
 
     }
 }
+
+
+// Difference between Const and readonly
+// Const
+// They can not be declared as static (they are implicitly static)
+// The value of constant is evaluated at compile time
+// constants are initialized at declaration only
+
+// readonly
+// They can be either instance-level or static
+// The value is evaluated at run time
+// readonly can be initialized in declaration or by code in the constructor
