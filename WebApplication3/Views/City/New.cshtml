@@ -4,13 +4,14 @@
 }
 
 <h2>New</h2>
-<form>
+<form id="newcity">
     <div class="form-group">
         <label>Movie</label>
         <input id="city" type="text" value="" class="form-control" />
     </div>
 
     <ul id="cities" class="list-group"></ul>
+    <button type="submit">submit</button>
 </form>
 
 @section scripts
@@ -43,6 +44,22 @@
 
             vm.cityIds.push(city.id);
         });
+
+        $("#newcity").submit(function (e) {
+
+            e.preventDefault();
+            $.ajax({
+                url: "/api/api/cities",
+                method: "POST",
+
+                data: vm
+
+            })
+            .done(function () { alert("done"); })
+.fail(function () { alert("fail"); })
+        });
+
+
     </script>
 
 
