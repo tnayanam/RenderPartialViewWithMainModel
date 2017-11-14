@@ -20,6 +20,7 @@
 @section scripts
 {
     <script>
+        var vm = {};
         var cities = new Bloodhound({
             datumTokenizer: Bloodhound.tokenizers.obj.whitespace('cityName'),
             queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -36,6 +37,8 @@
             name: 'cities',
             display: 'cityName',
             source: cities
+        }).on("typeahead:select", function (e, city) {
+            vm.cityId = city.id;
         });
     </script>
 
