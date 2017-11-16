@@ -120,3 +120,9 @@ namespace WebApplication3.Controllers
     }
 }
 
+
+
+// How to get SQL Script of the Migrations
+
+// RUn this command----  update-database -script -SourceMigration:"First Migration Name here" (no quotes) 
+
