@@ -103,3 +103,14 @@ namespace WebApplication3.Controllers.Api
 
 
 // in poackage manger constolw type install-package bootbox -version:4.3.0
+
+
+
+// Custom Error:
+
+/*
+
+ Of we keep it off then .net will simply throw the exception and we might see some inside detail of our application, just like yellow page of death
+ if we keep custom error on then we can see a custom page and there we can display the exception if we want, if not then a generic error page]
+ if we keep custom error to remote then for live sutomer they will see the custoim page hpwever the loclaqhost will see the exceptopm/yellow page of death.
+ ideally we should keep it as "RemoteOnly"*/
