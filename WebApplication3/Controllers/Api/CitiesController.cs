@@ -116,6 +116,8 @@ namespace WebApplication3.Controllers.Api
  ideally we should keep it as "RemoteOnly"*/
 
 
-// 3 errors: standard action level excetion - handled by handle  filters.Add(new HandleErrorAttribute()); in filter.config file
-// Invvalid route exception is handled by   
-// IIS Exceptoipn or some static resource www.abc/globe.jpeg does not even make to asp code
+// 3 errors:
+// 1.  standard action level excetion - handled by handle  filters.Add(new HandleErrorAttribute()); in filter.config file
+// 2. Invvalid route exception is handled by   
+// 3. IIS Exception or some static resource www.abc/globe.jpeg does not even make to asp code
+// now we are trying to handle error w/ exception which does not even make it to the application, 
