@@ -114,3 +114,8 @@ namespace WebApplication3.Controllers.Api
  if we keep custom error on then we can see a custom page and there we can display the exception if we want, if not then a generic error page]
  if we keep custom error to remote then for live sutomer they will see the custoim page hpwever the loclaqhost will see the exceptopm/yellow page of death.
  ideally we should keep it as "RemoteOnly"*/
+
+
+// 3 errors: standard action level excetion - handled by handle  filters.Add(new HandleErrorAttribute()); in filter.config file
+// Invvalid route exception is handled by   
+// IIS Exceptoipn or some static resource www.abc/globe.jpeg does not even make to asp code
