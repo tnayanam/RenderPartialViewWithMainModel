@@ -84,3 +84,16 @@ namespace WebApplication3.Controllers
  * 
  * 
 */
+
+/*
+ How to host a website:
+ * 1. Buy a domain
+ * 2. Buy a server
+ * 3. Now you need to tell server/IIS where you want to put the website, I mean where to redirect when the request comes. (if you are using a standard lcoation then you dont need to touch it, 
+ * If not then you need to add a physical path there so that it knows if a request comes to it which folder it needs to point to. Also here you tell which port request it should handle. 
+ * I mean you can tell that only :80 should be redirected if :4747 is coming it should be redirected to a different port. Here suppose you want to put the code at C://abc then you cna add that
+ * also you can add an alias for that website/location say:ABC
+ * 4. Now from your local system you when you publish the code you need to tell where to put the code on server. THIS IS called publish profile. It has information on where to put the
+ * compiled code on server. Also here you dont need to put the C://abc you can just put the alias which is ABC, and IIS server will understand where to paste the published code because
+ * ABC is pointed to c://abc
+*/
