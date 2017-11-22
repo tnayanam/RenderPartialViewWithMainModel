@@ -96,4 +96,6 @@ namespace WebApplication3.Controllers
  * 4. Now from your local system you when you publish the code you need to tell where to put the code on server. THIS IS called publish profile. It has information on where to put the
  * compiled code on server. Also here you dont need to put the C://abc you can just put the alias which is ABC, and IIS server will understand where to paste the published code because
  * ABC is pointed to c://abc
+ * 
+ * Site Binding means what are the allowed ports/URL  for this websites
 */
