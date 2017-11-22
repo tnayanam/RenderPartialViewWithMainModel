@@ -69,3 +69,18 @@ namespace WebApplication3.Controllers
 // non-nullable, multiplicity of the Principal Role must be '1'.
 
 // means one colunmn needs to be nullable as per the fluent api convention but in model that property is not set to nullable "?"
+
+
+// Get a datatable from a strongly types dataset
+
+
+/* Dataset: dsDirectory
+ * Datatable: GroupDataTable
+ * Variable in which that datatable's is stored in Dataset is "Group"
+ *     dsDirectory groupData = mdlLogViewer.LoadGroupInfoForAccount(ref user, selectedAccountId);
+            dsDirectory.GroupDataTable groupTableData = groupData.Tables["Group"] as dsDirectory.GroupDataTable;
+
+            dsDirectory.LocationDataTable locationTableData = groupData.Tables["Location"] as dsDirectory.LocationDataTable;
+ * 
+ * 
+*/
