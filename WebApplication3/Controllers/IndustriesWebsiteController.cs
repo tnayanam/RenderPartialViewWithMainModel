@@ -98,4 +98,5 @@ namespace WebApplication3.Controllers
  * ABC is pointed to c://abc
  * 
  * Site Binding means what are the allowed ports/URL  for this websites
+ * Physical Path means the path where actual website is located in folder.
 */
