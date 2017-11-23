@@ -16,6 +16,7 @@ namespace ConsoleApplication1
             var strFirstName = "Tanuj";
             var strLastName = "Nayanam";
             Console.WriteLine(string.Format("{0} - {1}", strFirstName, strLastName));
+            Console.WriteLine(string.Join(",", num)); // output "0,0,0"
         }
     }
 }
