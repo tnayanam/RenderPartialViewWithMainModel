@@ -17,6 +17,18 @@ namespace ConsoleApplication1
             var strLastName = "Nayanam";
             Console.WriteLine(string.Format("{0} - {1}", strFirstName, strLastName));
             Console.WriteLine(string.Join(",", num)); // output "0,0,0"
+
+            //Verbatim String displays the output as it is
+            // No Verbatim Example
+            Console.WriteLine("Kindly look into \n  this folder c:\\folder1\\folder2 \n c:\\folder4\\folder4");
+
+            //In here the actual path is c:\folder1\folder2 but we had to use one more back slash. a better way is
+            Console.WriteLine(@"
+Kindly Look into
+this folder
+c:\folder1\folder2
+");
+
         }
     }
 }
