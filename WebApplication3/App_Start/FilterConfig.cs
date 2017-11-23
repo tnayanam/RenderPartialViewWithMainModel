@@ -24,6 +24,14 @@ namespace WebApplication3
  * Many CLasses => Namespaces
  * Many Namespaces => Assemblies or dll
  * Many dll's => Application
+ * 
+ * Array:
+ * var numbers = new int[3];
+ * And now if we print all the variables will be declared 
+ * 
+ * 
  
      
      */
+
+

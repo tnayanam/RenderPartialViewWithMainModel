@@ -22,7 +22,6 @@ namespace WebApplication3.Controllers.Api
         //GET:  /api/cities   // retunrs list of all the cities
         public IEnumerable<CityDto> GetCities(string query = null)
         {
-
             IQueryable<City> cityQuery = _context.Cities;
 
             if (!string.IsNullOrWhiteSpace(query))
