@@ -47,6 +47,9 @@ c:\folder1\folder2
             else
                 Console.WriteLine("Something else");
 
+            var shipType = "UPS";
+            var postalCasting = (Postal)Enum.Parse(typeof(Postal), shipType);
+            Console.WriteLine(postalCasting);
             // Now suppose you want to check the exact enum it belongs to then
             Console.WriteLine((Postal)enumfromFrontEnd);
 
