@@ -13,3 +13,17 @@ namespace WebApplication3
         }
     }
 }
+
+
+/*
+ * .Net is combination of CLR + Class Library : It's a framework for creating application for windows
+ * CLR is more like an application which converts Intermediate Language code to Machine Native code
+ * c# code => IL code => Machine Native Code
+ * Process of converting IL into Machine native code by CLR is called JIT Just In Time Compiler.
+ * Class 
+ * Many CLasses => Namespaces
+ * Many Namespaces => Assemblies or dll
+ * Many dll's => Application
+ 
+     
+     */
