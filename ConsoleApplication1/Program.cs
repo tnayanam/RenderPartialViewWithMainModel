@@ -10,6 +10,12 @@ namespace ConsoleApplication1
             Console.WriteLine(num[0]); // all value wil be defaulted to the integer default value which is 0.
             Console.WriteLine(num[1]);
             Console.WriteLine(num[2]);
+            var str = new string[3] { "Tanuj", "Nayanam", "HelloWorld" }; // Object Initialization Syntax.
+
+            // String.Format
+            var strFirstName = "Tanuj";
+            var strLastName = "Nayanam";
+            Console.WriteLine(string.Format("{0} - {1}", strFirstName, strLastName));
         }
     }
 }
