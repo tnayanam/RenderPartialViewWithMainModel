@@ -2,6 +2,13 @@
 
 namespace ConsoleApplication1
 {
+    public enum Postal
+    {
+        FedEx = 0,
+        USPS = 1,
+        UPS = 2
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -28,6 +35,21 @@ Kindly Look into
 this folder
 c:\folder1\folder2
 ");
+
+
+            // from front end you got 1
+            var enumfromFrontEnd = 2;
+
+            if (enumfromFrontEnd == (int)Postal.USPS)
+            {
+                Console.WriteLine("USPS");
+            }
+            else
+                Console.WriteLine("Something else");
+
+            // Now suppose you want to check the exact enum it belongs to then
+            Console.WriteLine((Postal)enumfromFrontEnd);
+
 
         }
     }
