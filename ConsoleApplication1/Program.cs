@@ -148,6 +148,53 @@ namespace ConsoleApplication1
             //list.Count;
 
 
+            string e = "er";
+            e = "dsfd";
+
+            // String are Immutable, means their value cannot be modified. If you try to modify a new memory is allocated and 
+            //old memory still exists which will be deleted by garbage collection.
+            // ImmmutABLE MEANING VALUES CANNOT be changed, if we try to change it will return a new object wth new value.
+            string test = "Tanuj Nayanam ";
+            Console.WriteLine("Trim '{0}'", test.Trim()); // Removes leading and trailing spaces.
+            Console.WriteLine("ToUpper '{0}'", test.ToUpper()); // Removes leading and trailing spaces.
+
+            var newStringarr = test.Split(' '); // splits string based on the delimiter and returns the array
+            Console.WriteLine(newStringarr[0]);
+            Console.WriteLine(test.Substring(3));
+
+            Console.WriteLine(test.Replace("Tanuj", "Helo"));
+
+            var tr = "";
+            if (string.IsNullOrEmpty(tr))
+                Console.WriteLine("Empty Or Null");
+            else
+                Console.WriteLine("Empty Or Null");
+
+            var tr1 = " ";
+            if (string.IsNullOrWhiteSpace(tr1))
+                Console.WriteLine("Empty Or whiutesaoace");
+            else
+                Console.WriteLine("Not");
+
+            var tr3 = "dfd";
+            if (string.IsNullOrEmpty(tr3))
+                Console.WriteLine("Empty Or Null");
+            else
+                Console.WriteLine("Not");
+
+            string tr4 = null;
+
+            if (string.IsNullOrEmpty(tr4))
+                Console.WriteLine("Empty Or Null");
+            else
+                Console.WriteLine("Not");
+
+
+            var qw = "24";
+            var age = Convert.ToInt32(qw); // we cannot use normal casting here.
+
+            float price = 34.8f;
+            Console.WriteLine(price.ToString("C"));
 
 
 
