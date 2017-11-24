@@ -195,6 +195,7 @@ namespace ConsoleApplication1
 
             float price = 34.8f;
             Console.WriteLine(price.ToString("C"));
+            Add(8);
 
         }
         public static void Add(int a, int r = 9)
