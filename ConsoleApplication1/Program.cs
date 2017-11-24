@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApplication1
 {
@@ -107,6 +108,49 @@ namespace ConsoleApplication1
             {
                 Console.Write(elem + " ");
             }
+            Console.WriteLine();
+            var list = new List<int>() { 1, 5, 7, 9, 1, 2, 0 };
+
+            list.Add(30);
+            list.AddRange(new int[3] { 45, 12, 14 });
+
+            foreach (var lst in list)
+            {
+                Console.Write(lst + " ");
+            }
+            Console.WriteLine();
+            list.Remove(1);
+
+            foreach (var lst in list)
+            {
+                Console.Write(lst + " ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == 1)
+                {
+                    list.Remove(list[i]);
+                }
+            }
+            foreach (var lst in list)
+            {
+                Console.Write(lst + " ");
+            }
+            Console.WriteLine();
+
+            //list.RemoveAll()
+
+            var r = list.IndexOf(9);
+            var r1 = list.LastIndexOf(1);
+            var t = list.Contains(7);
+            list.Clear(); // removes all elemnt from list
+            //list.Count;
+
+
+
+
+
         }
     }
 }
