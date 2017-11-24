@@ -250,6 +250,22 @@ namespace ConsoleApplication1
             {
 
             }
+
+
+            /*
+             * DirectoryInfo and Directory
+             * Direcrtory has static methods AND DirectoryInfo has Instance methods.
+             
+             */
+            var direct = Directory.CreateDirectory(path);
+
+            var directories = Directory.GetDirectories(path, "*.*", SearchOption.AllDirectories);
+
+            Directory.Exists(path);
+
+            var dirObj = new DirectoryInfo(path);
+            dirObj.GetFiles();
+            dirObj.GetDirectories();
         }
     }
 }
