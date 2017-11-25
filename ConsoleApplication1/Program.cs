@@ -55,6 +55,8 @@ class Program
     {
         var man = new Man(new Animal());
         man.wife();
+        // Now in this situation if we want to add another method in animal class it will be difficult so if we want
+        // to add another method such has NoOfHair, we can create another class altogether 
 
         //man.a
 
