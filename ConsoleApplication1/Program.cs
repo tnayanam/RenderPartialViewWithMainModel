@@ -1,70 +1,60 @@
-﻿using System;
+﻿/*
+ * Inehritance is "Is Relationship"
+ * Composition is a "Has a Relationship"
+ * 
+ */
 
-
-// Logic
-/*
- * 1. A birthdate of a person does not change so it should be set just once
- * 2. the age is calculated based on birthdate so it should not have a setter
- 
-     
-     */
-
-
-
-
-namespace ConsoleApplication1
+public class Animal
 {
-    public enum Postal
+    public string Name { get; set; }
+    public void NumberOfLegs()
     {
-        FedEx = 0,
-        USPS = 1,
-        UPS = 2
+        System.Console.WriteLine("It has these many number of legs.");
     }
+}
 
-    public class Post
+public class Man : Animal
+{
+    public void wife()
     {
-        private string _title;
-        private string _description;
-        private DateTime _created;
-        private int _voteCount;
-
-        public Post(string title, string desc)
-        {
-            _description = desc;
-            _title = title;
-            _created = DateTime.Now;
-        }
-
-        public void UpVote()
-        {
-            _voteCount++;
-        }
-
-        public void DownVote()
-        {
-            if (_voteCount <= 0)
-                throw new Exception();
-
-            _voteCount--;
-        }
-
-        public int VoteCount()
-        {
-            return _voteCount;
-        }
+        System.Console.WriteLine("My wife");
     }
+}
 
-    class Program
+public class Fish : Animal
+{
+    public void NoOfFins()
     {
-        static void Main(string[] args)
-        {
-            Post p1 = new Post("FirstPost", "This is a first Post");
-            p1.UpVote();
-            p1.UpVote();
-            p1.UpVote();
-            p1.DownVote();
-            Console.WriteLine(p1.VoteCount());
-
-        }
+        System.Console.WriteLine("Number of fins");
     }
+}
+
+// Man Is A Animal
+class Program
+{
+    static void Main(string[] args)
+    {
+        var man = new Man();
+        man.Name = "Tanuj";// inherited
+        man.wife(); // its own fucntion
+        man.NumberOfLegs();
+
+        var fish = new Fish();
+        fish.NoOfFins(); // its own function
+        fish.Name = "Tippy"; // inherited one
+        // So, this is Inheritance.
+
+        // Problem with Inheritance:
+        // If we modify and add another property in Animal class lets say "Number of Hair". Now may
+        //be there are 100 anials who needs this method, so we are tempted to keep it in Animal class
+        // but there are many animals who dont need it, so for them its a waste to keep it in parent class which is ANimal
+        // SO we end up creating another class just for 50 type pof animals whioch needs that no of hair method.
+        // an now this is how inheritance iwll look like Animal=>ANimalWIthHair=> Anod now al the child classes/
+        // SO we have a heirarchy now. and thats what we want to avoid
+
+
+
+
+    }
+}
 }
