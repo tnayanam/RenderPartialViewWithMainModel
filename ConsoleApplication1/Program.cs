@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace ConsoleApplication1
 {
@@ -14,12 +15,44 @@ namespace ConsoleApplication1
         public string Name { get; set; }
     }
 
+    public class Order
+    {
+
+    }
+
+    public class Customer
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public List<Order> Orders { get; set; }
+
+        public Customer()
+        {
+            this.Orders = new List<Order>();
+        }
+
+        public Customer(int id) : this()
+        {
+            this.Id = id;
+        }
+
+        public Customer(int id, string name) : this(id) // nice way to initialize all the filed w/o repeating them in
+                                                        // the constructor
+        {
+            this.Name = name;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
 
             Test t1 = new Test();
+            var customer = new Customer(); // default
+            var customer1 = new Customer(3);
+            var customer2 = new Customer(4, "Hello");
+            customer.Orders.Add(new Order());
             t1.Name = "Tanuj";
             Test t2 = t1;
             t2.Name = "Abc";
