@@ -1,5 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+
+
+// Logic
+/*
+ * 1. A birthdate of a person does not change so it should be set just once
+ * 2. the age is calculated based on birthdate so it should not have a setter
+ 
+     
+     */
+
+
+
 
 namespace ConsoleApplication1
 {
@@ -8,6 +21,23 @@ namespace ConsoleApplication1
         FedEx = 0,
         USPS = 1,
         UPS = 2
+    }
+
+    public class Person
+    {
+        public DateTime BirthDate { get; private set; } // this makes sure that it can only be set via constructor during object creation
+
+        public TimeSpan Age
+        {
+
+
+            get { return DateTime.Now - BirthDate; }
+        } // this makes sure that it cannot be set at all it can only be get(based on birthdate)
+
+        public Person(DateTime dte)
+        {
+            BirthDate = dte;
+        }
     }
 
     public class Calculator
@@ -77,6 +107,10 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+
+            Person p1 = new Person(new DateTime(1, 2, 3));
+            var age = p1.Age;
+
             Bank b1 = new Bank();
             b1.GetAccountNumber();
             // One cannot set the account number as it is private
