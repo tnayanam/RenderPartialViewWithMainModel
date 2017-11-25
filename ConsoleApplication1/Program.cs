@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 
 
 // Logic
@@ -22,38 +21,49 @@ namespace ConsoleApplication1
         UPS = 2
     }
 
-    public class Stopwatch
+    public class Post
     {
-        private DateTime _StartTime;
-        private DateTime _StopTime;
-        private bool _isRunning;
+        private string _title;
+        private string _description;
+        private DateTime _created;
+        private int _voteCount;
 
-        public void Start()
+        public Post(string title, string desc)
         {
-            if (_isRunning) throw new Exception();
-            this._StartTime = DateTime.Now;
-            _isRunning = true;
+            _description = desc;
+            _title = title;
+            _created = DateTime.Now;
         }
-        public void Stop()
+
+        public void UpVote()
         {
-            if (!_isRunning) throw new Exception();
-            this._StopTime = DateTime.Now;
-            _isRunning = false;
+            _voteCount++;
         }
-        public TimeSpan Span()
+
+        public void DownVote()
         {
-            return this._StopTime - this._StartTime;
+            if (_voteCount <= 0)
+                throw new Exception();
+
+            _voteCount--;
+        }
+
+        public int VoteCount()
+        {
+            return _voteCount;
         }
     }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
-            Thread.Sleep(1000);
-            sw.Stop();
-            Console.WriteLine(sw.Span());
+            Post p1 = new Post("FirstPost", "This is a first Post");
+            p1.UpVote();
+            p1.UpVote();
+            p1.UpVote();
+            p1.DownVote();
+            Console.WriteLine(p1.VoteCount());
 
         }
     }
