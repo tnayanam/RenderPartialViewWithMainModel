@@ -266,6 +266,44 @@ namespace ConsoleApplication1
             var dirObj = new DirectoryInfo(path);
             dirObj.GetFiles();
             dirObj.GetDirectories();
+
+            var pathlocation = @"C:\Project\HelloWorld\HelloWorld.sln";
+
+            // extension name
+            Path.GetExtension(pathlocation);
+            // file name with erxtension
+            Path.GetFileName(pathlocation);
+            // w/o extension
+            Path.GetFileNameWithoutExtension(pathlocation);
+            // directory
+            Path.GetDirectoryName(pathlocation);
+
+            var Name = "Mosh"; // pointing to memory location: XABC12
+            var FName = Name; // till here both are pointing to same memory locaton which is XABC12
+            FName = "Hello"; // Now at this place Immutable concept takes precedence and FName gets
+            // a brand new instance of string. At this point Name is pointing to XABC12 but FNAME will point to AABNCD2
+            System.Console.WriteLine(Name);
+            System.Console.WriteLine(FName);
+
+            //Expected output: Hello, Hello
+            // Actual output: Mosh, Hello
+
+            var arr1 = new int[3] { 1, 2, 3 };
+            var arr2 = arr1;
+            arr2[0] = 2;
+            System.Console.WriteLine("");
+            foreach (var item in arr1)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("------------");
+
+            foreach (var item in arr2)
+            {
+                System.Console.WriteLine(item);
+            }
+
+
         }
     }
 }
