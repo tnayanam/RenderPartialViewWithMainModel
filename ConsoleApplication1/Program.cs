@@ -9,10 +9,24 @@ namespace ConsoleApplication1
         UPS = 2
     }
 
+    public class Test
+    {
+        public string Name { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
+
+            Test t1 = new Test();
+            t1.Name = "Tanuj";
+            Test t2 = t1;
+            t2.Name = "Abc";
+            System.Console.WriteLine(t1.Name); // here t1.Name is also changed to Abc
+            var t = 2;
+
+
             //    //            var num = new int[3];
             //    //            Console.WriteLine(num[0]); // all value wil be defaulted to the integer default value which is 0.
             //    //            Console.WriteLine(num[1]);
