@@ -32,8 +32,8 @@ namespace ConsoleApplication1
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<Order> Orders { get; set; }
-
+        public readonly List<Order> Orders; // now it can only be initialized once mostly in constructor or directly like below. It can never be initialized again.
+        public readonly List<Order> Orderss = new List<Order>();
         public Customer()
         {
             this.Orders = new List<Order>();
