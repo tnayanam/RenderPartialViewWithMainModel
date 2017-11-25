@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ConsoleApplication1
 {
@@ -10,6 +11,13 @@ namespace ConsoleApplication1
         UPS = 2
     }
 
+    public class Calculator
+    {
+        public void Add(params int[] arr)
+        {
+            var sum = arr.Sum();
+        }
+    }
     public class Test
     {
         public string Name { get; set; }
@@ -47,6 +55,9 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            var cal = new Calculator();
+            cal.Add(1, 2); // MULTIPLE PARAMETERS
+            cal.Add(1, 2, 3); // MULTIPLE PARAMETERS
 
             Test t1 = new Test();
             var customer = new Customer(); // default
