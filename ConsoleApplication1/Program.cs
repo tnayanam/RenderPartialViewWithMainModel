@@ -12,36 +12,59 @@ public class Animal
         System.Console.WriteLine("It has these many number of legs.");
     }
 }
-
-public class Man : Animal
+/*
+ * Composition is a Has a Relationship.
+ */
+public class Man
 {
+    private Animal _animal;
+
+    public Man(Animal animal)
+    {
+        _animal = animal;
+    }
+
     public void wife()
     {
+        _animal.Name = "asds";
         System.Console.WriteLine("My wife");
     }
 }
 
-public class Fish : Animal
+public class Fish
 {
+    private Animal _animal;
+
+    public Fish(Animal animal)
+    {
+        _animal = animal;
+    }
+
     public void NoOfFins()
     {
+        _animal.NumberOfLegs();
         System.Console.WriteLine("Number of fins");
     }
 }
 
-// Man Is A Animal
+// Man Has a Animal // Man is composed of animal
+// Fish Has a  animal
 class Program
 {
     static void Main(string[] args)
     {
-        var man = new Man();
-        man.Name = "Tanuj";// inherited
-        man.wife(); // its own fucntion
-        man.NumberOfLegs();
+        var man = new Man(new Animal());
+        man.wife();
 
-        var fish = new Fish();
-        fish.NoOfFins(); // its own function
-        fish.Name = "Tippy"; // inherited one
+        //man.a
+
+        //man.Name = "Tanuj";// inherited
+        //man.wife(); // its own fucntion
+        //man.NumberOfLegs();
+
+        //var fish = new Fish();
+        //fish.NoOfFins(); // its own function                                                                                                                                                                          nbm
+        //fish.Name = "Tippy"; // inherited one
         // So, this is Inheritance.
 
         // Problem with Inheritance:
@@ -56,5 +79,4 @@ class Program
 
 
     }
-}
 }
