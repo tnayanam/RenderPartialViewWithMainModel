@@ -36,11 +36,11 @@ namespace ConsoleApplication1
             this.Id = id;
         }
 
-        public Customer(int id, string name) : this(id) // nice way to initialize all the filed w/o repeating them in
-                                                        // the constructor
-        {
-            this.Name = name;
-        }
+        //public Customer(int id, string name) : this(id) // nice way to initialize all the filed w/o repeating them in
+        //                                                // the constructor
+        //{
+        //    this.Name = name;
+        //}
     }
 
     class Program
@@ -51,7 +51,12 @@ namespace ConsoleApplication1
             Test t1 = new Test();
             var customer = new Customer(); // default
             var customer1 = new Customer(3);
-            var customer2 = new Customer(4, "Hello");
+            var customer2 = new Customer() // when we use Object Initializers we do not need the constructors
+            {
+                Name = "hello",
+                Id = 2,
+                Orders = new List<Order>()
+            };
             customer.Orders.Add(new Order());
             t1.Name = "Tanuj";
             Test t2 = t1;
