@@ -176,7 +176,7 @@ public class Stack
      */
 
 
-public class Logger
+public class Logger : ILogger
 {
     public void LogError(string message)
     {
@@ -189,13 +189,45 @@ public class Logger
     }
 }
 
+public class FileLogger : ILogger
+{
+    public void LogError(string message)
+    {
+        Console.WriteLine("I want top write in file");
+    }
+
+    public void LogMessage(string message)
+    {
+        Console.WriteLine("I have a different logic");
+    }
+}
+
+
+/*
+ Difference between interface and abstract class
+ that being an Abstract Class can contain implementation of methods, fields,
+ constructors, etc, while an Interface only contains method and property prototypes. 
+ A class can implement multiple interfaces, but it can only inherit one class (abstract or otherwise).
+ An Interface member cannot be defined using the keyword static, virtual, abstract or sealed
+
+    Interface is What I can do  ** IMPORTANT
+    Class is what am I          ** IMPORTANT
+     
+     */
+
+public interface ILogger
+{
+    void LogError(string message);
+    void LogMessage(string message);
+}
+
 public class DBMigrator
 {
-    private readonly Logger _Logger;
+    private readonly ILogger _Logger;
 
-    public DBMigrator()
+    public DBMigrator(ILogger logger)  // THis is called dependency injection DI ** IMPORTANT
     {
-        _Logger = new Logger();
+        _Logger = logger;
     }
     public void Migrate()
     {
@@ -251,11 +283,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        var dbMigrator = new DBMigrator();
+        var dbMigrator = new DBMigrator(new Logger());
+        var dbMigratorForFile = new DBMigrator(new FileLogger()); // CHhanging to this is so easy now
         dbMigrator.Migrate();
 
         // Now suppose we want to have some other class lets say fileLogger, then we need to change the DBMIgrator class
         // because it is dependent on the Logger class currently. Now lets see how we can do this usiong interface
+        // Now this problem is solved.
+        // THIS IS CALLEC OPen Close Principole. open for extension but closed for modification. We do not have to modify the DbMigrator class
+
+
+
         var shapes = new List<Shape>();
         //var shape = new Shape(); // WOnt compile because we cannot instantiate the abstract class. 
 
