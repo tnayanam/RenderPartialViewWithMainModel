@@ -162,10 +162,59 @@ public class Stack
     }
 }
 
+/*
+ * Polymorphism
+ * - Method Overriding
+ 
+     
+     */
+
+public class Shape
+{
+    public virtual void Draw() { } // By making it virtual we are telling that this can be overridden by tyhe dericved vclasses
+}
+
+public class Circle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Draw Circle");
+    }
+}
+
+public class Rectangle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Draw Rectangle");
+    }
+}
+
+public class Canvas
+{
+    public void Drawing(List<Shape> shapes)
+    {
+        foreach (var shape in shapes)
+        {
+            shape.Draw();
+        }
+    }
+}
+
 class Program
 {
     static void Main(string[] args)
     {
+        var shapes = new List<Shape>();
+
+        shapes.Add(new Circle()); // upcasting
+        shapes.Add(new Rectangle()); // upcasting
+
+        var canvas = new Canvas();
+        canvas.Drawing(shapes);
+
+
+
         var s1 = new Stack();
         s1.Push(1);
         s1.Push(2);
