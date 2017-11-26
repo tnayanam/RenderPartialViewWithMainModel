@@ -3,6 +3,28 @@
  * Composition is a "Has a Relationship"
  * 
  */
+/*
+ * Upcasting: Casting a derived class to base class
+ * DownCasting: Casting a SUper class to the derovedf class
+
+
+ */
+
+public class SuperClass
+{
+    public int Height { get; set; }
+    public void Draw()
+    {
+
+    }
+}
+
+public class DerivedClass : SuperClass
+{
+    public int Width { get; set; }
+    public void Do() { }
+}
+
 
 public class PublicTest
 {
@@ -108,6 +130,7 @@ class Program
     {
         var car = new Car("WSD");
         var man = new Man(new Animal());
+
         man.wife();
         // Now in this situation if we want to add another method in animal class it will be difficult so if we want
         // to add another method such has NoOfHair, we can create another class altogether 
@@ -138,6 +161,16 @@ class Program
         PublicTest p1 = new PublicTest();
         p1.Id = 2; // Public
                    // p1.Age = 3; // Not Accessible
+
+        // Upcasting
+        var derivedClass = new DerivedClass();
+        SuperClass sp = derivedClass;
+        //sp. now only super calss methods are availbale.
+
+        // downcasting
+        var superClass = new SuperClass();
+        DerivedClass dc = (DerivedClass)superClass;
+        // dc all the methods availbale
 
 
 
