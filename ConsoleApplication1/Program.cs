@@ -4,6 +4,28 @@
  * 
  */
 
+public class PublicTest
+{
+    public int Id { get; set; }
+    private int age { get; set; }
+    protected int birthDate { get; set; }
+
+    public int GetAge()
+    {
+        this.age = 2; // accessing private memebr;
+        return 5;
+    }
+}
+
+public class protectTest : PublicTest
+{
+    public void Name()
+    {
+        var p1 = new PublicTest();
+        p1.
+    }
+}
+
 public class Animal
 {
     public string Name { get; set; }
@@ -76,8 +98,14 @@ class Program
         // SO we end up creating another class just for 50 type pof animals whioch needs that no of hair method.
         // an now this is how inheritance iwll look like Animal=>ANimalWIthHair=> Anod now al the child classes/
         // SO we have a heirarchy now. and thats what we want to avoid
+        /*
+         * Different types of Access Modifier: Public, Private, Protected, Internal, Protected Internal
+         
+         */
 
-
+        PublicTest p1 = new PublicTest();
+        p1.Id = 2; // Public
+                   // p1.Age = 3; // Not Accessible
 
 
     }
