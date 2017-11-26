@@ -28,6 +28,8 @@ public class protectTest : PublicTest
     }
 }
 
+
+
 public class Animal
 {
     public string Name { get; set; }
@@ -71,12 +73,40 @@ public class Fish
     }
 }
 
+/*
+ * Always Base class constructor is called first.  
+*/
+
+public class Vehicle
+{
+    //public Vehicle()
+    //{
+    //    System.Console.WriteLine("This is base class constructor");
+    //}
+
+    private readonly string _registration;
+
+    public Vehicle(string registration)
+    {
+        _registration = registration;
+    }
+}
+
+public class Car : Vehicle
+{
+    public Car(string registrationNumber) : base(registrationNumber) // initialized the base class constructor
+    {
+        System.Console.WriteLine("This is child class constructor");
+    }
+}
+
 // Man Has a Animal // Man is composed of animal
 // Fish Has a  animal
 class Program
 {
     static void Main(string[] args)
     {
+        var car = new Car("WSD");
         var man = new Man(new Animal());
         man.wife();
         // Now in this situation if we want to add another method in animal class it will be difficult so if we want
@@ -108,6 +138,9 @@ class Program
         PublicTest p1 = new PublicTest();
         p1.Id = 2; // Public
                    // p1.Age = 3; // Not Accessible
+
+
+
 
 
     }
