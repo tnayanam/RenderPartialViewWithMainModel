@@ -117,6 +117,14 @@ public class Vehicle
     }
 }
 
+/*
+ * Abstract Class cannot incluce implementation
+ * If a member is declared abstract the containing class also  needs to be abstract
+ * IN derived class all the abstract methods needs to be implemented of not then WONT COMPILE
+ * Abstract class cannot be instantiated.
+ 
+     */
+
 public class Car : Vehicle
 {
     public Car(string registrationNumber) : base(registrationNumber) // initialized the base class constructor
@@ -169,9 +177,14 @@ public class Stack
      
      */
 
-public class Shape
+public abstract class Shape
 {
-    public virtual void Draw() { } // By making it virtual we are telling that this can be overridden by tyhe dericved vclasses
+    public abstract void Draw(); // a promise that all inherited calss must havbe to implement it.
+
+    public void Add()
+    {
+
+    }
 }
 
 public class Circle : Shape
@@ -206,6 +219,7 @@ class Program
     static void Main(string[] args)
     {
         var shapes = new List<Shape>();
+        //var shape = new Shape(); // WOnt compile because we cannot instantiate the abstract class. 
 
         shapes.Add(new Circle()); // upcasting
         shapes.Add(new Rectangle()); // upcasting
