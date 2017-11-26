@@ -279,10 +279,21 @@ public class Canvas
     }
 }
 
+public class GenericsDictionary<TKey, TVal> //THis is generics
+{
+    public void Add(TKey key, TVal val)
+    {
+
+    }
+}
+
 class Program
 {
     static void Main(string[] args)
     {
+        var dict = new GenericsDictionary<string, int>();
+        dict.Add("hello", 2);
+
         var dbMigrator = new DBMigrator(new Logger());
         var dbMigratorForFile = new DBMigrator(new FileLogger()); // CHhanging to this is so easy now
         dbMigrator.Migrate();
