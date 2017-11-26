@@ -177,9 +177,9 @@ public class Stack
      
      */
 
-public abstract class Shape
+public sealed class Shape
 {
-    public abstract void Draw(); // a promise that all inherited calss must havbe to implement it.
+    // public abstract void Draw(); // a promise that all inherited calss must havbe to implement it.
 
     public void Add()
     {
@@ -187,7 +187,7 @@ public abstract class Shape
     }
 }
 
-public class Circle : Shape
+public class Circle : Shape // Error here, because sealed classes cannot be inherited
 {
     public override void Draw()
     {
