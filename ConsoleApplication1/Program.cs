@@ -10,6 +10,8 @@ public class PublicTest
     private int age { get; set; }
     protected int birthDate { get; set; }
 
+    protected int GetbirthDate() { return 4; }
+
     public int GetAge()
     {
         this.age = 2; // accessing private memebr;
@@ -21,8 +23,8 @@ public class protectTest : PublicTest
 {
     public void Name()
     {
-        var p1 = new PublicTest();
-        p1.
+        this.birthDate = 4;
+        this.GetbirthDate(); // protected accessible;
     }
 }
 
