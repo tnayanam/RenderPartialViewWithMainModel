@@ -172,14 +172,47 @@ public class Stack
 
 /*
  * Polymorphism
- * - Method Overriding
- 
-     
+ * - Method Overriding   
      */
 
-public sealed class Shape
+
+public class Logger
 {
-    // public abstract void Draw(); // a promise that all inherited calss must havbe to implement it.
+    public void LogError(string message)
+    {
+        Console.WriteLine("Error Message");
+    }
+
+    public void LogMessage(string message)
+    {
+        Console.WriteLine("Info Message");
+    }
+}
+
+public class DBMigrator
+{
+    private readonly Logger _Logger;
+
+    public DBMigrator()
+    {
+        _Logger = new Logger();
+    }
+    public void Migrate()
+    {
+        _Logger.LogError("Some Error Occured");
+
+        // Some Logic
+
+        _Logger.LogMessage("Some Message");
+    }
+}
+
+
+
+
+public abstract class Shape
+{
+    public abstract void Draw(); // a promise that all inherited calss must havbe to implement it.
 
     public void Add()
     {
@@ -187,7 +220,7 @@ public sealed class Shape
     }
 }
 
-public class Circle : Shape // Error here, because sealed classes cannot be inherited
+public class Circle : Shape
 {
     public override void Draw()
     {
@@ -218,6 +251,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        var dbMigrator = new DBMigrator();
+        dbMigrator.Migrate();
+
+        // Now suppose we want to have some other class lets say fileLogger, then we need to change the DBMIgrator class
+        // because it is dependent on the Logger class currently. Now lets see how we can do this usiong interface
         var shapes = new List<Shape>();
         //var shape = new Shape(); // WOnt compile because we cannot instantiate the abstract class. 
 
