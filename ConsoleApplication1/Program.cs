@@ -10,6 +10,9 @@
 
  */
 
+using System;
+using System.Collections.Generic;
+
 public class SuperClass
 {
     public int Height { get; set; }
@@ -124,10 +127,54 @@ public class Car : Vehicle
 
 // Man Has a Animal // Man is composed of animal
 // Fish Has a  animal
+
+
+public class Stack
+{
+    private readonly List<object> _obj;  // OBJECT IS THE PARENT OF ALL CLASSES IN DOT NET. SO this means it is a super class
+                                         //. which means Upcastingf so it can store anything and everything.
+                                         // readonlyt means it can opnl;y be initlized inconstriuctor or directly but not anywhere else.
+
+    public Stack()
+    {
+        _obj = new List<object>();
+    }
+
+    public void Push(object input)
+    {
+        if (input == null)
+            throw new Exception("Null input passed");
+        _obj.Add(input);
+    }
+
+    public object Pop()
+    {
+        if (_obj.Count == 0)
+            throw new Exception("Stack is Empty");
+        var temp = _obj[_obj.Count - 1];
+        _obj.RemoveAt(_obj.Count - 1);
+        return temp;
+    }
+
+    public void Clear()
+    {
+        _obj.Clear();
+    }
+}
+
 class Program
 {
     static void Main(string[] args)
     {
+        var s1 = new Stack();
+        s1.Push(1);
+        s1.Push(2);
+        s1.Push(3);
+        Console.WriteLine(s1.Pop());
+        Console.WriteLine(s1.Pop());
+        Console.WriteLine(s1.Pop());
+
+
         var car = new Car("WSD");
         var man = new Man(new Animal());
 
