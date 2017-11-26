@@ -172,6 +172,13 @@ class Program
         DerivedClass dc = (DerivedClass)superClass;
         // dc all the methods availbale
 
+        // Boxing and Unboxing
+        var num = 2; // this is a value type hence stored in stack
+        object obj = 2; // this is a reference type so a memory is allocated for 2 and that memory reference is stored to obj
+        // Unboxing
+        object obwj = 4;
+        int num1 = (int)obwj;
+
 
 
 
