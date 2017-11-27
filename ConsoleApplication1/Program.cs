@@ -311,13 +311,12 @@ public class Photo
 // Also if the cutomer who will use our framework wants to add any of their own functionality they will not be able to do so.
 public class PhotoProcessor
 {
-    public void Process(string path)
+    public delegate void PhotoFilterHandler(Photo photo);
+
+    public void Process(string path, PhotoFilterHandler filterHandler)
     {
         var photo = Photo.Load(path);
-
-        var filters = new PhotoFilters();
-        filters.ApplyBrightness(photo);
-        filters.ApplyContrast(photo);
+        filterHandler(photo);
         photo.Save();
     }
 }
@@ -341,7 +340,15 @@ class Program
     {
 
         var photoprocessor = new PhotoProcessor();
-        photoprocessor.Process("ABC");
+        var filter = new PhotoFilters();
+        PhotoProcessor.PhotoFilterHandler filterhandler = filter.ApplyBrightness;
+
+        //calling other filter
+        filterhandler += filter.ApplyContrast;
+
+        filterhandler += Program.removeREDeYE;
+        photoprocessor.Process("ABC", filterhandler);
+        // No go to @@@@@@@
 
         var dict = new GenericsDictionary<string, int>();
         dict.Add("hello", 2);
@@ -433,4 +440,12 @@ class Program
 
 
     }
+    //@@@@@@@
+    // clkient/consume can add their own filters too. As long as the definniton of delegate is mathcing wit the filter
+
+    static void removeREDeYE(Photo photo)
+    {
+        Console.WriteLine("red eye removed");
+    }
+
 }
