@@ -287,10 +287,62 @@ public class GenericsDictionary<TKey, TVal> //THis is generics
     }
 }
 
+/**
+ * Delegates are Reference to a function
+ * Used for extensibility and flexible application
+ */
+
+public class Photo
+{
+    public static Photo Load(string path)
+    {
+        return new Photo();
+    }
+
+    public void Save()
+    {
+
+    }
+}
+
+// This is a framework for designing photographs.
+// Now the problem is if we want to add another method to the photofilter we will have to make changes in the PhotoProcessor class
+// Something like  filters.Resize(photo);
+// Also if the cutomer who will use our framework wants to add any of their own functionality they will not be able to do so.
+public class PhotoProcessor
+{
+    public void Process(string path)
+    {
+        var photo = Photo.Load(path);
+
+        var filters = new PhotoFilters();
+        filters.ApplyBrightness(photo);
+        filters.ApplyContrast(photo);
+        photo.Save();
+    }
+}
+
+public class PhotoFilters
+{
+    public void ApplyBrightness(Photo photo)
+    {
+        Console.WriteLine("Bright Photo Applied");
+    }
+
+    public void ApplyContrast(Photo photo)
+    {
+        Console.WriteLine("Contrast Applied");
+    }
+}
+
 class Program
 {
     static void Main(string[] args)
     {
+
+        var photoprocessor = new PhotoProcessor();
+        photoprocessor.Process("ABC");
+
         var dict = new GenericsDictionary<string, int>();
         dict.Add("hello", 2);
 
@@ -372,7 +424,7 @@ class Program
         // Boxing and Unboxing
         var num = 2; // this is a value type hence stored in stack
         object obj = 2; // this is a reference type so a memory is allocated for 2 and that memory reference is stored to obj
-        // Unboxing
+                        // Unboxing
         object obwj = 4;
         int num1 = (int)obwj;
 
