@@ -311,9 +311,11 @@ public class Photo
 // Also if the cutomer who will use our framework wants to add any of their own functionality they will not be able to do so.
 public class PhotoProcessor
 {
-    public delegate void PhotoFilterHandler(Photo photo);
+    // instead of creating our oewn delegate we can use the delegate provied by the frmmework.
+    // Action<: generic delegate>
+    //public delegate void PhotoFilterHandler(Photo photo);
 
-    public void Process(string path, PhotoFilterHandler filterHandler)
+    public void Process(string path, Action<Photo> filterHandler)
     {
         var photo = Photo.Load(path);
         filterHandler(photo);
@@ -341,12 +343,16 @@ class Program
 
         var photoprocessor = new PhotoProcessor();
         var filter = new PhotoFilters();
-        PhotoProcessor.PhotoFilterHandler filterhandler = filter.ApplyBrightness;
+        Action<Photo> filterhandler = filter.ApplyBrightness;
 
         //calling other filter
         filterhandler += filter.ApplyContrast;
 
-        filterhandler += Program.removeREDeYE;
+        filterhandler += Program.removeREDeYE; //. this is a example of multicast delegate because it points to multipl functions
+
+
+
+
         photoprocessor.Process("ABC", filterhandler);
         // No go to @@@@@@@
 
