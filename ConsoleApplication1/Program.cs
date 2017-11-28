@@ -12,6 +12,7 @@
 
 using System;
 using System.Collections.Generic;
+using ConsoleApplication1;
 
 public class SuperClass
 {
@@ -347,6 +348,12 @@ class Program
 
     static void Main(string[] args)
     {
+
+        var books = new BookRepository().GetBooks();
+       var bo =  books.FindAll(b => b.Price < 15f);
+
+
+
         // Syantax for Lambda Expression
         // args => expression "args goes to expression"
        // number => number * number
@@ -475,7 +482,7 @@ class Program
 
 }
 
-/*
+/* What is a Lamda expression.
  *  Anonymous Method
  *  - No Access modifier
  *  - No Name
