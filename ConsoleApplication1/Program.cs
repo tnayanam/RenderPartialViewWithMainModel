@@ -349,13 +349,15 @@ class Program
     {
         // Syantax for Lambda Expression
         // args => expression "args goes to expression"
-
        // number => number * number
        // Func<int,int> Delegate example: 1st parameter is the Argument and the 2nd type is the Datatype or return value
         // This is an example with lambda expressio and Func delegates.
         Func<int, int> calsquare = Square; // pointing to the external Square function
         Func<int, int> square = number=>number*number; // this is where logic is written inline.
-           // ^ input parameter and then next int is for the return type
+        const int factor = 5;
+        Func<int, int> multiplier = n => n * factor;
+        var resul = multiplier(4);// this is how we call a lamda function
+
         Console.WriteLine(square(5));
             // Since calculating square needs int as parement and return type is int.
         var photoprocessor = new PhotoProcessor();
