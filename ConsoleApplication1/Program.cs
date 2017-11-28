@@ -337,6 +337,19 @@ public class PhotoFilters
     }
 }
 
+// Events and Delegates
+/*
+ * What are events?
+ * A mechanism for commnunication between objects
+ * Used in building loosely Coupled Applcation
+ * Helps extending applications
+ * 
+ * If something at one place changes in one object we can notify it at other objects about it.
+ */
+
+// Events is based on Publisher and Subscriber
+// Delegate is an agreememnt between Publisher and Subscriber
+
 class Program
 {
     // THis is an example without the Lambda expression
@@ -348,9 +361,15 @@ class Program
 
     static void Main(string[] args)
     {
+        var video = new Video()
+        {
+            Title = "EventVideo"
+        };
+        var videoencoder = new VideoEncoder();
+        videoencoder.Encode(video);
 
         var books = new BookRepository().GetBooks();
-       var bo =  books.FindAll(b => b.Price < 15f);
+       var bo =  books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression.
 
 
 
