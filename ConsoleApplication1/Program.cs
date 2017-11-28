@@ -352,26 +352,33 @@ public class PhotoFilters
 
 class Program
 {
-    // THis is an example without the Lambda expression
+    // This is an example without the Lambda expression
     static int Square(int number)
     {
         return number * number;
 
     }
 
+    // Steps to follow for publisher and subscriber
+    // Define a delegate: It is the contract between Publisher and Subscriber
+    // So based on signature of delegate the subsriber function will be called.
+    // Define the event based on thehat delegate
+    // Raise the event
     static void Main(string[] args)
     {
         var video = new Video()
         {
             Title = "EventVideo"
         };
-        var videoencoder = new VideoEncoder();
+        var videoencoder = new VideoEncoder(); // publisher
+        var mailService = new MailService(); // Subscriber
+        videoencoder.VideoEncoded += mailService.OnVideoEncoded;
         videoencoder.Encode(video);
 
+
+
         var books = new BookRepository().GetBooks();
-       var bo =  books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression.
-
-
+       var bo =  books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression
 
         // Syantax for Lambda Expression
         // args => expression "args goes to expression"
