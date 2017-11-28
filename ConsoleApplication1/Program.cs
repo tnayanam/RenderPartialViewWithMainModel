@@ -338,9 +338,26 @@ public class PhotoFilters
 
 class Program
 {
+    // THis is an example without the Lambda expression
+    static int Square(int number)
+    {
+        return number * number;
+
+    }
+
     static void Main(string[] args)
     {
+        // Syantax for Lambda Expression
+        // args => expression "args goes to expression"
 
+       // number => number * number
+       // Func<int,int> Delegate example: 1st parameter is the Argument and the 2nd type is the Datatype or return value
+        // This is an example with lambda expressio and Func delegates.
+        Func<int, int> calsquare = Square; // pointing to the external Square function
+        Func<int, int> square = number=>number*number; // this is where logic is written inline.
+           // ^ input parameter and then next int is for the return type
+        Console.WriteLine(square(5));
+            // Since calculating square needs int as parement and return type is int.
         var photoprocessor = new PhotoProcessor();
         var filter = new PhotoFilters();
         Action<Photo> filterhandler = filter.ApplyBrightness;
@@ -455,3 +472,10 @@ class Program
     }
 
 }
+
+/*
+ *  Anonymous Method
+ *  - No Access modifier
+ *  - No Name
+ *  - No Return Statement 
+ */

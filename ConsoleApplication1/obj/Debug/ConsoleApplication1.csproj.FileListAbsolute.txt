@@ -4,3 +4,9 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
