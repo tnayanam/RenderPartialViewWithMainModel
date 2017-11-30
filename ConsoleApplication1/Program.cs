@@ -10,9 +10,9 @@
 
  */
 
+using ConsoleApplication1;
 using System;
 using System.Collections.Generic;
-using ConsoleApplication1;
 
 public class SuperClass
 {
@@ -80,6 +80,14 @@ public class Man
     {
         _animal.Name = "asds";
         System.Console.WriteLine("My wife");
+    }
+}
+
+public class MessageService
+{
+    public void OnMessageSent(object source, EventArgs e)
+    {
+        Console.WriteLine("Message sent.");
     }
 }
 
@@ -372,27 +380,29 @@ class Program
         };
         var videoencoder = new VideoEncoder(); // publisher
         var mailService = new MailService(); // Subscriber
+        var messageService = new MessageService(); // Subscriber
         videoencoder.VideoEncoded += mailService.OnVideoEncoded;
+        videoencoder.VideoEncoded += messageService.OnMessageSent;
         videoencoder.Encode(video);
 
 
 
         var books = new BookRepository().GetBooks();
-       var bo =  books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression
+        var bo = books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression
 
         // Syantax for Lambda Expression
         // args => expression "args goes to expression"
-       // number => number * number
-       // Func<int,int> Delegate example: 1st parameter is the Argument and the 2nd type is the Datatype or return value
+        // number => number * number
+        // Func<int,int> Delegate example: 1st parameter is the Argument and the 2nd type is the Datatype or return value
         // This is an example with lambda expressio and Func delegates.
         Func<int, int> calsquare = Square; // pointing to the external Square function
-        Func<int, int> square = number=>number*number; // this is where logic is written inline.
+        Func<int, int> square = number => number * number; // this is where logic is written inline.
         const int factor = 5;
         Func<int, int> multiplier = n => n * factor;
         var resul = multiplier(4);// this is how we call a lamda function
 
         Console.WriteLine(square(5));
-            // Since calculating square needs int as parement and return type is int.
+        // Since calculating square needs int as parement and return type is int.
         var photoprocessor = new PhotoProcessor();
         var filter = new PhotoFilters();
         Action<Photo> filterhandler = filter.ApplyBrightness;
