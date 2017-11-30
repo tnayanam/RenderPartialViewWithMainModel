@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Video
+    public class Video
     {
         public string Title { get; set; }
     }
@@ -15,34 +11,34 @@ namespace ConsoleApplication1
     class VideoEncoder
     {
         // first step
-        public delegate void VideoEncoderEventHandler(object source, EventArgs args);
+        public delegate void VideoEncoderEventHandler(object source, VideoEventArgs args);
 
         // second step 
         public event VideoEncoderEventHandler VideoEncoded;
 
 
-        protected virtual void OnVideoEncoded()
+        protected virtual void OnVideoEncoded(Video video)
         {
-            if(VideoEncoded !=null )
+            if (VideoEncoded != null)
             {
-                VideoEncoded(this, EventArgs.Empty);
+                VideoEncoded(this, new VideoEventArgs() { Video = video });
             }
         }
         public void Encode(Video video)
         {
             Console.WriteLine("Encode the video");
             Thread.Sleep(3000);
-            OnVideoEncoded();
+            OnVideoEncoded(video);
         }
 
     }
 
     public class MailService
-    { 
+    {
         // event handler
-        public void OnVideoEncoded(object source, EventArgs e)
+        public void OnVideoEncoded(object source, VideoEventArgs e)
         {
-            Console.WriteLine("We are in mail service sending an amil..");
+            Console.WriteLine("We are in mail service sending an amil.." + e.Video.Title);
         }
     }
 

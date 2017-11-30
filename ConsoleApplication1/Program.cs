@@ -10,9 +10,17 @@
 
  */
 
+
+// In this we wil try now to send data also to the subscribers.
+
 using ConsoleApplication1;
 using System;
 using System.Collections.Generic;
+
+public class VideoEventArgs : EventArgs
+{
+    public Video Video { get; set; }
+}
 
 public class SuperClass
 {
@@ -85,9 +93,9 @@ public class Man
 
 public class MessageService
 {
-    public void OnMessageSent(object source, EventArgs e)
+    public void OnMessageSent(object source, VideoEventArgs e)
     {
-        Console.WriteLine("Message sent.");
+        Console.WriteLine("Message sent." + e.Video.Title);
     }
 }
 
@@ -381,8 +389,8 @@ class Program
         var videoencoder = new VideoEncoder(); // publisher
         var mailService = new MailService(); // Subscriber
         var messageService = new MessageService(); // Subscriber
-        videoencoder.VideoEncoded += mailService.OnVideoEncoded;
-        videoencoder.VideoEncoded += messageService.OnMessageSent;
+        videoencoder.VideoEncoded += mailService.OnVideoEncoded; // adding method reference to the event pointer
+        videoencoder.VideoEncoded += messageService.OnMessageSent; // adding method refernce to te evenmt pointer // more like subscribing
         videoencoder.Encode(video);
 
 
