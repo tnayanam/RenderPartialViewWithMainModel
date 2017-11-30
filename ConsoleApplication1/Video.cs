@@ -27,7 +27,7 @@ namespace ConsoleApplication1
         public void Encode(Video video)
         {
             Console.WriteLine("Encode the video");
-            Thread.Sleep(3000);
+            Thread.Sleep(300);
             OnVideoEncoded(video);
         }
 

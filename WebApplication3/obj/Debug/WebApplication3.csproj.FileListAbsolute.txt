@@ -2035,3 +2035,4 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csproj.GenerateResource.Cache
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache

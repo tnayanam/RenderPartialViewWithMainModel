@@ -219,7 +219,6 @@ public class FileLogger : ILogger
     }
 }
 
-
 /*
  Difference between interface and abstract class
  that being an Abstract Class can contain implementation of methods, fields,
@@ -255,9 +254,6 @@ public class DBMigrator
         _Logger.LogMessage("Some Message");
     }
 }
-
-
-
 
 public abstract class Shape
 {
@@ -366,6 +362,14 @@ public class PhotoFilters
 // Events is based on Publisher and Subscriber
 // Delegate is an agreememnt between Publisher and Subscriber
 
+public static class Extnsn
+{
+    public static string Shorten(this string longString)
+    {
+        return longString.Substring(1, 5);
+    }
+}
+
 class Program
 {
     // This is an example without the Lambda expression
@@ -380,8 +384,21 @@ class Program
     // So based on signature of delegate the subsriber function will be called.
     // Define the event based on thehat delegate
     // Raise the event
+
+    // Extension Methods: allows us to add additional functionality to a class w/o changing the existing source code of that class or w/o creating a class that inherits from it.
+
+
+
+
     static void Main(string[] args)
     {
+        string post = "This is suppose to be a very long post blab bla bla...";
+        // so we want to be able to call somthing like String.Mad(). but the problem is we do not have access to string class and also we cannot inherit from it.
+        // so we need to wrtie the extestion mtethod.
+
+        var shortenVersion = post.Shorten();
+        Console.WriteLine(shortenVersion);
+
         var video = new Video()
         {
             Title = "EventVideo"
