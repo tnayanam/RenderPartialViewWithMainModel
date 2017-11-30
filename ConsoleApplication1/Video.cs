@@ -11,10 +11,10 @@ namespace ConsoleApplication1
     class VideoEncoder
     {
         // first step
-        public delegate void VideoEncoderEventHandler(object source, VideoEventArgs args);
+        // public delegate void VideoEncoderEventHandler(object source, VideoEventArgs args);
 
         // second step 
-        public event VideoEncoderEventHandler VideoEncoded;
+        public event EventHandler<VideoEventArgs> VideoEncoded; // Awesome
 
 
         protected virtual void OnVideoEncoded(Video video)
