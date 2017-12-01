@@ -413,7 +413,7 @@ class Program
 
 
         var books = new BookRepository().GetBooks();
-        var bo = books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression
+        var bo = books.FindAll(b => b.Price < 15f); // here b is the argument and b.Price<15 is the expression // Find all
 
         // Syantax for Lambda Expression
         // args => expression "args goes to expression"
