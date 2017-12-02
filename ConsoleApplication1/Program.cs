@@ -423,27 +423,27 @@ class Program
 
     static void Main(string[] args)
     {
-
-        StreamReader sr = null;
-
         try
         {
-            sr = new StreamReader(@"C:\a.txt");
+            using (var sr = new StreamReader(@"C:\a.txt")) // UNDER THE hood a finally block is provided to delete the memory allocated.
+            {
+                Console.WriteLine("SOme logic");
+            }
         }
         catch (Exception)
         {
             Console.WriteLine("Some Exception Occured");
         }
-        // this gets executed in 2 scenarios
-        // 1. if exception occured and handled properly
-        // 2. if no exception occured
-        //3. THis will not get executed if exception is UNHANDLED
-        finally
-        {
-            if (sr != null)
-                sr.Dispose();
-            Console.WriteLine("The only time this is not executed when exception is not handled.");
-        }
+        //// this gets executed in 2 scenarios
+        //// 1. if exception occured and handled properly
+        //// 2. if no exception occured
+        ////3. THis will not get executed if exception is UNHANDLED
+        //finally
+        //{
+        //    if (sr != null)
+        //        sr.Dispose();
+        //    Console.WriteLine("The only time this is not executed when exception is not handled.");
+        //}
 
 
 
