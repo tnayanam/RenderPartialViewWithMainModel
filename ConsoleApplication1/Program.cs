@@ -411,6 +411,7 @@ public class YoutubeApi
         }
         catch (Exception)
         {
+            throw new ArgumentNullException();
             Console.WriteLine("Some exception occured");
         }
         // here everysingle line of code will get executed even though exception has occured. because we successfully caught it.
@@ -450,9 +451,13 @@ class Program
             var youtube = new YoutubeApi();
             youtube.GetVideos("hge");
             // below line will get executed abecause the exception occured above is handled.
+
+            // Now THIS LINE will not get executed because when handling the exception we throw the execption to an outer level. so exception is
+            // still active and that is why below line wil nto executed.
             Console.WriteLine("One");
         }
-        // this bloxk will not executed because the exception occured has been handled.
+        // this bloxk will not executed because the exception occured has been handled.\\
+        // here this line will be executed because exception is still active.
         catch (Exception)
         {
             Console.WriteLine("Two");
