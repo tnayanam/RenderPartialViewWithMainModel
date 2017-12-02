@@ -394,6 +394,17 @@ class Program
 
     static void Main(string[] args)
     {
+
+        // DYnamic Types: It is hanbdled by DLR (Dynamic language run time compiler)
+        string t = "Tanuj";
+
+        dynamic r = t;
+
+        dynamic t1 = "hello";
+        t1 = 3;
+        // No Type casting also required. all this is done internally.
+
+
         // nuLLABLE ASSIGNMENT TO NNO NULLABLE
 
         DateTime? datetime = null;
