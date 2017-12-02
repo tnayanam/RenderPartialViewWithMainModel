@@ -399,6 +399,27 @@ public class DivideByZero
     }
 }
 
+
+public class YoutubeApi
+{
+    public List<Video> GetVideos(string user)
+    {
+        try
+        {
+            // some logic to get the videos for that user.
+            throw new ArgumentNullException();
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Some exception occured");
+        }
+        // here everysingle line of code will get executed even though exception has occured. because we successfully caught it.
+        return new List<Video>();
+    }
+}
+// If we dot use the throw in the exception then rest of the code keeps opn executing as if nothing happend. even if we had one exception
+// as it was handled by the catch block.
+
 class Program
 {
 
@@ -423,6 +444,21 @@ class Program
 
     static void Main(string[] args)
     {
+
+        try
+        {
+            var youtube = new YoutubeApi();
+            youtube.GetVideos("hge");
+            // below line will get executed abecause the exception occured above is handled.
+            Console.WriteLine("One");
+        }
+        // this bloxk will not executed because the exception occured has been handled.
+        catch (Exception)
+        {
+            Console.WriteLine("Two");
+            throw;
+        }
+        // thjis line will execute now. so basically is exption is caught that means next available line will start executing as if nothing occured.
         try
         {
             using (var sr = new StreamReader(@"C:\a.txt")) // UNDER THE hood a finally block is provided to delete the memory allocated.
