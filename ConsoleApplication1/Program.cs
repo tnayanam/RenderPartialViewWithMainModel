@@ -372,6 +372,8 @@ public static class Extnsn
 
 class Program
 {
+
+
     // This is an example without the Lambda expression
     static int Square(int number)
     {
@@ -392,6 +394,15 @@ class Program
 
     static void Main(string[] args)
     {
+        // nuLLABLE ASSIGNMENT TO NNO NULLABLE
+
+        DateTime? datetime = null;
+        DateTime dt = datetime.GetValueOrDefault();
+
+        // iF NULL THEN SET SOME OTHGER VALUE: nULL Coalsceing Operator
+
+        DateTime? datetime1 = null;
+        DateTime dt1 = datetime1 ?? DateTime.Today;
         string post = "This is suppose to be a very long post blab bla bla...";
         // so we want to be able to call somthing like String.Mad(). but the problem is we do not have access to string class and also we cannot inherit from it.
         // so we need to wrtie the extestion mtethod.
