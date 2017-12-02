@@ -370,6 +370,26 @@ public static class Extnsn
     }
 }
 
+public class DivideByZero
+{
+    public void Divide(int num, int den)
+    {
+        try
+        {
+            var t1 = num / den;
+            Console.WriteLine("Hello"); // if execution occurs this line will not execute.
+        }
+        catch (Exception)
+        {
+
+            Console.WriteLine("zsdfgsd");
+        }
+
+
+        Console.WriteLine("Hello"); // even if exception occurs this line will execute
+    }
+}
+
 class Program
 {
 
@@ -394,6 +414,26 @@ class Program
 
     static void Main(string[] args)
     {
+        // Program crashed means unhandled exception
+        // If we put exception handling then alos exception occurs but we can then put the message3 of our choice and program will nopt crash.
+
+        // If an exception occurs and exception handling is not there then none of the code after that excutes
+        // SO program completely crashes out. 
+        // But when we have exception handling, then that particular chunk where the exception occured will not execute. and code will go
+        // to catch block and from there again the execution will start.
+        var d = new DivideByZero();
+        d.Divide(2, 0);
+
+        //try
+        //{
+        //    d.Divide(2, 0);
+        //}
+        //catch (Exception)
+        //{
+        //    Console.WriteLine("Divide by Zero Exception Occured");
+        //}
+
+
 
         // DYnamic Types: It is hanbdled by DLR (Dynamic language run time compiler)
         string t = "Tanuj";
