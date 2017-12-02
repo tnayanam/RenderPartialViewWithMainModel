@@ -381,11 +381,19 @@ public class DivideByZero
         }
         catch (Exception)
         {
-
+            // we cannot add disp[osing of memory here because if execption occurs the this will work fine
+            // but if exception does not occur then this code wil not be executed and even the we would want to dispose the memeory so
+            // better tyo keep it in finally block
             Console.WriteLine("zsdfgsd");
         }
+        finally
+        {
+            // It is used for disposing the memory
+            // always get executed exception occurs or does not occur.
 
-
+            // streamreader.dispose();
+            Console.WriteLine("This will always be executed");
+        }
         Console.WriteLine("Hello"); // even if exception occurs this line will execute
     }
 }
