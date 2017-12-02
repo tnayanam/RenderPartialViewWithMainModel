@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ConsoleApplication1
 {
@@ -25,3 +21,10 @@ namespace ConsoleApplication1
         public float Price { get; set; }
     }
 }
+
+
+// What is entity famework:
+
+// It is a framework that helps in Manaing Database connection
+// Manual Mapping
+// It is an Object Relational Mapper
