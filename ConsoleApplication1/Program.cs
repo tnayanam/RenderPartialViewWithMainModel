@@ -16,6 +16,7 @@
 using ConsoleApplication1;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 public class VideoEventArgs : EventArgs
 {
@@ -422,6 +423,33 @@ class Program
 
     static void Main(string[] args)
     {
+
+        StreamReader sr = null;
+
+        try
+        {
+            sr = new StreamReader(@"C:\a.txt");
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Some Exception Occured");
+        }
+        // this gets executed in 2 scenarios
+        // 1. if exception occured and handled properly
+        // 2. if no exception occured
+        //3. THis will not get executed if exception is UNHANDLED
+        finally
+        {
+            if (sr != null)
+                sr.Dispose();
+            Console.WriteLine("The only time this is not executed when exception is not handled.");
+        }
+
+
+
+
+
+
         // Program crashed means unhandled exception
         // If we put exception handling then alos exception occurs but we can then put the message3 of our choice and program will nopt crash.
 
