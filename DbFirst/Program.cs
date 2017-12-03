@@ -4,6 +4,21 @@
     {
         static void Main(string[] args)
         {
+
+            var dbContext = new PlutoDbContext();
+            var courses = dbContext.Courses;
+            foreach (Course course in courses)
+            {
+                System.Console.WriteLine(course.Description);
+            }
+
+            // Sproc
+            var coursesAll = dbContext.GetCourses();
+
+            foreach (var course in coursesAll)
+            {
+                System.Console.WriteLine(course.Description);
+            }
         }
     }
 }
@@ -22,4 +37,6 @@
  * IN order to get than Model ionto code. right click on an empty space in the edmx desinger file and click on Update from DB
  * there select the checkbox of stuff you want to add and then click on finish
 
+    * In order to see how the Models are getting mapped. you can click on designer table and then click the "Table Mapping" option.
+    * It wil show which Model prop is getting mapped to whicl collumn in DB
  */

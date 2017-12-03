@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{7BBDB12F-45E1-4D06-9BF0-222CB87574A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbFirst", "DbFirst\DbFirst.csproj", "{6E3741AC-1672-4E3D-AB23-3244F07D6302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7BBDB12F-45E1-4D06-9BF0-222CB87574A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BBDB12F-45E1-4D06-9BF0-222CB87574A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BBDB12F-45E1-4D06-9BF0-222CB87574A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3741AC-1672-4E3D-AB23-3244F07D6302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3741AC-1672-4E3D-AB23-3244F07D6302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3741AC-1672-4E3D-AB23-3244F07D6302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3741AC-1672-4E3D-AB23-3244F07D6302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

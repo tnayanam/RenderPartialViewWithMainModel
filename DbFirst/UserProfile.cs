@@ -15,5 +15,6 @@ namespace DbFirst
     public partial class UserProfile
     {
         public int UserProfileID { get; set; }
+        public string Name { get; set; }
     }
 }
