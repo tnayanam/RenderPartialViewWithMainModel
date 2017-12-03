@@ -446,6 +446,18 @@ class Program
     static void Main(string[] args)
     {
 
+        var context = new DatabaseFirstDemoEntities();
+        var postone = new Post()
+        {
+            Body = "This is a body",
+            DatePublished = DateTime.Today,
+            PostID = 1,
+            Title = "First"
+        };
+        context.Posts.Add(postone);
+        context.SaveChanges();
+
+
         try
         {
             var youtube = new YoutubeApi();
@@ -687,4 +699,29 @@ class Program
  *  - No Access modifier
  *  - No Name
  *  - No Return Statement 
+ */
+
+
+/*
+ *Entity Framework Database First Approach
+ * SO initially we installed the SQL Server
+ * Then we insalled the SSMS - client for the SQL Server
+ *  Now we need to connect the SSMS with the SQL Server Instance
+ *  For that we opened the SSMS and put Server Name as the Instance Name of the SQL SERVER THAT we downloaded.
+ *  this will connect the SSMS to SQL Server
+ *  Now, create a database there.
+ *  create a table there
+ *  Now we need to connect the application to that database
+ *  In here we need to tell two things to our code. One the SQL Server Instance, also we need to tell which database
+ *  in that particular instance we need our application to intreract to.
+ *  So, now right clikc on the solution and chose add new item, there select the ADO.Net Entity Data Model.
+ *  Give it a name and click OK, in the next window we need to tell that we need to select "Designer From Database"
+ *  Now select data dource as "Microsoft SQL Server
+ *  Now we need to select the Server Name: It's more like instance name: there we need to give .\THESQLSERVERINSTANCENAME
+ *  Now in the bottom dropdown it will aujtomatically detect the DB Available there. select that DB and then click "Test Connection" to make
+ *  sure our application is able to communicate with the DB
+ *  Now in the next window it will show the srpoc and view and tables check the check boxes acccordingly and then click finish
+ *  This will connect our application to the Database. Also note that in App.Config file you can find the connection string
+ *  that helps the application to connect to the DB.
+
  */

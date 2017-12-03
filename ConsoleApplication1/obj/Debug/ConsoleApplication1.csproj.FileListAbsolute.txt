@@ -10,3 +10,7 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\EntityFramework.SqlServer.xml
