@@ -44,3 +44,25 @@ namespace ConsoleApplication1
 // It has the Database server IP,port, and then it has the Database name in that server, becasue that server might have many databases
 // now also one datbase needs one user, so in connectio string we also need to tell the user name and passwoed for that databse.
 // the inital catalog section of connection string talks about the database name.
+
+
+//Server=localhost\MSSQLSERVER01;Database=master;Trusted_Connection=True;
+
+// Above is the connection string that got generated when I installed the SQL Server.
+// Now clearly it is giving us all the infrmation. 
+/*
+ * serverName : localhost\MSSQLSERVER01
+ * actually in one system we can install many instances of the sql server. and they all can have their set of databases
+ * so here it is telling that the sql server instance that I will be working on will be "MSSQLSERVER01
+ * Also it is telling that the database name is Master (by default).
+ * 
+ * 
+ * More: Now once we installed the SQL Server and then we installed the SSMS to interact with it. more like a client.
+ * 
+ * Now the client does not know which server it needs to connect to, again it knows it needs to get connected to SQL Server but it does not
+ * know which SQL Server instance it needs to get connected to. Because we might have multiple instance of SQL Server running.
+ * SO when we launch the SSMS it asks which instance of SQL Server you need to connect to.
+ * in my case when I installed the SQL SERVER my instrance name was MSSQLSERVER01. so I need to provide the instrance name so that SSMS can now connect
+ * to that server and start interacting.
+ * 
+ */
