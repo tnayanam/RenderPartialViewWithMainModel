@@ -56,3 +56,8 @@ namespace CodesFirst
 }
 // Below is IMportnat
 //install-package entityframework -Version 6.1.3 -projectName CodesFirst
+
+
+// Error While Runnig Enable-Migrations:
+// No context type was found in the assembly
+// That means you have not mada a class that inherits from DBContext

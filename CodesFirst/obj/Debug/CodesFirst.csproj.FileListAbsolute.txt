@@ -7,3 +7,5 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.exe
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.Migrations.InitialModel.resources
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.csproj.GenerateResource.Cache
