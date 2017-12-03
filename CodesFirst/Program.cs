@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace CodesFirst
 {
@@ -32,6 +33,18 @@ namespace CodesFirst
         Beginner = 1,
         Intermediate = 2,
         Advanced = 3
+    }
+
+    public class PlutoContext : DbContext
+    {
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        // Since we did not follow the convention in connnection string , we are explicitly telling the DbCOntext about the connection string it needs to use.
+        public PlutoContext() : base("name=DefaultConnection")
+        {
+
+        }
     }
 
     class Program
