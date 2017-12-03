@@ -1,0 +1,1 @@
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\DbFirst.exe.config
