@@ -61,3 +61,20 @@ namespace CodesFirst
 // Error While Runnig Enable-Migrations:
 // No context type was found in the assembly
 // That means you have not mada a class that inherits from DBContext
+
+/*
+ * In order to crrate code first freom any existing database just crate the project and add a ADO.Net Entity Model and click on
+ * Created designer from Database 4thoption I think
+ * ANd then give sleect the new connection and give the instace server name and chose the right database
+ * from bottom dropdown and click next
+ * from there uncjeck the Migration table and then click next and you are all set.
+ * Now go to project and "Enable-Migrations"
+ * Now you will rund add-Migration "Inital Model" But the problem is all these migrations script generated already exists in
+ * the database so we need to tell the Project to ignore this set of migration
+ * SO you will run below command "add-migration InitialModel -IgnoreChanges -Force"
+ * What this will do it it weill ignore current migration Model clases and will give you empty migration file
+ * Since we can only havbe one pending mgraiton at a time so we will now update our DB with this empty Migration
+ * "update-databse"
+ * Now you are all set. keep aming model changes int he code and keep adding migrationa nd updating the db.
+
+     */
