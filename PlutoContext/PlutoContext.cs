@@ -2,6 +2,11 @@ namespace PlutoContext
 {
     using System.Data.Entity;
 
+    // Try to keep this class name same as the one in connection string. If it is the same then we do not need to change
+    // our connection string, or we do not even need to pass "name=PlutoContext" in the constructor
+    // However if these name does not match then we need to see what is the KEY name in the connection string
+    // and we need to pass that name here in the constrcutor of this class "name=CONNECTIONSTRINTGLKEY"
+
     public partial class PlutoContext : DbContext
     {
         public PlutoContext()
