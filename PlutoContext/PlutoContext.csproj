@@ -55,10 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Migrations\201712032339597_InitialModel.cs" />
     <Compile Include="Migrations\201712032339597_InitialModel.Designer.cs">
       <DependentUpon>201712032339597_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712032348159_categorytablle.cs" />
+    <Compile Include="Migrations\201712032348159_categorytablle.Designer.cs">
+      <DependentUpon>201712032348159_categorytablle.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -73,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712032339597_InitialModel.resx">
       <DependentUpon>201712032339597_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712032348159_categorytablle.resx">
+      <DependentUpon>201712032348159_categorytablle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
