@@ -115,7 +115,7 @@
     <FunctionImport Name="funcGetAuthorCourses" IsComposable="true" ReturnType="Collection(PlutoModel.funcGetAuthorCourses_Result)">
       <Parameter Name="AuthorID" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="GetCourses" ReturnType="Collection(PlutoModel.GetCourses_Result)" />
+    <FunctionImport Name="GetCourses" EntitySet="Courses" ReturnType="Collection(PlutoModel.Course)" />
     <FunctionImport Name="InsertCourse">
       <Parameter Name="AuthorID" Mode="In" Type="Int32" />
       <Parameter Name="Title" Mode="In" Type="String" />
@@ -147,14 +147,5 @@
     <Property Type="Int16" Name="Price" Nullable="false" />
     <Property Type="String" Name="LevelString" Nullable="false" MaxLength="50" />
     <Property Type="Byte" Name="Level" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="GetCourses_Result">
-    <Property Type="Int32" Name="CourseID" Nullable="false" />
-    <Property Type="Int32" Name="AuthorID" Nullable="false" />
-    <Property Type="String" Name="Title" Nullable="false" MaxLength="255" />
-    <Property Type="String" Name="Description" Nullable="false" MaxLength="8000" />
-    <Property Type="Int16" Name="FullPrice" Nullable="false" />
-    <Property Type="String" Name="LevelString" Nullable="false" MaxLength="50" />
-    <Property Type="String" Name="Level" Nullable="false" MaxLength="50" />
   </ComplexType>
 </Schema>

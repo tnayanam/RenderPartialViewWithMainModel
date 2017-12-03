@@ -1,0 +1,9 @@
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\CodesFirst.exe.config
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\CodesFirst.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\CodesFirst.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.pdb
