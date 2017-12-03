@@ -71,6 +71,7 @@
       <DependentUpon>BlogModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="BookRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs">
       <DependentUpon>BlogModel.tt</DependentUpon>
     </Compile>
