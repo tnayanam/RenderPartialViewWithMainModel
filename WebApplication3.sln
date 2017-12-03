@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbFirst", "DbFirst\DbFirst.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodesFirst", "CodesFirst\CodesFirst.csproj", "{76769E62-202C-48E2-821D-99429BE02BA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoContext", "PlutoContext\PlutoContext.csproj", "{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{76769E62-202C-48E2-821D-99429BE02BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76769E62-202C-48E2-821D-99429BE02BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76769E62-202C-48E2-821D-99429BE02BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

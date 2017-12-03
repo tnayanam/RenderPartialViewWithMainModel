@@ -1,1 +1,12 @@
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\PlutoContext.exe.config
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\PlutoContext.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\PlutoContext.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.InitialModel.resources
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.csproj.GenerateResource.Cache

@@ -9,3 +9,4 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.pdb
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.Migrations.InitialModel.resources
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.csproj.GenerateResource.Cache
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.csprojResolveAssemblyReference.cache
