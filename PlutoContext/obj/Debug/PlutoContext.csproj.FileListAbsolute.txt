@@ -13,3 +13,4 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Deb
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.categorytablle.resources
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.categoryADDED.resources
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.datetimenulabel.resources
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.renamedcolumnname.resources
