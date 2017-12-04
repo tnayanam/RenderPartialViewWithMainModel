@@ -17,8 +17,8 @@ namespace PlutoContext
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
-        public virtual DbSet<Mobile> Mobiles { get; set; }
-        public virtual DbSet<SIM> SIMs { get; set; }
+        //public virtual DbSet<Mobile> Mobiles { get; set; }
+        //public virtual DbSet<SIM> SIMs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -82,13 +82,23 @@ namespace PlutoContext
             //    .HasMany(c => c.Tags)
             //    .WithMany(t => t.Courses);
 
+            // Inorder to change the name of Composite Key in linking table (its different because we dont have that domain
+            //  in our class. so wee need to follow below approach
+
             // Many to Many with Linking table explicitly named
             // Many to Many
-            //modelBuilder.Entity<Course>()
-            //    .HasMany(c => c.Tags)
-            //    .WithMany(t => t.Courses).
-            //    Map(t => t.ToTable("CoursesTag"));
+            modelBuilder.Entity<Course>()
+                .HasMany(c => c.Tags)
+                .WithMany(t => t.Courses).
+                Map(t =>
+                {
+                    t.ToTable("CoursesTag");
+                    t.MapLeftKey("CourseId");
+                    t.MapRightKey("TagId");
+                });
             // in this case the mapping table will be renamed as CoursesTag
+
+
 
             // One to Zero/One
             // course can have no caption or one
