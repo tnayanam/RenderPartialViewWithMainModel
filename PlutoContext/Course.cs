@@ -19,6 +19,7 @@ namespace PlutoContext
 
         public int Id { get; set; }
 
+        //[Column("Title")] // In case if column name does not match with column name in DB
         public string Name { get; set; }
 
         public string Description { get; set; }
