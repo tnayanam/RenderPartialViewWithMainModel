@@ -52,6 +52,12 @@ namespace PlutoContext
             //modelBuilder.Entity<Author>()
             //    .HasMany(a => a.Courses)
             //    .WithRequired(c => c.Author);
+
+            //modelBuilder.Entity<Author>()
+            //    .HasMany(a => a.Courses)
+            //    .WithRequired(c => c.Author)
+            //    .HasForeignKey(c => c.Author_Id);
+
         }
     }
 }
