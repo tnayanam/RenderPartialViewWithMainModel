@@ -1,6 +1,5 @@
 namespace PlutoContext
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,9 +21,6 @@ namespace PlutoContext
         public int Level { get; set; }
 
         public Category Category { get; set; }
-
-        public DateTime? DatePublished { get; set; } // Datetime is a sruct thus cannot be nullable if we want
-        // to make it nullable we need to add "?" tag infront of it.
 
         public float FullPrice { get; set; }
 
