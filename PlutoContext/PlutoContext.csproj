@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201712032356283_categoryADDED.Designer.cs">
       <DependentUpon>201712032356283_categoryADDED.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712040003353_datetimenulabel.cs" />
+    <Compile Include="Migrations\201712040003353_datetimenulabel.Designer.cs">
+      <DependentUpon>201712040003353_datetimenulabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712032356283_categoryADDED.resx">
       <DependentUpon>201712032356283_categoryADDED.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712040003353_datetimenulabel.resx">
+      <DependentUpon>201712040003353_datetimenulabel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
