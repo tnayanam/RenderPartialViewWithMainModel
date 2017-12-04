@@ -44,4 +44,15 @@ namespace PlutoContext
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tag> Tags { get; set; }
     }
+
+
+    //public class tree
+    //{
+    //    [ForeignKey("Author")] // here we are setting the foreign key constraint
+    //    public int AuthorId { get; set; }
+    //    public Author Author { get; set; }
+    //}
+
 }
+
+
