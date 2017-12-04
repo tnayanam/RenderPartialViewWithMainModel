@@ -15,3 +15,5 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Deb
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.datetimenulabel.resources
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.renamedcolumnname.resources
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.dtepublisheddeleted.resources
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.catclassdxeldeted.resources
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\PlutoContext\obj\Debug\PlutoContext.Migrations.dtepublisheddeleted1.resources

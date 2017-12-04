@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
-    <Compile Include="Category.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Migrations\201712032339597_InitialModel.cs" />
     <Compile Include="Migrations\201712032339597_InitialModel.Designer.cs">
@@ -80,6 +79,14 @@
     <Compile Include="Migrations\201712040013271_dtepublisheddeleted.cs" />
     <Compile Include="Migrations\201712040013271_dtepublisheddeleted.Designer.cs">
       <DependentUpon>201712040013271_dtepublisheddeleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712040014449_catclassdxeldeted.cs" />
+    <Compile Include="Migrations\201712040014449_catclassdxeldeted.Designer.cs">
+      <DependentUpon>201712040014449_catclassdxeldeted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712040015570_dtepublisheddeleted1.cs" />
+    <Compile Include="Migrations\201712040015570_dtepublisheddeleted1.Designer.cs">
+      <DependentUpon>201712040015570_dtepublisheddeleted1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -109,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712040013271_dtepublisheddeleted.resx">
       <DependentUpon>201712040013271_dtepublisheddeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712040014449_catclassdxeldeted.resx">
+      <DependentUpon>201712040014449_catclassdxeldeted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712040015570_dtepublisheddeleted1.resx">
+      <DependentUpon>201712040015570_dtepublisheddeleted1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

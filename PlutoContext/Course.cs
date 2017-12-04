@@ -20,8 +20,6 @@ namespace PlutoContext
 
         public int Level { get; set; }
 
-        public Category Category { get; set; }
-
         public float FullPrice { get; set; }
 
         public int? Author_Id { get; set; }
