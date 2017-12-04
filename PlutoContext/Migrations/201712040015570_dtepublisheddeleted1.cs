@@ -38,3 +38,16 @@ namespace PlutoContext.Migrations
         }
     }
 }
+
+
+/*
+ * Suppose we need to go to a previous vverions of the code and fix some bug.
+ * But our database is still pointing to the laTEST version, so we need to revert back our migration till that point
+ * we will find the latest migration done on that product version where we need to revert back to and then run below command
+ * update-database -TargetMigration:dtepublisheddeleted
+ * // once this is done our database is reverted back. and now we can go to source repo of our code and revert to that code version we wanted.
+ * Now once we fix the stuff we wanted to we SHOLD AGAIN PULL THE LATEST VERSION OF cource code. because that cde only
+ * will have the new migration classes and all of that
+ * Once that it pulled now we will again run Update-Database and it will bring the DB back to current state
+ 
+     */
