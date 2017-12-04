@@ -1,5 +1,6 @@
 namespace PlutoContext
 {
+    using EntityConfigurations;
     using System.Data.Entity;
 
     // Try to keep this class name same as the one in connection string. If it is the same then we do not need to change
@@ -22,6 +23,8 @@ namespace PlutoContext
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new CourseConfiguration());
+
             // CHange Table Name
             // modelBuilder.Entity<Course>()
             //  .ToTable("tbl_abc"); // new name of the table will be tbl_abc
@@ -35,19 +38,10 @@ namespace PlutoContext
             //modelBuilder.Entity<Course>()
             //.HasKey(t => new { t.Id,t.Level});
 
-            modelBuilder.Entity<Course>()
-                .Property(t => t.Description)
-                .IsRequired();
-
             modelBuilder.Entity<Author>()
                 .HasMany(e => e.Courses)
                 .WithOptional(e => e.Author)
                 .HasForeignKey(e => e.Author_Id);
-
-            modelBuilder.Entity<Course>()
-                .HasMany(e => e.Tags)
-                .WithMany(e => e.Courses)
-                .Map(m => m.ToTable("TagCourses").MapLeftKey("Course_Id"));
 
             // One to One relationship
             // Mobile is Principle
