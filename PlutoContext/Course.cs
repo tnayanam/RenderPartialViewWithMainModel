@@ -33,6 +33,7 @@ namespace PlutoContext
         //[Key]
         //[Column(Order =1)]
         public int Level { get; set; }
+        //[Index(IsUnique =true)] // unique
 
         public float FullPrice { get; set; }
 
