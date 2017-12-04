@@ -57,7 +57,10 @@ namespace PlutoContext
             //    .HasMany(a => a.Courses)
             //    .WithRequired(c => c.Author)
             //    .HasForeignKey(c => c.Author_Id);
-
+            // Many to Many
+            //modelBuilder.Entity<Course>()
+            //    .HasMany(c => c.Tags)
+            //    .WithMany(t => t.Courses);
         }
     }
 }
