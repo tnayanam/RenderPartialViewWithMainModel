@@ -47,6 +47,16 @@ namespace PlutoContext
                 .WithMany(e => e.Courses)
                 .Map(m => m.ToTable("TagCourses").MapLeftKey("Course_Id"));
 
+            // As long as there is an course linked to an author we should not be able to delete that author 
+
+
+            //modelBuilder.Entity<Author>()
+            //    .HasMany(a => a.Courses)
+            //    .WithRequired(c => c.Author)
+            //    .HasForeignKey(c => c.Author_Id)
+            //    .WillCascadeOnDelete(false);
+
+
             // One to Many Relationship
 
             //modelBuilder.Entity<Author>()
@@ -57,6 +67,7 @@ namespace PlutoContext
             //    .HasMany(a => a.Courses)
             //    .WithRequired(c => c.Author)
             //    .HasForeignKey(c => c.Author_Id);
+
             // Many to Many
             //modelBuilder.Entity<Course>()
             //    .HasMany(c => c.Tags)
