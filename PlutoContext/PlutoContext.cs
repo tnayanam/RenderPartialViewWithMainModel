@@ -29,6 +29,10 @@ namespace PlutoContext
             //.HasKey(t => t.Id);
             // Another way to make a field required
 
+            // Composite Key
+            //modelBuilder.Entity<Course>()
+            //.HasKey(t => new { t.Id,t.Level});
+
             modelBuilder.Entity<Course>()
                 .Property(t => t.Description)
                 .IsRequired();
