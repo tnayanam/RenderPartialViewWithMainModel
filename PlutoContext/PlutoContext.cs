@@ -69,6 +69,12 @@ namespace PlutoContext
             //    .WithMany(t => t.Courses).
             //    Map(t => t.ToTable("CoursesTag"));
             // in this case the mapping table will be renamed as CoursesTag
+
+            // One to Zero/One
+            // course can have no caption or one
+            //modelBuilder.Entity<Course>()
+            //    .HasOptional(c=>c.Caption)
+            //    .WithRequired(c=>c.Course)
         }
     }
 }
