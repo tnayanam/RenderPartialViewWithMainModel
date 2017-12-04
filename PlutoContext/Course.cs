@@ -27,9 +27,11 @@ namespace PlutoContext
 
         //[Column("Title")] // In case if column name does not match with column name in DB
         public string Name { get; set; }
-
+        //[Key]
+        //[Column(Order = 2)] // this and below one if COmposite Key
         public string Description { get; set; }
-
+        //[Key]
+        //[Column(Order =1)]
         public int Level { get; set; }
 
         public float FullPrice { get; set; }
