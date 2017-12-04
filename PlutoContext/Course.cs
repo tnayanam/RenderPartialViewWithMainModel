@@ -1,10 +1,7 @@
 namespace PlutoContext
 {
-    using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Courses")]
     public partial class Course
@@ -22,6 +19,8 @@ namespace PlutoContext
         public string Description { get; set; }
 
         public int Level { get; set; }
+
+        public Category Category { get; set; }
 
         public float FullPrice { get; set; }
 
