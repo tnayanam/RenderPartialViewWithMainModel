@@ -7,13 +7,13 @@ namespace PlutoContext.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class seeddatasd : IMigrationMetadata
+    public sealed partial class seeddatasdsdr : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(seeddatasd));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seeddatasdsdr));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712040310050_seeddatasd"; }
+            get { return "201712040314249_seeddatasdsdr"; }
         }
         
         string IMigrationMetadata.Source

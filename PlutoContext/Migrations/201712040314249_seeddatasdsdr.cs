@@ -3,7 +3,7 @@ namespace PlutoContext.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class seeddatasd : DbMigration
+    public partial class seeddatasdsdr : DbMigration
     {
         public override void Up()
         {
