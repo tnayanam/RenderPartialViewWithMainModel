@@ -1,5 +1,6 @@
 namespace PlutoContext.Migrations
 {
+    using System.Collections.ObjectModel;
     using System.Data.Entity.Migrations;
 
     internal sealed class Configuration : DbMigrationsConfiguration<PlutoContext>
@@ -11,18 +12,14 @@ namespace PlutoContext.Migrations
 
         protected override void Seed(PlutoContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Authors.AddOrUpdate(a => a.Name, new Author
+            {
+                Name = "Author 1",
+                Courses = new Collection<Course>()
+                    {
+                         new Course() {Name = "Author1 course",Description="My desc" }
+                    }
+            });
         }
     }
 }
