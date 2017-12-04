@@ -17,6 +17,12 @@ namespace PlutoContext
             Tags = new HashSet<Tag>();
         }
 
+
+        // Ideal Convention is ID or classNameID
+        // If this is not follwed then we need to add [Key]
+        // also if we do not want the DB to genenrate the key automatically and we want to provide the key from code then
+        // we use 
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)] // this wil make sure DB wont generate it. We need to provide this.
         public int Id { get; set; }
 
         //[Column("Title")] // In case if column name does not match with column name in DB
