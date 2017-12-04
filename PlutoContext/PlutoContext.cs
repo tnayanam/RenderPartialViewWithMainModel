@@ -46,6 +46,12 @@ namespace PlutoContext
                 .HasMany(e => e.Tags)
                 .WithMany(e => e.Courses)
                 .Map(m => m.ToTable("TagCourses").MapLeftKey("Course_Id"));
+
+            // One to Many Relationship
+
+            //modelBuilder.Entity<Author>()
+            //    .HasMany(a => a.Courses)
+            //    .WithRequired(c => c.Author);
         }
     }
 }
