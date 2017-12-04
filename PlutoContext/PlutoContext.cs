@@ -17,6 +17,8 @@ namespace PlutoContext
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<Mobile> Mobiles { get; set; }
+        public virtual DbSet<SIM> SIMs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -46,6 +48,13 @@ namespace PlutoContext
                 .HasMany(e => e.Tags)
                 .WithMany(e => e.Courses)
                 .Map(m => m.ToTable("TagCourses").MapLeftKey("Course_Id"));
+
+            // One to One relationship
+            // Mobile is Principle
+            // SIM is dependent
+            //modelBuilder.Entity<Mobile>()
+            //    .HasRequired(m => m.Sim)
+            //    .WithRequiredPrincipal(s => s.Mobile);
 
             // As long as there is an course linked to an author we should not be able to delete that author 
 
