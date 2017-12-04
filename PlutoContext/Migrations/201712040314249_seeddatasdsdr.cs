@@ -1,8 +1,7 @@
 namespace PlutoContext.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class seeddatasdsdr : DbMigration
     {
         public override void Up()
@@ -14,7 +13,7 @@ namespace PlutoContext.Migrations
             RenameIndex(table: "dbo.CoursesTag", name: "IX_Tag_Id", newName: "IX_TagId");
             AlterColumn("dbo.Courses", "Description", c => c.String(nullable: false));
         }
-        
+
         public override void Down()
         {
             AlterColumn("dbo.Courses", "Description", c => c.String());
@@ -26,3 +25,6 @@ namespace PlutoContext.Migrations
         }
     }
 }
+
+////Error:
+//Unable to determine the principal end of an association between the types 'PlutoContext.SIM' and 'PlutoContext.Mobile'. The principal end of this association must be explicitly configured using either the relationship fluent API or data annotations.
