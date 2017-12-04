@@ -20,10 +20,13 @@ namespace PlutoContext
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Course>()
+            // CHange Table Name
+            // modelBuilder.Entity<Course>()
             //  .ToTable("tbl_abc"); // new name of the table will be tbl_abc
 
-
+            // Primary Key
+            //modelBuilder.Entity<Course>()
+            //.HasKey(t => t.Id);
             // Another way to make a field required
 
             modelBuilder.Entity<Course>()
