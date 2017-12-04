@@ -61,6 +61,14 @@ namespace PlutoContext
             //modelBuilder.Entity<Course>()
             //    .HasMany(c => c.Tags)
             //    .WithMany(t => t.Courses);
+
+            // Many to Many with Linking table explicitly named
+            // Many to Many
+            //modelBuilder.Entity<Course>()
+            //    .HasMany(c => c.Tags)
+            //    .WithMany(t => t.Courses).
+            //    Map(t => t.ToTable("CoursesTag"));
+            // in this case the mapping table will be renamed as CoursesTag
         }
     }
 }
