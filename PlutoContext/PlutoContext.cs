@@ -75,6 +75,15 @@ namespace PlutoContext
             //modelBuilder.Entity<Course>()
             //    .HasOptional(c=>c.Caption)
             //    .WithRequired(c=>c.Course)
+
+            // One to One relationship
+            // Here always look for which is parent and which is child
+            // for instance in course and cover page, we have one to one. But we cannot have a coverpage w/o the course
+            // SO Course table is Parent (Principle) and Cover table is Child (Dependent)
+            // Now below is how we define one to one.
+            //modelBuilder.Entity<Course>()
+            //    .HasRequired(c => c.Cover)
+            //    .WithRequiredPrincipal(c => c.Course);
         }
     }
 }
