@@ -92,6 +92,10 @@
     <Compile Include="Migrations\201712040040323_seeddata.Designer.cs">
       <DependentUpon>201712040040323_seeddata.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712040314249_seeddatasdsdr.cs" />
+    <Compile Include="Migrations\201712040314249_seeddatasdsdr.Designer.cs">
+      <DependentUpon>201712040314249_seeddatasdsdr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
@@ -129,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712040040323_seeddata.resx">
       <DependentUpon>201712040040323_seeddata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712040314249_seeddatasdsdr.resx">
+      <DependentUpon>201712040314249_seeddatasdsdr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

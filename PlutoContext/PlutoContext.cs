@@ -20,6 +20,9 @@ namespace PlutoContext
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //modelBuilder.Entity<Course>()
+            //  .ToTable("tbl_abc"); // new name of the table will be tbl_abc
+
 
             // Another way to make a field required
 
