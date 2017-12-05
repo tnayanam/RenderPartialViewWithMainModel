@@ -75,3 +75,4 @@ public class Cricket
 
 // In this case the the corresponding cricket is not loaded. because of Line 1's virtual keyword.
 // Kindly note that when we try to see the game in debugger we will still see the crickets associated with that game. its because VS debugger runs the query. and that is misleading.
+
