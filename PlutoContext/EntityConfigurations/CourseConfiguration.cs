@@ -55,17 +55,23 @@ namespace PlutoContext.EntityConfigurations
 
 //// Suppose one game can have many cricket
 
-//public class Game
-//{
-//    public int GameId { get; set; }
-//    public string GameName { get; set; }
-//    public virtual ICollection<Cricket> Cricket { get; set; }
-//}
+public class Game
+{
+    public int GameId { get; set; }
+    public string GameName { get; set; }
+    public virtual ICollection<Cricket> Crickets { get; set; } // Line 1
+}
 
-//public class Cricket
-//{
-//    public int CricketId { get; set; }
-//    public string CricketName { get; set; }
-//    public int GameId { get; set; }
-//    public virtual Game Game { get; set; }
-//}
+public class Cricket
+{
+    public int CricketId { get; set; }
+    public string CricketName { get; set; }
+    public int GameId { get; set; }
+    public virtual Game Game { get; set; }
+}
+
+// suppose we run a query as 
+// var game = _context.Games.Single(g=>g.Gameid);
+
+// In this case the the corresponding cricket is not loaded. because of Line 1's virtual keyword.
+// Kindly note that when we try to see the game in debugger we will still see the crickets associated with that game. its because VS debugger runs the query. and that is misleading.
