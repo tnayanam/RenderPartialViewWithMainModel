@@ -94,3 +94,13 @@ public class Cricket
  * 
  * 
  */
+
+
+// Suppose we have one to mnay relatinship betwen author and courses
+// and default Ef will allow cascasde on delete to be true
+// that means if aurhor is deleted all the courses wil, be deleted also
+// but we dont want that because some people might have been e nrolled to thouse courses and if we simply delte the author waht will
+// happen t all thse courses. .. so in this case we need to apply cascadeondelete to be false.
+// so how we will ever delete the author. we wil ever be able to delete the author nce we have deleted all its course. so get the course firsat delte it and thne only delete the atuhor.
+// You can load the courses for that author using INCLUDE 
+// and then use "Remove" or "RemoveRange"
