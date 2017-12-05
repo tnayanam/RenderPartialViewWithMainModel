@@ -76,3 +76,7 @@ public class Cricket
 // In this case the the corresponding cricket is not loaded. because of Line 1's virtual keyword.
 // Kindly note that when we try to see the game in debugger we will still see the crickets associated with that game. its because VS debugger runs the query. and that is misleading.
 
+// Now in order to Eager Load, we have two options. Either we have not included virtual keyword in our class
+// other soluton: more preferrable one is to use below methos
+// var game = _context.Cricket.Include("Game").Singlec=>c.Id);
+
