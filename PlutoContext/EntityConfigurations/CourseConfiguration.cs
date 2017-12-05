@@ -39,6 +39,33 @@ namespace PlutoContext.EntityConfigurations
  * Suppots lazy loading hence good for Paging Scenario.
  * Supports deferred execution.
  * 
- * 
- * 
+ * yahan pe ek point note karo.. deferred execution dono mein hia. par ja bhi execution ho rha hai query ka thne just where part will execute in the ser ver side in the Ienumrable
+ * that is why we get more results from db and then all the filter are appliec on the code/client side.
+ * lekin IQueryable pe kya hota hia ki DB query mein sara filter lag ke execute hota hai. isliye less data pull hota hai DB se. 
+ * So in total we have 3 main SEPERATE TOPICS
+ * 1. Deferred Execution -> Allowed by both
+ * 2. Query Execution => Serve side at one in IEnumerable and filter in memory, but in IQueryable filters also gets done in DB(more efficient)
+ * 3. Lazy Loading => Not supported by IEnummerable. Matlab chaining objects ka bhi data load ho jaata hai.
  */
+
+/*
+ * Three type of execution we have : Lazy Loading, Eager laoding, Explicit Loading
+ * Lazy Loading
+ */
+
+//// Suppose one game can have many cricket
+
+//public class Game
+//{
+//    public int GameId { get; set; }
+//    public string GameName { get; set; }
+//    public virtual ICollection<Cricket> Cricket { get; set; }
+//}
+
+//public class Cricket
+//{
+//    public int CricketId { get; set; }
+//    public string CricketName { get; set; }
+//    public int GameId { get; set; }
+//    public virtual Game Game { get; set; }
+//}
