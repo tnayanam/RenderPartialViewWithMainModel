@@ -78,5 +78,19 @@ public class Cricket
 
 // Now in order to Eager Load, we have two options. Either we have not included virtual keyword in our class
 // other soluton: more preferrable one is to use below methos
-// var game = _context.Cricket.Include("Game").Singlec=>c.Id);
+// var game = _context.Cricket.Include("Game").Single(c=>c.Id);
+// var game = _context.Cricket.Include(c=>c.Game).Single(c=>c.Id);
+// var game = _context.Cricket.Include(c=>c.Game).Single(c=>c.Id);
 
+/*
+ * Explicit Loading.
+ * In this case we have multiple rounds to database. Actually both run the same query I mean both explicit and eager loading only difference is that with eager loading loads all the data at once
+ * for example: var game = _context.Cricket.Include("Game").Single(c=>c.Id);   both cricket and game is loaded
+ * in explicti case we break iabove into two query
+ one query =  var cricket = _context.Cricket.Single(c=>c.Id);
+ * // now we need to load the game
+ *second query =  context.Games.Where(c.Id == cricket.Id).Load();
+ * 
+ * 
+ * 
+ */
