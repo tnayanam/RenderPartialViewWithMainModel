@@ -37,6 +37,12 @@ namespace PlutoContext
  * Using repository pattern, it decouples our application from persistence framework. so tomorrow if we want to use another framework instead of entity framework we will have to do minimal changes
  * Decouple the application from Entity Framework 
  * 
+ * IRepository - put all the common data access methods here
+ * Repository - put all the implementation here
+ * ICourseRepository - put all the functions explicitly required by only that Course
+ * IAuthorRepository - put all the functions explicitly required by only that Author
+ * Now implement them as CourseRepository and AuthorRepository
+ * And then we need to work on Unit of Work.
  * 
  */
 
