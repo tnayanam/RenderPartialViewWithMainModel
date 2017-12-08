@@ -77,4 +77,14 @@ namespace TestService
  * Now in this check in we created a basic service and changed the App.Config file accordingly.
  * and we ran it Visual Studio did two things, hosted our service as well as Gave us a clinet which consumed this service
  * On running the app Double clicked on the GetData and then clicked on Invoke to run the consume the service.
+ * 
+ * In Order to create a NEW WCF Service you need to create a new project and select wcf-> WCF Service Library. this is how
+ * we have created this project
+ * Also till now we have seen Created the WCF Sewrvice using VS.
+ * Now hosting of those services are done by VS automatically
+ * And even VS provided us a client too to work with them.
+ * But now we wil study hosting and all explicitly.
+ * 
+ * 
+ * 
  */
