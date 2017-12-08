@@ -28,3 +28,8 @@ namespace PlutoContext.Migrations
 
 ////Error:
 //Unable to determine the principal end of an association between the types 'PlutoContext.SIM' and 'PlutoContext.Mobile'. The principal end of this association must be explicitly configured using either the relationship fluent API or data annotations.
+// this error meansd we need to tell EF which one if primaryt and which one is dependent
+// by haveing code like below
+//  //modelBuilder.Entity<Mobile>()
+//    .HasRequired(m => m.Sim)
+//    .WithRequiredPrincipal(s => s.Mobile);

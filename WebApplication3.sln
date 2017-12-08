@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodesFirst", "CodesFirst\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoContext", "PlutoContext\PlutoContext.csproj", "{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "TestService\TestService.csproj", "{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD8CF782-15F0-467F-96B6-894CEDCA9AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
