@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace TestService
 {
@@ -38,9 +41,28 @@ namespace TestService
             Array.Sort(arr);
             return arr;
         }
+
+        public void GetAllCountries()
+        {
+            List<Country> LC = new List<Country>();
+            string conStr = @"data source =.\MSSQLSERVER01; initial catalog = WCF; integrated security = True";
+
+            SqlConnection con = new SqlConnection(conStr);
+            SqlCommand cmd = new SqlCommand("Select * from Country", con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Debug.Write("Hello");
+            }
+        }
+        // so I went to SQL Server Mangement Studio and added one database there. Kindly note that SQL Server is already 
+        // installed, I had isntalled SSMS client on top of it. And now after creating the database, I wrote above codde to 
+        // connect my Visual Studio to the SQL Server.
+
     }
 }
-
 /*
  * A WCF Service has 3 components: 
  * Create a Service

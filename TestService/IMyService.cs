@@ -19,5 +19,8 @@ namespace TestService
 
         [OperationContract]
         int[] GetSorted(int[] arr);
+
+        [OperationContract]
+        void GetAllCountries();
     }
 }
