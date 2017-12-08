@@ -12,7 +12,7 @@ namespace TestService
         string GetMessage(string Message);
 
         [OperationContract]
-        string GetResult(int Sid, string SName, int M1, int M2, int M3);
+        string GetResult(Student S);
 
         [OperationContract]
         int GetMax(int[] arr);

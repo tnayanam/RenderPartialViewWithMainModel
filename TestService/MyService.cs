@@ -25,9 +25,9 @@ namespace TestService
             return "Hello" + Message;
         }
 
-        public string GetResult(int Sid, string SName, int M1, int M2, int M3)
+        public string GetResult(Student S)
         {
-            double avg = M1 + M2 + M3 / 3;
+            double avg = S.M1 + S.M2 + S.M3 / 3;
             if (avg < 35)
                 return "Fail";
             return "Pass";
