@@ -1,10 +1,42 @@
-﻿namespace TestService
+﻿using System;
+
+namespace TestService
 {
     class MyService : IMyService
     {
         public string GetData()
         {
             return "Hello World";
+        }
+
+        public int GetMax(int[] arr)
+        {
+            int max = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                    max = arr[i];
+            }
+            return max;
+        }
+
+        public string GetMessage(string Message)
+        {
+            return "Hello" + Message;
+        }
+
+        public string GetResult(int Sid, string SName, int M1, int M2, int M3)
+        {
+            double avg = M1 + M2 + M3 / 3;
+            if (avg < 35)
+                return "Fail";
+            return "Pass";
+        }
+
+        public int[] GetSorted(int[] arr)
+        {
+            Array.Sort(arr);
+            return arr;
         }
     }
 }
