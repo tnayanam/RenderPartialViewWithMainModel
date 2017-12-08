@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Diagnostics;
 
 namespace TestService
 {
@@ -42,7 +41,7 @@ namespace TestService
             return arr;
         }
 
-        public void GetAllCountries()
+        public List<Country> GetAllCountries()
         {
             List<Country> LC = new List<Country>();
             string conStr = @"data source =.\MSSQLSERVER01; initial catalog = WCF; integrated security = True";
@@ -54,8 +53,15 @@ namespace TestService
 
             while (dr.Read())
             {
-                Debug.Write("Hello");
+                Country c = new Country();
+                c.CountryId = int.Parse(dr[0].ToString());
+                c.CountryName = dr[1].ToString();
+                LC.Add(c);
             }
+
+            dr.Close();
+            con.Close();
+            return LC;
         }
         // so I went to SQL Server Mangement Studio and added one database there. Kindly note that SQL Server is already 
         // installed, I had isntalled SSMS client on top of it. And now after creating the database, I wrote above codde to 
