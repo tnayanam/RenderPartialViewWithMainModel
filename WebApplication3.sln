@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoContext", "PlutoContex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "TestService\TestService.csproj", "{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyServiceHost", "MyServiceHost\MyServiceHost.csproj", "{3A49556D-2563-46CC-BC0C-CC34B3D3955A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68AB7D14-7E7C-4262-B4FF-A9F0807D7425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A49556D-2563-46CC-BC0C-CC34B3D3955A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A49556D-2563-46CC-BC0C-CC34B3D3955A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A49556D-2563-46CC-BC0C-CC34B3D3955A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A49556D-2563-46CC-BC0C-CC34B3D3955A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
