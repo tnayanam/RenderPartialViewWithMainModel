@@ -10,6 +10,7 @@ namespace HelloServiceHost
             {
                 host.Open();
                 System.Console.WriteLine("Host Started" + DateTime.Now);
+                Console.ReadLine();
             }
         }
     }
@@ -24,6 +25,12 @@ namespace HelloServiceHost
  * 
  * 
  * Its all little tough but you will get eventually used to it. For now I had to run the host in Administrator Mode.
+ * 
+ * Now if we go to localhost:8080 it will open a link where we can see the WSDL document
+ * This wsdl document is used by client to know what are the services available.
+ * if you see the app.config file we have added one addredd as "mex" and that one is responsible for WSDL stuff
+ * Client creattes proxy class based onm that wsdl info to communicate with the host.
+ *
  */
 
 
