@@ -12,7 +12,7 @@
 
 /*//How did we create this service
  * first created a class library (dll)
- * then in the same project added one WCF Service
+ * then in the same project added one WCF Service project
  * 
  */
 
