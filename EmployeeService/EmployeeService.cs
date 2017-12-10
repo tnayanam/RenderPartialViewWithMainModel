@@ -86,6 +86,3 @@ namespace EmployeeService
         }
     }
 }
-
-
-// Additonal pointer: we have deleted the app.config file from here. as we will be using app.config file from the hosting project -> console application

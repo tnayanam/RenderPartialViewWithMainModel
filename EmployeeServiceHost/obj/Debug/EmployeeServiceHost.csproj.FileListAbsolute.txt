@@ -1,0 +1,8 @@
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\bin\Debug\EmployeeServiceHost.exe.config
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\bin\Debug\EmployeeServiceHost.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\bin\Debug\EmployeeServiceHost.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\bin\Debug\EmployeeService.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\bin\Debug\EmployeeService.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\obj\Debug\EmployeeServiceHost.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\obj\Debug\EmployeeServiceHost.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeServiceHost\obj\Debug\EmployeeServiceHost.pdb
