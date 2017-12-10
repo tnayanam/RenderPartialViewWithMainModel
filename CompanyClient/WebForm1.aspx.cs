@@ -27,3 +27,5 @@ namespace CompanyClient
 // Awesome One complete flow done. Kindly note that if you want to test the client, you need to open two different VS solution. You cannot run the Host as well as 
 // client in the same instance.
 // Also note than RUN VS IN administrator MODE
+
+
