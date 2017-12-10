@@ -25,6 +25,7 @@ namespace EmployeeService
             SqlParameter parameterId = new SqlParameter();
             // now set the paremeter value with the ID of the Employee
             parameterId.Value = id;
+            parameterId.ParameterName = "@Id";
             // now added paremeter too in the cmd. So now cmd is comeplte and it has everything now.
             cmd.Parameters.Add(parameterId);
             //open the db connection
