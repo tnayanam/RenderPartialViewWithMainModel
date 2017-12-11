@@ -1,0 +1,6 @@
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\GetEmployee\bin\GetEmployee.dll.config
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\GetEmployee\bin\GetEmployee.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\GetEmployee\bin\GetEmployee.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\GetEmployee\obj\Debug\GetEmployee.csprojResolveAssemblyReference.cache
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\GetEmployee\obj\Debug\GetEmployee.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\GetEmployee\obj\Debug\GetEmployee.pdb

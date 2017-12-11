@@ -1,0 +1,8 @@
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\bin\Debug\EmployeeServiceHost.exe.config
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\bin\Debug\EmployeeServiceHost.exe
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\bin\Debug\EmployeeServiceHost.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\bin\Debug\EmployeeService.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\bin\Debug\EmployeeService.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\obj\Debug\EmployeeServiceHost.csprojResolveAssemblyReference.cache
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\obj\Debug\EmployeeServiceHost.exe
+d:\users\dev-10\documents\visual studio 2013\Projects\EmployeeService\EmployeeServiceHost\obj\Debug\EmployeeServiceHost.pdb
