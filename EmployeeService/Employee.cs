@@ -3,16 +3,25 @@ using System.Runtime.Serialization;
 
 namespace EmployeeService
 {
+    [KnownType(typeof(FullTimeEmployee))]
+    [KnownType(typeof(PartTimeEmployee))]
     [DataContract]
     public class Employee
     {
         [DataMember]
         public int Id { get; set; }
+
         [DataMember]
         public string Name { get; set; }
+
         [DataMember]
         public string Gender { get; set; }
-        public DateTime DateOfBirth { get; set; } //this will not get sreialized
+
+        [DataMember]
+        public DateTime DateOfBirth { get; set; }
+
+        [DataMember]
+        public EmployeeType Type { get; set; }
     }
 }
 

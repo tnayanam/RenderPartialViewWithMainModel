@@ -6,7 +6,7 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\EntityFramework.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csprojResolveAssemblyReference.cache
-C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.exe
-C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.pdb
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.Migrations.sadfgdsf.resources
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.Cache
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.exe
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.pdb
