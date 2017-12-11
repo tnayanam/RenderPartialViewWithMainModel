@@ -52,5 +52,7 @@ namespace EmployeeService
  * the WSDL service.
  * Kindly note that the WCF sertcviec might run sucessfully but still we wil ahve issue with the WSDL. so always run the WSDL and amke sure its fine.
  * 
+ * When ever you make changes inb Service, then go to Client and right clike on the WCF Service ands click on update service reference
+ * 
 
  */
