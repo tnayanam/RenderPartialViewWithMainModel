@@ -35,3 +35,16 @@ namespace EmployeeService
  * whish will have [DataMember] will only get serialized. 
  * 
  */
+
+/*
+ * Ok What are KnownTypes attribute and when to use them:"
+ * Known types are bassically used when we have inheritance in our Serive Models
+ * Actuall when WSDL document gets generated based on the Model of Serivce class it only looks for the Base Model ex : EMployee
+ * Because of that when client tries to get employees which are instance of derived class it the Serialized dfoes not know how to
+ * serialize it. Actually client has no idea about existence of the Derived classes as W/o knowntyupe attribute the WSDL that gets generated
+ * has no idea of derived class hence WCF clinet cant understand our deserialize the resule that is getting returned from the service
+ * when we use known type then client understand it and then able to desrialzer the deroived class accordinly.
+ * 
+ * 
+
+ */
