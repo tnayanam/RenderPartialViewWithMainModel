@@ -45,6 +45,12 @@ namespace EmployeeService
  * has no idea of derived class hence WCF clinet cant understand our deserialize the resule that is getting returned from the service
  * when we use known type then client understand it and then able to desrialzer the deroived class accordinly.
  * 
+ * When ever you create a WCF Service always run the base address that you have added in app.congif class (in my case it is added in hosting console applicaiton)
+ * bottom line: always run the base class to knoew about the WSDL document that client wil use.
+ * If it does not open properly then that means we might have missed the datacontract or datamember attribute. TO get that information
+ * we can use  <serviceDebug includeExceptionDetailInFaults="true"/> in the behaviuours tag. this wil throw the exception when we try to open
+ * the WSDL service.
+ * Kindly note that the WCF sertcviec might run sucessfully but still we wil ahve issue with the WSDL. so always run the WSDL and amke sure its fine.
  * 
 
  */
