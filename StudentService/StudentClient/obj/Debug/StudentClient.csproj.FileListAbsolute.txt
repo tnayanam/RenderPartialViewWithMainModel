@@ -1,0 +1,6 @@
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentClient\bin\StudentClient.dll.config
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentClient\bin\StudentClient.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentClient\bin\StudentClient.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentClient\obj\Debug\StudentClient.csprojResolveAssemblyReference.cache
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentClient\obj\Debug\StudentClient.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentClient\obj\Debug\StudentClient.pdb

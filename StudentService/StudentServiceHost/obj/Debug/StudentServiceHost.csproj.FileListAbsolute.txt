@@ -1,0 +1,8 @@
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\bin\Debug\StudentServiceHost.exe.config
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\bin\Debug\StudentServiceHost.exe
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\bin\Debug\StudentServiceHost.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\bin\Debug\StudentService.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\bin\Debug\StudentService.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\obj\Debug\StudentServiceHost.csprojResolveAssemblyReference.cache
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\obj\Debug\StudentServiceHost.exe
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentServiceHost\obj\Debug\StudentServiceHost.pdb

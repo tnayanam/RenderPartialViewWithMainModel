@@ -16,3 +16,6 @@ namespace EmployeeService
         }
     }
 }
+
+
+// create a empty class library, delete its auto generated class, then add a wcf service to it and take it formward from there.

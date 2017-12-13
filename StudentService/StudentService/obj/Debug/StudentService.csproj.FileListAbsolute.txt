@@ -1,0 +1,4 @@
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentService\bin\Debug\StudentService.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentService\bin\Debug\StudentService.pdb
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentService\obj\Debug\StudentService.dll
+d:\users\dev-10\documents\visual studio 2013\Projects\StudentService\StudentService\obj\Debug\StudentService.pdb
