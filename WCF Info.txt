@@ -1,0 +1,15 @@
+Downloaded SQL Server
+Downloaded SSMS Client for the SQL Server
+Now let's create a Database the out WCF Service will try to interact via SSMS
+In order to connect to SQL Server we needed to give "UserName": it was autopopulated. But I think ideally we need to create on user for the DB Instance. (Not sure (as it is suopopulated)
+ServerName: DEV-10 : Here we are giving the name of our SQL Server that we downloaded. (I was thinking we need to give the instance name not sure. Ideally we shold give the instance name, becasue
+we need to tell SSMS which instace we want it to get connected.
+delete app.config of actual service solution as we will use app.congi of host solution.
+
+Anyways now it is important to add reference of WCF service in the WCF client as Service Reference.
+
+
+Always remember to get to the WSDL document one needs to got to the base address where the service is hosted. it iwll be app.config on Host Soltuion.
+
+InOrder to send data from Serivec to client or back we need the Class that the Service is using to be serialized. For that we can use either Serilizablr attribute or we can use "DataConrACT"	
+benefit of using Datacontract is that we can explicitly say which all are the property we want to expose to the client. but with serilizablre it serializes all the memerbs 
