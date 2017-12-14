@@ -17,7 +17,7 @@ namespace EmployeeService
         {
             // Now we need to fetch a employee from database
             // so here we will write one ado.net code to connect to the database and execute the Stored proicedure that we created in DB to fetch the employee
-            Employee employee = new Employee();
+            Employee employee = null;
             string conStr = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             //string conStr = @"data source =.\MSSQLSERVER01; initial catalog = SAMPLE; integrated security = True";
             // made the connection classwith the connection string
@@ -35,18 +35,37 @@ namespace EmployeeService
             cmd.Parameters.Add(parameterId);
             //open the db connection
             con.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                employee.Id = Convert.ToInt32(dr["Id"]);
-                employee.Name = dr["Name"].ToString();
-                employee.Gender = dr["Gender"].ToString();
-                employee.DateOfBirth = Convert.ToDateTime(dr["DateOfBirth"]);
-            }
+                if ((EmployeeType)reader["EmployeeType"] == EmployeeType.FullTimeEmployee)
+                {
+                    employee = new FullTimeEmployee
+                    {
 
-            dr.Close();
-            con.Close();
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Name = reader["Name"].ToString(),
+                        Gender = reader["Gender"].ToString(),
+                        DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
+                        Type = EmployeeType.FullTimeEmployee,
+                        AnnualSalary = Convert.ToInt32(reader["AnnualSalary"])
+                    };
+                }
+                else
+                {
+                    employee = new PartTimeEmployee
+                    {
+
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Name = reader["Name"].ToString(),
+                        Gender = reader["Gender"].ToString(),
+                        DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
+                        Type = EmployeeType.PartTimeEmployee,
+                        HourlyPay = Convert.ToInt32(reader["HourlyPay"]),
+                        HoursWorked = Convert.ToInt32(reader["HoursWorked"]),
+                    };
+                }
+            }
             return employee;
         }
 
@@ -78,12 +97,44 @@ namespace EmployeeService
                 Value = employee.Gender
             };
             cmd.Parameters.Add(parameterGender);
+            SqlParameter parameterEmployeeType = new SqlParameter()
+            {
+                ParameterName = "@EmployeeType",
+                Value = employee.Type
+            };
+            cmd.Parameters.Add(parameterEmployeeType);
             SqlParameter parameterDateOfBirth = new SqlParameter()
             {
                 ParameterName = "@DateOfBirth",
                 Value = employee.DateOfBirth
             };
             cmd.Parameters.Add(parameterDateOfBirth);
+
+            if (employee.GetType() == typeof(FullTimeEmployee))
+            {
+                SqlParameter parameterAnnualSalary = new SqlParameter
+                {
+                    ParameterName = "@AnnualSalary",
+                    Value = ((FullTimeEmployee)employee).AnnualSalary
+                };
+                cmd.Parameters.Add(parameterAnnualSalary);
+            }
+            else
+            {
+                SqlParameter parameterHourlyPay = new SqlParameter
+                {
+                    ParameterName = "@HourlyPay",
+                    Value = ((PartTimeEmployee)employee).HourlyPay,
+                };
+                cmd.Parameters.Add(parameterHourlyPay);
+
+                SqlParameter parameterHoursWorked = new SqlParameter
+                {
+                    ParameterName = "@HoursWorked",
+                    Value = ((PartTimeEmployee)employee).HoursWorked
+                };
+                cmd.Parameters.Add(parameterHoursWorked);
+            }
             // now added paremeter too in the cmd. So now cmd is comeplte and it has everything now.
             //open the db connection
             con.Open();

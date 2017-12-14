@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 namespace EmployeeService
 {
     [DataContract]
+    [KnownType(typeof(FullTimeEmployee))]
+    [KnownType(typeof(PartTimeEmployee))]
     public class Employee
     {
         [DataMember]
@@ -21,5 +23,8 @@ namespace EmployeeService
 
         [DataMember]
         public DateTime DateOfBirth { get; set; }
+
+        [DataMember]
+        public EmployeeType Type { get; set; }
     }
 }
