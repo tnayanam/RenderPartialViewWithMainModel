@@ -45,5 +45,14 @@
  *  [ServiceKnownType(typeof(FullTimeEmployee))]
  *  Employee GetEmployee(int id);
  *  4. We can add the knowntypes in config file also: details not needed
+ *  
+ * How to Enable Tracing: Client Side:
+ * 
+ * 1. Right Click on Client's who is consuming the service "Web.Config file"
+ * 2. There click on Edit WCF Configuartion
+ * 3. Now click on Diagnostics and then switch on "Log Auto Flush", "Enable Message Login", "Enable Tracing"
+ * 4. Expand the Diagnostics folder, click on Message Logging and the Set LogEntireMessage to True
+ * 5. Now when you run WCF Service and the client in the client folder you will find some .svclog dobule click and open it. and then you can click on the messages in the left side and then click on the
+ * message that apper on the body. Then at the bottom you wil see the XML message tag. Click there and you will see the Soap Interactions
  */
 

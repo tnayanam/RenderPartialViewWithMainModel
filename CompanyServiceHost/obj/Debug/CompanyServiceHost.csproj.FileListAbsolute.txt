@@ -6,3 +6,11 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CompanyServiceHost\b
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CompanyServiceHost\obj\Debug\CompanyServiceHost.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CompanyServiceHost\obj\Debug\CompanyServiceHost.exe
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CompanyServiceHost\obj\Debug\CompanyServiceHost.pdb
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\bin\Debug\CompanyServiceHost.exe.config
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\obj\Debug\CompanyServiceHost.exe
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\obj\Debug\CompanyServiceHost.pdb
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\bin\Debug\CompanyServiceHost.exe
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\bin\Debug\CompanyServiceHost.pdb
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\bin\Debug\CompanyService.dll
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\bin\Debug\CompanyService.pdb
+C:\Users\Dev-10\Desktop\Demo\CompanyServiceHost\obj\Debug\CompanyServiceHost.csprojResolveAssemblyReference.cache

@@ -3,3 +3,8 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeService\bin\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeService\obj\Debug\EmployeeService.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeService\obj\Debug\EmployeeService.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\EmployeeService\obj\Debug\EmployeeService.pdb
+C:\Users\Dev-10\Desktop\Demo\EmployeeService\bin\Debug\EmployeeService.dll
+C:\Users\Dev-10\Desktop\Demo\EmployeeService\bin\Debug\EmployeeService.pdb
+C:\Users\Dev-10\Desktop\Demo\EmployeeService\obj\Debug\EmployeeService.csprojResolveAssemblyReference.cache
+C:\Users\Dev-10\Desktop\Demo\EmployeeService\obj\Debug\EmployeeService.dll
+C:\Users\Dev-10\Desktop\Demo\EmployeeService\obj\Debug\EmployeeService.pdb

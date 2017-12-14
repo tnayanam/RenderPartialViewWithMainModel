@@ -45,11 +45,11 @@
             </asp:TextBox>
         </td>
     </tr>
-    <tr>
+<%--    <tr>
         <td>
             <b>Employee Type</b>
         </td>
-        <td>
+      <td>
             <asp:DropDownList ID="ddlEmployeeType" runat="server" 
                 OnSelectedIndexChanged="ddlEmployeeType_SelectedIndexChanged"
                 AutoPostBack="True">
@@ -88,7 +88,7 @@
             <asp:TextBox ID="txtHoursWorked" runat="server">
             </asp:TextBox>
         </td>
-    </tr>
+    </tr>--%>
     <tr>
         <td>
             <asp:Button ID="btnGetEmployee" runat="server" 
