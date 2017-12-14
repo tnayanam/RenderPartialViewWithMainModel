@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.ServiceModel;
 
 namespace EmployeeService
 {
+
     [KnownType(typeof(FullTimeEmployee))]
     [KnownType(typeof(PartTimeEmployee))]
     [DataContract]
     public class Employee
     {
+
         [DataMember]
         public int Id { get; set; }
 

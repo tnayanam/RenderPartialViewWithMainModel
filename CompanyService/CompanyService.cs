@@ -12,7 +12,6 @@
         public string GetPublicInformation()
         {
             return "Public Information Returned available over http";
-
         }
     }
 }
@@ -54,5 +53,16 @@
  * 4. Expand the Diagnostics folder, click on Message Logging and the Set LogEntireMessage to True
  * 5. Now when you run WCF Service and the client in the client folder you will find some .svclog dobule click and open it. and then you can click on the messages in the left side and then click on the
  * message that apper on the body. Then at the bottom you wil see the XML message tag. Click there and you will see the Soap Interactions
+ * 
+ * 
+ * 
+ * Difference between MessageContract and DataContract:
+ * 
+ * If we want to change SOAP Header and Body and the name of Response Object in SOAP, we can use MessageContract, MessageHeader and MessageBodyMember attribute. SOAP MessageContract
+ * allows us to add custom information in the SOAP Header
+ * More like User Credentails or LicenseKeys in the header o invoke the servicelll
+ * 
+ * SKIPPED THE PRACTICAL IMPLEMENTATION OF MESSAGE CONTRACT, LEFT IT FOR LATER :-|
+ * 
  */
 
