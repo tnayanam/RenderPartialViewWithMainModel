@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 
 namespace EmployeeService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "EmployeeService" in both code and config file together.
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class EmployeeService : IEmployeeService
     {
+        private Employee _lastSDavedEmployee;
         public Employee GetEmployee(int id)
         {
             // Now we need to fetch a employee from database
@@ -45,7 +43,7 @@ namespace EmployeeService
 
                         Id = Convert.ToInt32(reader["Id"]),
                         Name = reader["Name"].ToString(),
-                        Gender = reader["Gender"].ToString(),
+                        //Gender = reader["Gender"].ToString(),
                         DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
                         Type = EmployeeType.FullTimeEmployee,
                         AnnualSalary = Convert.ToInt32(reader["AnnualSalary"])
@@ -58,7 +56,7 @@ namespace EmployeeService
 
                         Id = Convert.ToInt32(reader["Id"]),
                         Name = reader["Name"].ToString(),
-                        Gender = reader["Gender"].ToString(),
+                        //Gender = reader["Gender"].ToString(),
                         DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
                         Type = EmployeeType.PartTimeEmployee,
                         HourlyPay = Convert.ToInt32(reader["HourlyPay"]),
@@ -66,11 +64,17 @@ namespace EmployeeService
                     };
                 }
             }
+
+            if (_lastSDavedEmployee != null && _lastSDavedEmployee.Id == id)
+            {
+                employee.ExtensionData = _lastSDavedEmployee.ExtensionData;
+            }
             return employee;
         }
 
         public void SaveEmployee(Employee employee)
         {
+            _lastSDavedEmployee = employee;
             string conStr = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
 
             SqlConnection con = new SqlConnection(conStr);
@@ -91,12 +95,12 @@ namespace EmployeeService
                 Value = employee.Name
             };
             cmd.Parameters.Add(parameterName);
-            SqlParameter parameterGender = new SqlParameter()
-            {
-                ParameterName = "@Gender",
-                Value = employee.Gender
-            };
-            cmd.Parameters.Add(parameterGender);
+            //SqlParameter parameterGender = new SqlParameter()
+            //{
+            //    ParameterName = "@Gender",
+            //    Value = employee.Gender
+            //};
+            //cmd.Parameters.Add(parameterGender);
             SqlParameter parameterEmployeeType = new SqlParameter()
             {
                 ParameterName = "@EmployeeType",
