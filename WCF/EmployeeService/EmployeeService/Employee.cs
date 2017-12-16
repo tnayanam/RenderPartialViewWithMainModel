@@ -31,3 +31,4 @@ namespace EmployeeService
 // Here suppose we removed a property, and now new clients will know that proeprty is not there.
 // also with old clients also everything wil work fine as extra data is simply ignored by the server.
 // but what If we want to reutnr whateevr the extra data client is sendinf. For that we make above changes.
+// So old clients will still receive the old data.
