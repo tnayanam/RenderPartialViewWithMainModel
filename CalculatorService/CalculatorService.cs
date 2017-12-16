@@ -9,7 +9,10 @@ namespace CalculatorService
     {
         public int Divide(int Numerator, int Denominator)
         {
+            if (Denominator == 0)
+                throw new FaultException("loda");
             return Numerator / Denominator;
+
         }
     }
 }

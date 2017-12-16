@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
+using System.ServiceModel.Description;
+
 namespace HelloServiceHost
 {
     class Program
@@ -8,7 +10,14 @@ namespace HelloServiceHost
         {
             using (ServiceHost host = new ServiceHost(typeof(HelloService.HelloService)))
             {
+                ServiceMetadataBehavior metaDataBehaviour = new ServiceMetadataBehavior()
+                {
+                    HttpGetEnabled = true
+                };
+                host.Description.Behaviors.Add(metaDataBehaviour);
+                host.AddServiceEndpoint(typeof(HelloService.IHelloServiceChanged), new BasicHttpBinding(), "HelloService");
                 host.Open();
+
                 System.Console.WriteLine("Host Started" + DateTime.Now);
                 Console.ReadLine();
             }
