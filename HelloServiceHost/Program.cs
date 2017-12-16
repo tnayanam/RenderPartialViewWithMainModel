@@ -39,6 +39,13 @@ namespace HelloServiceHost
  * This wsdl document is used by client to know what are the services available.
  * if you see the app.config file we have added one addredd as "mex" and that one is responsible for WSDL stuff
  * Client creattes proxy class based onm that wsdl info to communicate with the host.
+ * 
+ * 
+ * There are many ways to host a WCF Service
+ * a. Self-Hosting: using some console application the way we have been doing in previous tutoriaLS
+ * b. Windows Service: Hosting using a Windows Service
+ * c. IIS:
+ * d. WAS: Windows Activation Service:
  *
  */
 
