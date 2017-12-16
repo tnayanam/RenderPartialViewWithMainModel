@@ -17,3 +17,5 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Mi
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\MyServiceHost\obj\Debug\MyServiceHost.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\MyServiceHost\obj\Debug\MyServiceHost.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\MyServiceHost\obj\Debug\MyServiceHost.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\MyServiceHost\bin\TestService.dll
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\MyServiceHost\bin\TestService.pdb

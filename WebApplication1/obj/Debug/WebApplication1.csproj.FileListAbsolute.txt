@@ -30,3 +30,4 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication1\bin\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
