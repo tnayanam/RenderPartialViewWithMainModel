@@ -14,7 +14,7 @@
             <b>Numerator:</b>
         </td>
         <td>
-            <asp:TextBox ID="txtNumerator" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtNumerator" runat="server" OnTextChanged="txtNumerator_TextChanged"></asp:TextBox>
         </td>
     </tr>
     <tr>

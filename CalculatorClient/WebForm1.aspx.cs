@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.ServiceModel;
 
 namespace CalculatorClient
 {
@@ -16,11 +12,25 @@ namespace CalculatorClient
 
         protected void btnDivide_Click(object sender, EventArgs e)
         {
-            int numerator = Convert.ToInt32(txtNumerator.Text);
-            int denominator = Convert.ToInt32(txtDenominator.Text);
-            CalculatorService.CalculatorServiceClient client =
-                new CalculatorService.CalculatorServiceClient();
-            lblResult.Text = client.Divide(numerator, denominator).ToString();
+            try
+            {
+                int numerator = Convert.ToInt32(txtNumerator.Text);
+                int denominator = Convert.ToInt32(txtDenominator.Text);
+                CalculatorService.CalculatorServiceClient client =
+                    new CalculatorService.CalculatorServiceClient();
+                lblResult.Text = client.Divide(numerator, denominator).ToString();
+            }
+            catch (FaultException exp)
+            {
+
+                lblResult.Text = exp.Message;
+            }
+
+        }
+
+        protected void txtNumerator_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
