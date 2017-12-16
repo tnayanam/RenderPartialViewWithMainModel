@@ -26,3 +26,9 @@ namespace CalculatorService
 // you also need to make sure that    <serviceDebug includeExceptionDetailInFaults="true"/> is added in the service behaviour section
 // so that proper / actual error is shown in the mesage log file .svglog files. go to tha location where log file is there and see the
 //messages
+
+// Always remember whenever a SOAP Fault Exception / UNhandled exception occurs then Chaneel between lcient and server is torned down
+// meaning the client will have to ber restarted again. So in order to prevent that we should handle the exception in ther server side and throw it if we want 
+// but then we should capture it properly in the client application. We shold always throw fault esception and not the .net exception
+// as .net exception will not be understood by Java aplication and will affect interoperability
+// EXCEPTION HANDLING globally study part 17,18,19,20,20 from KUD Venkat 
