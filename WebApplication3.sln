@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorServiceHost", "Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorClient", "CalculatorClient\CalculatorClient.csproj", "{48467FB7-FDE5-46C7-9665-6032782806E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceHost", "WindowsServiceHost\WindowsServiceHost.csproj", "{9AFB70AC-3D5B-4731-9316-81AC9DD90EB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{48467FB7-FDE5-46C7-9665-6032782806E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48467FB7-FDE5-46C7-9665-6032782806E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48467FB7-FDE5-46C7-9665-6032782806E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AFB70AC-3D5B-4731-9316-81AC9DD90EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFB70AC-3D5B-4731-9316-81AC9DD90EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFB70AC-3D5B-4731-9316-81AC9DD90EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFB70AC-3D5B-4731-9316-81AC9DD90EB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -46,7 +46,16 @@ namespace HelloServiceHost
  * b. Windows Service: Hosting using a Windows Service
  * c. IIS:
  * d. WAS: Windows Activation Service:
+ * 
+ * What are Windows Services:
+ * They run in the background
+ * they can be configured to start during system bootup
+ * they don't have user interface
+ * to see the windows services just run services.msc
+ * When we should create a windows service when we want some action to get started w/o any user interaction and as soon as the system boots up
  *
  */
+
+
 
 
