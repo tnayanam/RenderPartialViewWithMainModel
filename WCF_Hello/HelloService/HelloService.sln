@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsClient", "WindowsClient\WindowsClient.csproj", "{1DC97E56-899B-44C5-9201-A51FDAB2BB01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowServiceHost", "WindowServiceHost\WindowServiceHost.csproj", "{9581FE47-748B-4675-AA8F-AA52E92F6B07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1DC97E56-899B-44C5-9201-A51FDAB2BB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC97E56-899B-44C5-9201-A51FDAB2BB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC97E56-899B-44C5-9201-A51FDAB2BB01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9581FE47-748B-4675-AA8F-AA52E92F6B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9581FE47-748B-4675-AA8F-AA52E92F6B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9581FE47-748B-4675-AA8F-AA52E92F6B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9581FE47-748B-4675-AA8F-AA52E92F6B07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
