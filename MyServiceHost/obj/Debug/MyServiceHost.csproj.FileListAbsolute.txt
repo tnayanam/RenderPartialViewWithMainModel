@@ -31,7 +31,6 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Mi
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Microsoft.AI.WindowsServer.dll
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\TestService.dll
-C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\TestService.pdb
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Microsoft.AI.Web.xml
@@ -40,3 +39,4 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\Mi
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\obj\Debug\MyServiceHost.csprojResolveAssemblyReference.cache
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\obj\Debug\MyServiceHost.dll
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\obj\Debug\MyServiceHost.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\MyServiceHost\bin\TestService.pdb

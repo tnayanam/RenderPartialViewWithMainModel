@@ -14,6 +14,7 @@ namespace SimpleService
         private int _number;
         public int IncrementNumber()
         {
+            System.Console.WriteLine("Session id " + OperationContext.Current.SessionId); // tells about the SessionId
             _number = _number + 1;
             return _number;
         }

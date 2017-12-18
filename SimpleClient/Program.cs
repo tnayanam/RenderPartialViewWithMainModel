@@ -11,6 +11,7 @@ namespace SimpleClient
         static void Main(string[] args)
         {
             SimpleService.SimpleServiceClient client = new SimpleService.SimpleServiceClient();
+            Console.WriteLine(client.InnerChannel.SessionId);
             int num  = client.IncrementNumber();
             Console.WriteLine("Number after first call " + num); // output = 1 expected 1
             num = client.IncrementNumber();
