@@ -8,7 +8,7 @@ using System.Text;
 namespace SimpleService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession) ]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single) ]
     public class SimpleService : ISimpleService
     {
         private int _number;
@@ -22,5 +22,7 @@ namespace SimpleService
 }
 
 /*
- * In here we have created a session but the time out is set to 10 second. so after 10 second we will start getting an exception. if client tries to communicate aagain.  
+ * In here we have created a session but the time out is set to 10 second. so after 10 second we will start getting an exception. if client tries to communicate aagain.
+ * So in this case state is maintained/shared in between different clients.
+ * Concurrency is an issue
  */

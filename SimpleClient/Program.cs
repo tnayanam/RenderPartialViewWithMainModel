@@ -43,4 +43,7 @@ namespace SimpleClient
  * Not all binding support per session. basic httpbinding does not support per session. so it behaves as per call.
  * How to control WCF Session TimeOut
  * 
+ * Now we are learning Single Instance Context mode. So only once instacnec of service class is created. Once response is sent to the client then the service instance is nto destroed and 
+ * used to cater to other client requests
+ * 
  */
