@@ -25,3 +25,11 @@ namespace ReportService
 
 // here we are learning about adding duplex pattern in request-reply message (which is by default) service. 
 // Here we implemented Duplex Messaging pattern using One Way Operations, here we dont need to worry abotu deadlock and threading 
+// Instancing Mode in WCF 
+/*
+ * There are 3 instancing ways:\
+ * When client calls the service then instance gets created of the service
+ * Per Call: every call creates a new instance
+ * per Session: pre session per instance
+ * Single: one instace for the lifetime of the applcation.
+ */
