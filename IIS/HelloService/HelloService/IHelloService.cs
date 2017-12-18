@@ -6,7 +6,7 @@ namespace HelloService
     [ServiceContract]
     public interface IHelloService
     {
-        [OperationContract(IsOneWay = false)]
+        [OperationContract(IsOneWay = true)]
         string GetMessage(string name);
         // above and below has same behavbiour
         //[OperationContract]
