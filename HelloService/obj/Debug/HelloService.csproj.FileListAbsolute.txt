@@ -4,3 +4,8 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloService\bin\Deb
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloService\obj\Debug\HelloService.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloService\obj\Debug\HelloService.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloService\obj\Debug\HelloService.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloService\bin\Debug\HelloService.dll.config
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloService\bin\Debug\HelloService.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloService\bin\Debug\HelloService.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloService\obj\Debug\HelloService.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloService\obj\Debug\HelloService.pdb

@@ -10,3 +10,15 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.Cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.exe
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\CodeFirst.exe.config
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\CodeFirst.exe
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\CodeFirst.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csprojResolveAssemblyReference.cache
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.Migrations.sadfgdsf.resources
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.Cache
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.exe
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.pdb

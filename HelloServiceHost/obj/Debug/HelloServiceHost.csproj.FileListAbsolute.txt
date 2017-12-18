@@ -6,3 +6,11 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloServiceHost\bin
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloServiceHost\obj\Debug\HelloServiceHost.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloServiceHost\obj\Debug\HelloServiceHost.exe
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\HelloServiceHost\obj\Debug\HelloServiceHost.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\bin\Debug\HelloServiceHost.exe.config
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\bin\Debug\HelloServiceHost.exe
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\bin\Debug\HelloServiceHost.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\bin\Debug\HelloService.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\bin\Debug\HelloService.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\obj\Debug\HelloServiceHost.csprojResolveAssemblyReference.cache
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\obj\Debug\HelloServiceHost.exe
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\HelloServiceHost\obj\Debug\HelloServiceHost.pdb

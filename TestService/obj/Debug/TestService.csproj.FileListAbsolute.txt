@@ -10,3 +10,8 @@ C:\Users\Dev-10\Desktop\Demo\TestService\bin\Debug\TestService.pdb
 C:\Users\Dev-10\Desktop\Demo\TestService\obj\Debug\TestService.csprojResolveAssemblyReference.cache
 C:\Users\Dev-10\Desktop\Demo\TestService\obj\Debug\TestService.dll
 C:\Users\Dev-10\Desktop\Demo\TestService\obj\Debug\TestService.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\TestService\bin\Debug\TestService.dll.config
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\TestService\bin\Debug\TestService.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\TestService\bin\Debug\TestService.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\TestService\obj\Debug\TestService.dll
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\TestService\obj\Debug\TestService.pdb
