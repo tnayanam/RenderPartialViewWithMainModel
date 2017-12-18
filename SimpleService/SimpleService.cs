@@ -8,7 +8,7 @@ using System.Text;
 namespace SimpleService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall) ]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession) ]
     public class SimpleService : ISimpleService
     {
         private int _number;
