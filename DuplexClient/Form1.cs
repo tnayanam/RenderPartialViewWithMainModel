@@ -13,7 +13,6 @@ namespace DuplexClient
 {
     // below line of code is needed becasue if its not ther then Deadlock will occue. Because client will wait for the service to finsih its operation but in the meantime the service is replying
     //with percent compelted and want to contact the client with percent of reposrt processed update.
-    [CallbackBehavior(UseSynchronizationContext = false)]
     public partial class Form1 : Form, ReportService.IReportServiceCallback
     {
         public Form1()
@@ -30,7 +29,7 @@ namespace DuplexClient
 
         public void Progress(int PercentageCompleted)
         {
-            TextBox.CheckForIllegalCrossThreadCalls = false;
+            //TextBox.CheckForIllegalCrossThreadCalls = false;
             textBox1.Text = PercentageCompleted.ToString() + " % Completed.";
         }
     }

@@ -5,21 +5,11 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="ProcessReportResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Progress">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="PercentageCompleted" type="xs:int" />
       </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ProgressResponse">
-    <xs:complexType>
-      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

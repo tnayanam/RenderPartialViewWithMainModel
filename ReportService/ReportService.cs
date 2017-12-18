@@ -11,7 +11,6 @@ namespace ReportService
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ReportService" in both code and config file together.
     // below line of code is needed becasue if its not ther then Deadlock will occue. Because client will wait for the service to finsih its operation but in the meantime the service is replying
     //with percent compelted and want to contact the client with percent of reposrt processed update.
-    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
     public class ReportService : IReportService
     {
         public void ProcessReport()

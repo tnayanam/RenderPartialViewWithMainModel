@@ -15,17 +15,17 @@ namespace DuplexClient.ReportService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ReportService.IReportService", CallbackContract=typeof(DuplexClient.ReportService.IReportServiceCallback))]
     public interface IReportService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportService/ProcessReport", ReplyAction="http://tempuri.org/IReportService/ProcessReportResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IReportService/ProcessReport")]
         void ProcessReport();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportService/ProcessReport", ReplyAction="http://tempuri.org/IReportService/ProcessReportResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IReportService/ProcessReport")]
         System.Threading.Tasks.Task ProcessReportAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IReportServiceCallback {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportService/Progress", ReplyAction="http://tempuri.org/IReportService/ProgressResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IReportService/Progress")]
         void Progress(int PercentageCompleted);
     }
     
