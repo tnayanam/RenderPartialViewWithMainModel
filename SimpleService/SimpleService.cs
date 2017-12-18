@@ -19,3 +19,7 @@ namespace SimpleService
         }
     }
 }
+
+/*
+ * In here we have created a session but the time out is set to 10 second. so after 10 second we will start getting an exception. if client tries to communicate aagain.  
+ */

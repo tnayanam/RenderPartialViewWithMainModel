@@ -37,4 +37,9 @@ namespace SimpleClient
  * concurrency is an issue in multithreaded clients.
  * Overall per session services perform better because the service objects are nt instantiated per call
  * but per call services scale better because the instance is destroyed once the call returns.
+ * 
+ * By Default behaviour is per session
+ * Not all binding support per session. basic httpbinding does not support per session. so it behaves as per call.
+ * How to control WCF Session TimeOut
+ * 
  */
