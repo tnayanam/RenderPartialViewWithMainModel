@@ -17,3 +17,4 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

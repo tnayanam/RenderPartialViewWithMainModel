@@ -84,6 +84,8 @@ namespace WebApplication3.Controllers
             Projects.Add(proj15);
             Projects.Add(proj16);
 
+        var se =    Projects.OrderBy(p => p.Name);
+
             var exps = Projects.GroupBy(p => new { p.Name, p.IsOk })
                 .OrderBy(p => p.Key.Name)
                 .ThenBy(p => p.Key.IsOk)

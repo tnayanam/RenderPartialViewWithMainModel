@@ -21,3 +21,4 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.Cache
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.exe
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodeFirst\obj\Debug\CodeFirst.csprojResolveAssemblyReference.cache

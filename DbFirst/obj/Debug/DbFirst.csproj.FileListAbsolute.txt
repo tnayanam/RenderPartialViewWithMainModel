@@ -17,3 +17,4 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\En
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\DbFirst\obj\Debug\DbFirst.exe
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\DbFirst\obj\Debug\DbFirst.pdb
+C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\DbFirst\obj\Debug\DbFirst.csprojResolveAssemblyReference.cache
