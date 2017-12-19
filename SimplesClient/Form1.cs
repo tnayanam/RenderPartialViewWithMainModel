@@ -106,5 +106,10 @@ namespace SimplesClient
  * PerSession                   Single                      No                          Yes                                          Positive
  * PerSession                   Single                         Yes                 Yes b/w clinet, No same client multuple thread   
  * Single                       Single                          No                      No                                                                                                  
- * Single                       Single                          Yes                         No                                  
+ * Single                       Single                          Yes                         No          
+ * 
+ * When concurrencymode is set to multiple then irrecpective of any other settings the trhough put is laways positive.
+ * Reentrant Concurrency Mode: Allows WCF Service to issue callback to the client. Too advanec for now so left it.
+ * https://www.youtube.com/watch?v=uIUKZqAXF3A&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=45
+ * 
  */
