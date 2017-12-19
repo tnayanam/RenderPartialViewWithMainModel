@@ -97,5 +97,14 @@ namespace SimplesClient
  * NON Consurrently
  * However with different cliente (even if same session) they will have different instance of the service so they will work concurrently.
  * 
+ * In Single concurrency mode a lock is applied to every instance that is created and only one thread can access it.
+ * Small Chart try to Understand it
  * 
+ * Index Contextmode          ConcurrencyMode              Bnding Supports Session  ConcurrentCalls/Result                           Thruighput
+ * percall                      Single                      No                      Yes                                              Positive 
+ * percall                      Single                      Yes                       No                                             Negative
+ * PerSession                   Single                      No                          Yes                                          Positive
+ * PerSession                   Single                         Yes                 Yes b/w clinet, No same client multuple thread   
+ * Single                       Single                          No                      No                                                                                                  
+ * Single                       Single                          Yes                         No                                  
  */
