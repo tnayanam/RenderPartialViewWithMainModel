@@ -86,8 +86,11 @@ namespace SimplesClient
  * But we have created two separate thread, so each thread will wait.
  * T1, T2 both are created and they both can call the service. as they are on separate thread. Even though they both will wait independenlty for the service to respond as we 
  * have applied Request-Reply.
- * Now when T1 goes it creates one instance and when t2 goes it creates another instance, why becasue it is Per call. So both are running.But one server side the concurrency mode is set to single and also the binding is set to basic http which does not supprt sessions( anyways we are using per call not session as the instance context mode)
- * Anywyas here we have a positive through put as concurrent calls are processed. Watch this video for proper understanding https://www.youtube.com/watch?v=Ls9-nxYr2EA&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=43
+ * Now when T1 goes it creates one instance and when t2 goes it creates another instance, why becasue it is Per call. So both are running.But one server side the concurrency mode is set to single still both have differnt instance of the server so its basicaly not concurrent in coding sense. and also the binding is set to basic http which does not supprt sessions( anyways we are using per call not session as the instance context mode)
+ * Anywyas here we have a positive throughpuit. Watch this video for proper understanding https://www.youtube.com/watch?v=Ls9-nxYr2EA&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=43
+ * Note that we still acheievd here concurrent procssing b/w T1 and T2. only becasue both were on different threads and having different instance of the service.
+ * So they were teated as different client altogether.
+ * 
  * 
  * 
  * 
