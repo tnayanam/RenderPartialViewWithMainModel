@@ -91,7 +91,7 @@ namespace SimplesClient
  * Note that we still acheievd here concurrent procssing b/w T1 and T2. only becasue both were on different threads and having different instance of the service.
  * So they were teated as different client altogether.
  * 
- * 
+ * So with this binding tcp: which supports sessin through put came negative. not sure how all this panned out. 
  * 
  * 
  */
