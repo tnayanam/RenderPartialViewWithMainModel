@@ -93,5 +93,9 @@ namespace SimplesClient
  * 
  * So with this binding tcp: which supports sessin through put came negative. not sure how all this panned out. 
  * 
+ * Now again we changed the config to Session. that means one client one session. so in this case in same client even on multiple thread request will be processed
+ * NON Consurrently
+ * However with different cliente (even if same session) they will have different instance of the service so they will work concurrently.
+ * 
  * 
  */
