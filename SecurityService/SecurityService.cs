@@ -17,9 +17,9 @@ namespace SecurityService
 
         // output
 
-        /*
-         * lenovo
-         * Tanuj
+        /*CORRECTION
+         * true
+         * lenovo\Tanuj
          * NTLM
          */
         //public string Sign(string message)
