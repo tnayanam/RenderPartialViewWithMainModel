@@ -20,3 +20,4 @@ C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.csproj.GenerateResource.Cache
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.exe
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.pdb
+C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\CodesFirst\obj\Debug\CodesFirst.csprojResolveAssemblyReference.cache

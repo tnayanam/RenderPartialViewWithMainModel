@@ -1,7 +1,6 @@
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\TestService\bin\Debug\TestService.dll.config
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\TestService\bin\Debug\TestService.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\TestService\bin\Debug\TestService.pdb
-C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\TestService\obj\Debug\TestService.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\TestService\obj\Debug\TestService.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\TestService\obj\Debug\TestService.pdb
 C:\Users\Dev-10\Desktop\Demo\TestService\bin\Debug\TestService.dll.config

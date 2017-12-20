@@ -5,7 +5,6 @@ C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\En
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\EntityFramework.xml
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\obj\Debug\DbFirst.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\obj\Debug\DbFirst.exe
 C:\Users\lenovo\Desktop\demo\RenderPartialViewWithMainModel\DbFirst\obj\Debug\DbFirst.pdb
 C:\Users\Dev-10\Desktop\Demo\RenderPartialViewWithMainModel\DbFirst\bin\Debug\DbFirst.exe.config
