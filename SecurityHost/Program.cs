@@ -41,6 +41,6 @@ namespace SecurityHost
  * 
  * 
  * Now as far as this example is concerned we used wshttpbinsing. and then we right clicked on the app.config of host to edit wcf configuration
- * an then enables logging from there. now after one succesfful clinet call we opened the log fine and foiund out thatr XM messaege body is all encrypted.
+ * an then enables logging from there. now after one succesfful clinet call we opened the log fine and foiund out thatr XM messaege body is all encrypted and signed (which is the defaut behaviour of wsHttpBinding).
  * 
  */

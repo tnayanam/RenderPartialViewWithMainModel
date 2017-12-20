@@ -6,11 +6,11 @@ namespace SecurityService
     [ServiceContract]
     public interface ISecurityService
     {
-        [OperationContract(ProtectionLevel = System.Net.Security.ProtectionLevel.None)]
+        [OperationContract]
         string None(string message);
-        [OperationContract(ProtectionLevel = System.Net.Security.ProtectionLevel.Sign)]
-        string Sign(string message);
-        [OperationContract(ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign)]
-        string SignAndEncrypt(string message);
+        //[OperationContract(ProtectionLevel = System.Net.Security.ProtectionLevel.Sign)]
+        //string Sign(string message);
+        //[OperationContract(ProtectionLevel = System.Net.Security.ProtectionLevel.EncryptAndSign)]
+        //string SignAndEncrypt(string message);
     }
 }

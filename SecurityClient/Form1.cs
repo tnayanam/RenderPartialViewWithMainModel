@@ -23,15 +23,15 @@ namespace SecurityClient
 
         private void btn_Encrypted_Click(object sender, EventArgs e)
         {
-            SecurityService.SecurityServiceClient client = new SecurityService.SecurityServiceClient();
-            MessageBox.Show(client.SignAndEncrypt(textBox1.Text));
+            //SecurityService.SecurityServiceClient client = new SecurityService.SecurityServiceClient();
+            //MessageBox.Show(client.SignAndEncrypt(textBox1.Text));
 
         }
 
         private void btn_Signed_Click(object sender, EventArgs e)
         {
-            SecurityService.SecurityServiceClient client = new SecurityService.SecurityServiceClient();
-            MessageBox.Show(client.Sign(textBox1.Text));
+            //SecurityService.SecurityServiceClient client = new SecurityService.SecurityServiceClient();
+            //MessageBox.Show(client.Sign(textBox1.Text));
         }
     }
 }
