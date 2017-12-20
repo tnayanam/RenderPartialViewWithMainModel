@@ -15,11 +15,23 @@ namespace SecurityClient.SecurityService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SecurityService.ISecurityService")]
     public interface ISecurityService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurityService/DoWork", ReplyAction="http://tempuri.org/ISecurityService/DoWorkResponse")]
-        string DoWork(string message);
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.None, Action="http://tempuri.org/ISecurityService/None", ReplyAction="http://tempuri.org/ISecurityService/NoneResponse")]
+        string None(string message);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurityService/DoWork", ReplyAction="http://tempuri.org/ISecurityService/DoWorkResponse")]
-        System.Threading.Tasks.Task<string> DoWorkAsync(string message);
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.None, Action="http://tempuri.org/ISecurityService/None", ReplyAction="http://tempuri.org/ISecurityService/NoneResponse")]
+        System.Threading.Tasks.Task<string> NoneAsync(string message);
+        
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.Sign, Action="http://tempuri.org/ISecurityService/Sign", ReplyAction="http://tempuri.org/ISecurityService/SignResponse")]
+        string Sign(string message);
+        
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.Sign, Action="http://tempuri.org/ISecurityService/Sign", ReplyAction="http://tempuri.org/ISecurityService/SignResponse")]
+        System.Threading.Tasks.Task<string> SignAsync(string message);
+        
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ISecurityService/SignAndEncrypt", ReplyAction="http://tempuri.org/ISecurityService/SignAndEncryptResponse")]
+        string SignAndEncrypt(string message);
+        
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://tempuri.org/ISecurityService/SignAndEncrypt", ReplyAction="http://tempuri.org/ISecurityService/SignAndEncryptResponse")]
+        System.Threading.Tasks.Task<string> SignAndEncryptAsync(string message);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +61,28 @@ namespace SecurityClient.SecurityService {
                 base(binding, remoteAddress) {
         }
         
-        public string DoWork(string message) {
-            return base.Channel.DoWork(message);
+        public string None(string message) {
+            return base.Channel.None(message);
         }
         
-        public System.Threading.Tasks.Task<string> DoWorkAsync(string message) {
-            return base.Channel.DoWorkAsync(message);
+        public System.Threading.Tasks.Task<string> NoneAsync(string message) {
+            return base.Channel.NoneAsync(message);
+        }
+        
+        public string Sign(string message) {
+            return base.Channel.Sign(message);
+        }
+        
+        public System.Threading.Tasks.Task<string> SignAsync(string message) {
+            return base.Channel.SignAsync(message);
+        }
+        
+        public string SignAndEncrypt(string message) {
+            return base.Channel.SignAndEncrypt(message);
+        }
+        
+        public System.Threading.Tasks.Task<string> SignAndEncryptAsync(string message) {
+            return base.Channel.SignAndEncryptAsync(message);
         }
     }
 }
